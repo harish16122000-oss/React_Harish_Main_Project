@@ -14,7 +14,7 @@ import {
 } from '@mui/material';
 
 import MenuIcon from '@mui/icons-material/Menu';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+import ListIcon from '@mui/icons-material/List';
 
 const Naver = () => {
   const theme = useTheme();
@@ -31,29 +31,28 @@ const Naver = () => {
     setAnchorEl(null);
   };
 
-  const menuItems = ['Home', 'About', 'Products', 'Cart', 'Contact'];
+  const menuItems = ['Home', 'About', 'Products', 'Cart', 'Contact', 'Register'];
 
   return (
     <>
-      <AppBar position="static" sx={{ backgroundColor: 'green' }}>
+      <AppBar position="static" color="primary">
         <Toolbar>
 
-          {/* ✅ LEFT SIDE: Menu Icon + Title */}
+           
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            
+           
 
-            <Typography variant="h6" sx={{ ml: 1 }}>
-              🌿 Organic Store
+            <Typography variant="h6" sx={{ ml: 1, fontWeight: 700 }}>
+              🌿 Lingam's Organic
             </Typography>
-            <IconButton color="inherit">
+             <IconButton color="inherit">
               <MenuIcon />
             </IconButton>
           </Box>
 
           <Box sx={{ flexGrow: 1 }} />
-          
 
-          {/* ✅ Desktop Menu */}
+         
           {!isMobile && (
             <>
               {menuItems.map((item) => (
@@ -61,33 +60,31 @@ const Naver = () => {
                   {item}
                 </Link>
               ))}
-              <Button color="inherit" sx={{ fontWeight: 700 }}>
-                Register
+              <Button color="secondary" variant="contained">
+                Login
               </Button>
-            </>
+             </>
           )}
 
-          {/* ✅ Mobile 3-dot menu */}
+          
           {isMobile && (
             <IconButton color="inherit" onClick={handleClick}>
-              <MoreVertIcon />
+              <ListIcon />
             </IconButton>
           )}
 
         </Toolbar>
       </AppBar>
 
-      {/* ✅ Mobile Dropdown */}
+      
       <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
         {menuItems.map((item) => (
           <MenuItem key={item} onClick={handleClose}>
             {item}
           </MenuItem>
         ))}
-        <MenuItem onClick={handleClose}>Register</MenuItem>
-         
+        <MenuItem onClick={handleClose}>Login</MenuItem>
       </Menu>
-     
     </>
   );
 };
@@ -96,9 +93,12 @@ const linkStyle = {
   textDecoration: 'none',
   mr: 4,
   color: 'white',
-  fontSize: '18px',
-  fontWeight: 700,
+  fontSize: '16px',
+  fontWeight: 600,
   cursor: 'pointer',
+  '&:hover': {
+    color: 'secondary.main',
+  },
 };
 
 export default Naver;
