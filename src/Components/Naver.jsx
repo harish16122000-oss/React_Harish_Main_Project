@@ -8,13 +8,17 @@ import {
   IconButton,
   Menu,
   MenuItem,
-  Link,
+  
   useMediaQuery,
   useTheme,
 } from '@mui/material';
-
+ 
 import MenuIcon from '@mui/icons-material/Menu';
 import ListIcon from '@mui/icons-material/List';
+import { Link } from 'react-router-dom';
+ 
+
+
 
 const Naver = () => {
   const theme = useTheme();
@@ -55,21 +59,22 @@ const Naver = () => {
          
           {!isMobile && (
             <>
-              {menuItems.map((item) => (
-                <Link key={item} sx={linkStyle}>
-                  {item}
-                </Link>
-              ))}
-              <Button color="secondary" variant="contained">
+            {menuItems.map((menu, index)=>(
+               <Box key={index}  sx={linkStyle}>{menu}</Box>
+            ))}
+              
+              
+              <Link to="/log"><Button color="secondary" variant="contained">
                 Login
-              </Button>
+              </Button></Link>
              </>
           )}
 
-          
+         
           {isMobile && (
             <IconButton color="inherit" onClick={handleClick}>
-              <ListIcon />
+                <Link to="/log" sx={linkStyle}><ListIcon /></Link> 
+              
             </IconButton>
           )}
 
@@ -79,8 +84,8 @@ const Naver = () => {
       
       <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
         {menuItems.map((item) => (
-          <MenuItem key={item} onClick={handleClose}>
-            {item}
+          <MenuItem key={item} onClick={handleClose} >
+            {item }
           </MenuItem>
         ))}
         <MenuItem onClick={handleClose}>Login</MenuItem>
@@ -91,7 +96,7 @@ const Naver = () => {
 
 const linkStyle = {
   textDecoration: 'none',
-  mr: 4,
+  mr: "60px",
   color: 'white',
   fontSize: '16px',
   fontWeight: 600,

@@ -22,6 +22,7 @@ const theme = createTheme({
     fontFamily: 'Poppins, Roboto, sans-serif',
     h4: {
       fontWeight: 700,
+      color:'#2E7D32'
     },
     h6: {
       fontWeight: 600,
@@ -30,6 +31,7 @@ const theme = createTheme({
       textTransform: 'none',
       fontWeight: 600,
     },
+   
   },
   shape: {
     borderRadius: 12,

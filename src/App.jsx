@@ -2,16 +2,22 @@
 import Naver from './Components/Naver'
 import { CssBaseline, ThemeProvider } from '@mui/material'
 import theme from './Theme'
-import '@fontsource/roboto/400.css';
+
 import Login from './Components/Login';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
  
  const App = () => {
    return (
      <div>
        <ThemeProvider theme={theme}>
         <CssBaseline/>
-        <Naver/>
-        <Login/>
+      <BrowserRouter>
+      <Routes>
+       <Route path='/' element={<Naver/>}/>
+        <Route path='/log' element={ <Login/>} />
+       
+      </Routes>
+      </BrowserRouter>
        </ThemeProvider>
      </div>
    )
