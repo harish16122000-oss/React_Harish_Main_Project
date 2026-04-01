@@ -71,13 +71,13 @@ const Naver = () => {
           )}
 
          
-          {isMobile && (
-            <IconButton color="inherit" onClick={handleClick}>
-                <Link to="/log" sx={linkStyle}><ListIcon /></Link> 
-              
-            </IconButton>
-          )}
-
+         {isMobile && (
+  
+    <IconButton color="inherit" onClick={handleClick}>
+      <ListIcon/>
+    </IconButton>
+  
+)}
         </Toolbar>
       </AppBar>
 
