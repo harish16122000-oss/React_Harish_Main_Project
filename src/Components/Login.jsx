@@ -1,18 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import { Button, Container, Typography } from '@mui/material';
-import styled from 'styled-components';
+import {  Container, Typography } from '@mui/material';
+ 
+import { Link } from 'react-router-dom';
+
+ 
 
 
 
-const Login = () => {
-  // const Mybutton = styled(Button)({
-  //   backgroundColor: "#2E7D32", color: "white", width: '150px', height: '40px', 
-  //   '&:hover': { backgroundColor: "white", color: "#2E7D32" },
-  // }
-  // )
-
+const Login = ({Mybutton}) => {
+   
   return (
     <div>
       <Container sx={{
@@ -39,7 +37,7 @@ const Login = () => {
             p:"3%",
             backgroundColor:"#FFFFFF",
             borderRadius:"20px",
-           my:"4%",
+           my:"2%",
             '& > .MuiTextField-root': { m: 1, width: '25ch', minWidth: "400px",  },
     
     
@@ -56,10 +54,11 @@ const Login = () => {
           <TextField id="outlined-basic" label="Mobie Number" variant="outlined" />
           <TextField id="outlined-basic" label="Password" variant="outlined" />
           <TextField id="outlined-basic" label="Confirm Password" variant="outlined" />
-<Button variant='outlined' sx={{ backgroundColor: "#2E7D32 " , color: "white", width: '150px ', height: '40px ',mb:'10px',  '&:hover': { backgroundColor: "white", color: "#2E7D32" } }}>Submit</Button>
-        </Box>
-        
-       
+ 
+<Mybutton>Submit</Mybutton>
+<Typography>If you already have an account please <Link to='log1'>login</Link></Typography>
+      </Box>        
+      
       </Container>
     </div>
   )
