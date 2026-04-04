@@ -18,7 +18,7 @@ const Login = ({Mybutton}) => {
         alignItems: "center",
         justifyItems: "center",
         flexDirection: "column",
-        gap: "20px",
+        gap: "15px",
         backgroundColor:'#F1F8E9',
          
          
@@ -32,12 +32,13 @@ const Login = ({Mybutton}) => {
             justifyContent: "center",
             alignItems: "center",
             justifyItems: "center",
-            gap: "20px",
+            gap: "16px",
             flexDirection: "column",
-            p:"3%",
+            px:"3%",
+            my:"1%",
             backgroundColor:"#FFFFFF",
             borderRadius:"20px",
-           my:"2%",
+           
             '& > .MuiTextField-root': { m: 1, width: '25ch', minWidth: "400px",  },
     
     
@@ -45,15 +46,15 @@ const Login = ({Mybutton}) => {
           noValidate
           autoComplete="off"
         >
-          <Typography variant='h4' sx={{ textAlign: "center", }}>
+          <Typography variant='h4' sx={{ textAlign: "center",mt:"5px" }}>
           Register
         </Typography>
           
-          <TextField id="outlined-basic" label="Name" variant="outlined" />
-          <TextField id="outlined-basic" label="Email" variant="outlined" />
-          <TextField id="outlined-basic" label="Mobie Number" variant="outlined" />
-          <TextField id="outlined-basic" label="Password" variant="outlined" />
-          <TextField id="outlined-basic" label="Confirm Password" variant="outlined" />
+          <TextField  label="Name" variant="outlined" type='name' />
+          <TextField   label="Email" variant="outlined" />
+          <TextField   label="Mobie Number" variant="outlined" />
+          <TextField   label="Password" variant="outlined" />
+          <TextField   label="Confirm Password" variant="outlined" />
  
 <Mybutton>Submit</Mybutton>
 <Typography>If you already have an account please <Link to='log1'>login</Link></Typography>

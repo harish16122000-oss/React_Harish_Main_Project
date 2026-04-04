@@ -9,7 +9,7 @@ import Login1 from './Components/Login1';
 import styled from 'styled-components';
 
   const Mybutton = styled(Button)({
-    backgroundColor: "#2E7D32 ", color: "white", width: '150px ', height: '40px ', mb: '10px', 
+    backgroundColor: "#2E7D32 ", color: "white", width: '150px ', height: '40px ', mb: '5px', 
     '&:hover': { backgroundColor: "white", color: "#2E7D32", },
   })
 const App = () => {
