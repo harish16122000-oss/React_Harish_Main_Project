@@ -1,19 +1,53 @@
 import React, { useState } from 'react'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import {  Container, Typography } from '@mui/material';
+import {  Button, Container, Typography } from '@mui/material';
  
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
  
 
 
 
 const Login = ({Mybutton}) => {
+  const [detail, setDetail]= useState({
+    name:'',
+    email:'',
+    mobile:'',
+    password:'',
+    cpass:''
+
+  })
+
+  const handleChange=(event)=>{
+    const{name, value}= event.target;
+    setDetail((prevstate)=>({
+      ...prevstate,[name]:value
+    })); }
+
+    const handleSubmit= (async(e)=>{
+      try{
+      e.preventDefault();
+      await axios.post("http://localhost:5000/details",detail);
+      alert("Registered Successfully!");}
+      catch(error){ 
+        console.log(error);
+        
+       }
+      setDetail({ name:'',
+    email:'',
+    mobile:'',
+    password:'',
+    cpass:''})
+    })
+ 
    
   return (
     <div>
-      <Container sx={{
+      
+
+      <Container  sx={{
         display: "flex", justifyContent: "center",
         alignItems: "center",
         justifyItems: "center",
@@ -27,6 +61,7 @@ const Login = ({Mybutton}) => {
         
         <Box
           component="form"
+          onSubmit={handleSubmit}
           sx={{
             display: "flex",
             justifyContent: "center",
@@ -50,13 +85,13 @@ const Login = ({Mybutton}) => {
           Register
         </Typography>
           
-          <TextField  label="Name" variant="outlined" type='name' />
-          <TextField   label="Email" variant="outlined" />
-          <TextField   label="Mobie Number" variant="outlined" />
-          <TextField   label="Password" variant="outlined" />
-          <TextField   label="Confirm Password" variant="outlined" />
+          <TextField name='name' value={detail.name} onChange={handleChange}  label="Name" variant="outlined" type='name' />
+          <TextField name='email' value={detail.email} onChange={handleChange}  label="Email" variant="outlined" />
+          <TextField name='mobile'  value={detail.mobile} onChange={handleChange} label="Mobile " variant="outlined" />
+          <TextField name='password' value={detail.password} onChange={handleChange}  label="Password" variant="outlined" />
+          <TextField name='cpass'  value={detail.cpass} onChange={handleChange} label="Confirm Password" variant="outlined" />
  
-<Mybutton>Submit</Mybutton>
+<Button variant='contained' type='submit'>submit</Button>
 <Typography>If you already have an account please <Link to='log1'>login</Link></Typography>
       </Box>        
       

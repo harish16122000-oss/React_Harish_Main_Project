@@ -19,7 +19,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Poppins, Roboto, sans-serif',
+    fontFamily: 'Poppins, Roboto, serif',
     h4: {
       fontWeight: 700,
       color:'#2E7D32'

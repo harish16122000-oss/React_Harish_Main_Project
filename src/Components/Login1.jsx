@@ -9,8 +9,9 @@ import { Container, Typography } from '@mui/material';
  const Login1 = ({Mybutton}) => {
 
    return (
-     <div sx={{backgroundColor:"#F5F5F5"}}>
-        <Container sx={{width:"350px", }}>
+    <div >
+     <Container sx={{backgroundColor:"#F5F5F5"}}>
+        <Container sx={{width:"350px",py:"2%"}}>
          <Box
       component="form"
       sx={{ 
@@ -18,9 +19,12 @@ import { Container, Typography } from '@mui/material';
         justifyContent:'center',
         flexDirection:'column'
         ,alignItems:"center",
-        mt:"20%",
+        mt:{xs:"1%",
+            md:"14%",
+        },
           padding:"10%",
           borderRadius:"30px",
+         
         backgroundColor:"#E8F5E9",
         '& >.MuiTextField-root': { m: 2, width: '25ch', minWidth: "200px",  } }}
       noValidate
@@ -28,11 +32,12 @@ import { Container, Typography } from '@mui/material';
     >
       <Typography variant='h4' sx={{mb:"12%"}}>Login</Typography>
       <img src= {img1} alt="" height="150px" width="250px"/>
-      <TextField id="standard-basic" label="Standard" variant="standard" />
-      <TextField id="standard-basic" label="Standard" variant="standard" />
-      <Mybutton>Submit</Mybutton>
+      <TextField    label="Email" variant="standard" />
+      <TextField   label="Password" variant="standard" />
+      <Mybutton variant="outlined" sx={{mt:3}}>Submit</Mybutton>
     </Box>
         </Container>
+     </Container>
      </div>
    )
  }

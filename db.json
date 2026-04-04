@@ -1,0 +1,29 @@
+{
+  "details": [
+    {
+      "name": "harish",
+      "email": "harish16122000@gmail.com",
+      "mobile": "8523904929",
+      "password": "har123",
+      "cpass": "har123",
+      "id": "OQoUjl4ePJM"
+    },
+    {
+      "name": "harish",
+      "email": "harish16122000@gmail.com",
+      "mobile": "8523904929",
+      "password": "har123",
+      "cpass": "har123",
+      "id": "gg2xs6eVTxA"
+    },
+    {
+      "name": "harish",
+      "email": "harish16122000@gmail.com",
+      "mobile": "8523904929",
+      "password": "har123",
+      "cpass": "har123",
+      "id": "x1TyEWgnyDI"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
