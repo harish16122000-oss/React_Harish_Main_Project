@@ -91,7 +91,7 @@ const Login = ({Mybutton}) => {
           <TextField name='password' value={detail.password} onChange={handleChange}  label="Password" variant="outlined" />
           <TextField name='cpass'  value={detail.cpass} onChange={handleChange} label="Confirm Password" variant="outlined" />
  
-<Button variant='contained' type='submit'>submit</Button>
+<Mybutton type='submit'>Submit</Mybutton>
 <Typography>If you already have an account please <Link to='log1'>login</Link></Typography>
       </Box>        
       

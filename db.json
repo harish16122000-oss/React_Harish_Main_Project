@@ -23,6 +23,14 @@
       "password": "har123",
       "cpass": "har123",
       "id": "x1TyEWgnyDI"
+    },
+    {
+      "name": "lingam",
+      "email": "harish16122000@gmail.com",
+      "mobile": "7865345906",
+      "password": "12345",
+      "cpass": "12345",
+      "id": "xW8D168vuu4"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
