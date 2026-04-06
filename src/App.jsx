@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login1 from './Components/Login1';
  
 import { styled } from '@mui/material/styles';
+import Menu from './Components/Menu';
 
 const Mybutton = styled(Button)({
   backgroundColor: "#2E7D32",
@@ -16,7 +17,7 @@ const Mybutton = styled(Button)({
   height: "40px",
   marginBottom: "5px",
   '&:hover': {
-    backgroundColor: "white",
+    backgroundColor: "#Fff",
     color: "#2E7D32",
   },
 });
@@ -31,6 +32,8 @@ const App = () => {
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<Naver  />} />
+            <Route path='/men' element={<Menu/>} />
+             
             <Route path='/log' element={<Login Mybutton={Mybutton}/>} />
             <Route path='/log/log1' element={<Login1 Mybutton={Mybutton}/>} />
             

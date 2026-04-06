@@ -75,7 +75,11 @@ const Login = ({Mybutton}) => {
             gap: "16px",
             flexDirection: "column",
             px:"3%",
-            my:"5%",
+            my:{
+              lg:"0.5%",
+              xl:"5%"
+
+            },
             backgroundColor:"#FFFFFF",
             borderRadius:"20px",
            
