@@ -31,6 +31,54 @@
       "password": "12345",
       "cpass": "12345",
       "id": "xW8D168vuu4"
+    },
+    {
+      "name": "lingam",
+      "email": "harish@gmail.com",
+      "mobile": "8523904929",
+      "password": "123",
+      "cpass": "123",
+      "id": "gg-cGh5bRXo"
+    },
+    {
+      "name": "hasryd",
+      "email": "harish@gmail.com",
+      "mobile": "3523626",
+      "password": "45345",
+      "cpass": "434",
+      "id": "EExMkWnBplI"
+    },
+    {
+      "name": "lingam",
+      "email": "harish@gmail.com",
+      "mobile": "8523904929",
+      "password": "12345",
+      "cpass": "12345",
+      "id": "SpA-l3ADW50"
+    },
+    {
+      "name": "",
+      "email": "",
+      "mobile": "",
+      "password": "",
+      "cpass": "",
+      "id": "1Z_rv6bIRRY"
+    },
+    {
+      "name": "",
+      "email": "",
+      "mobile": "",
+      "password": "",
+      "cpass": "",
+      "id": "1R02oCTu9O4"
+    },
+    {
+      "name": "",
+      "email": "",
+      "mobile": "",
+      "password": "",
+      "cpass": "",
+      "id": "XvpXDB2qOrg"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

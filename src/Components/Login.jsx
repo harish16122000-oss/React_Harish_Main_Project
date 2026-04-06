@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import {  Button, Container, Typography } from '@mui/material';
- 
+import {  Container, Typography } from '@mui/material';
+import axios from 'axios'
 import { Link } from 'react-router-dom';
-import axios from 'axios';
-
+  
  
 
 
@@ -19,6 +18,7 @@ const Login = ({Mybutton}) => {
     cpass:''
 
   })
+   
 
   const handleChange=(event)=>{
     const{name, value}= event.target;
@@ -29,6 +29,10 @@ const Login = ({Mybutton}) => {
     const handleSubmit= (async(e)=>{
       try{
       e.preventDefault();
+      if(detail.password !== detail.cpass){
+        alert("Password donot match")
+        return;
+      }
       await axios.post("http://localhost:5000/details",detail);
       alert("Registered Successfully!");}
       catch(error){ 
@@ -40,6 +44,7 @@ const Login = ({Mybutton}) => {
     mobile:'',
     password:'',
     cpass:''})
+    
     })
  
    
@@ -70,7 +75,7 @@ const Login = ({Mybutton}) => {
             gap: "16px",
             flexDirection: "column",
             px:"3%",
-            my:"1%",
+            my:"5%",
             backgroundColor:"#FFFFFF",
             borderRadius:"20px",
            
@@ -85,13 +90,13 @@ const Login = ({Mybutton}) => {
           Register
         </Typography>
           
-          <TextField name='name' value={detail.name} onChange={handleChange}  label="Name" variant="outlined" type='name' />
-          <TextField name='email' value={detail.email} onChange={handleChange}  label="Email" variant="outlined" />
-          <TextField name='mobile'  value={detail.mobile} onChange={handleChange} label="Mobile " variant="outlined" />
-          <TextField name='password' value={detail.password} onChange={handleChange}  label="Password" variant="outlined" />
-          <TextField name='cpass'  value={detail.cpass} onChange={handleChange} label="Confirm Password" variant="outlined" />
+          <TextField name='name' value={detail.name} type='text' onChange={handleChange}  label="Name" variant="outlined"  />
+          <TextField name='email' type='email' value={detail.email} onChange={handleChange}  label="Email" variant="outlined" />
+          <TextField name='mobile'  value={detail.mobile} onChange={handleChange} label="Mobile " variant="outlined" type='tel'  />
+          <TextField name='password' type='password' value={detail.password} onChange={handleChange}  label="Password" variant="outlined" />
+          <TextField name='cpass' type='password'  value={detail.cpass} onChange={handleChange} label="Confirm Password" variant="outlined" />
  
-<Mybutton type='submit'>Submit</Mybutton>
+<Mybutton type='submit' variant='outlined'>Submit</Mybutton>
 <Typography>If you already have an account please <Link to='log1'>login</Link></Typography>
       </Box>        
       
