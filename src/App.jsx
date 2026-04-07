@@ -29,10 +29,12 @@ const App = () => {
     <div>
       <ThemeProvider theme={theme}>
         <CssBaseline />
+        
         <BrowserRouter>
+          <Naver  />
           <Routes>
-            <Route path='/' element={<Naver  />} />
-            <Route path='/men' element={<Menu/>} />
+            
+            <Route path='/' element={<Menu Mybutton={Mybutton}/>} />
              
             <Route path='/log' element={<Login Mybutton={Mybutton}/>} />
             <Route path='/log/log1' element={<Login1 Mybutton={Mybutton}/>} />
