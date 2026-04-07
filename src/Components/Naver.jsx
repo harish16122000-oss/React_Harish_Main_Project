@@ -1,15 +1,12 @@
 import React from 'react';
 
+import {useLocation} from 'react-router-dom';
+
 import Drawer from '@mui/material/Drawer';
- 
 import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+
 import {
   AppBar,
   Box,
@@ -39,7 +36,7 @@ import drink from '../assets/drink.PNG'
 
 const Naver = () => {
 
-
+const Location = useLocation();
   const [opens, setOpens] = React.useState(false);
   const draw =[
    
@@ -91,6 +88,7 @@ const Naver = () => {
 
   return (
     <>
+    {Location.pathname !== '/log' && Location.pathname !=='/log/log1' &&(
       <AppBar position="static" color="primary">
         <Toolbar>
 
@@ -136,7 +134,7 @@ const Naver = () => {
 )}
         </Toolbar>
       </AppBar>
-
+)}
       
       <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
         {menuItems.map((item) => (
