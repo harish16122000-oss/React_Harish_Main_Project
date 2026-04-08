@@ -1,10 +1,31 @@
 import React from 'react'
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+ import veg1 from '../assets/veg1.jpg';
+import fruit1 from '../assets/fruit1.jpg';
+import rice1 from '../assets/rice1.png';
+import wheat1 from '../assets/wheat1.jpg';
+import millet1 from '../assets/millet1.png';
+import juice1 from '../assets/juice1.jpg';
+import dairy1 from '../assets/dairy1.jpg'
 
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button  } from '@mui/material';
 import ban from '../assets/ban.png';
-import { LuRefreshCcw } from "react-icons/lu";
+
 
 const Menu = ({ Mybutton }) => {
+   const prod= [
+          {id:1 , img: wheat1, head:'Wheat',},
+          {id:2 , img: millet1, head:'Millet',  },
+          {id:3 , img: juice1 , head:'Juice',},
+          {id:4 , img: dairy1, head:'Dairy ',  },
+          {id:5 , img: fruit1, head:'Fruits', },
+          {id:6 , img: veg1, head:'Vegetables',  },
+          {id:7 , img:rice1, head:'Rice',  },
+      ]
   return (
     <div>
 
@@ -12,11 +33,12 @@ const Menu = ({ Mybutton }) => {
       <Box sx={{
         backgroundImage: `url(${ban})`,
         paddingY: {
-          xs: "20%",
+          
           md: "10%",
           lg: "1%",
-          xl: '5%'
+          xl: '2.7%'
         },
+       paddingTop:{xs: "15%",md:'0'},
         paddingX: '1%',
         backgroundPosition: { xs: "10%" },
         marginLeft: '3%'
@@ -33,18 +55,18 @@ const Menu = ({ Mybutton }) => {
         </Typography>
 
 
-        <Typography variant='h2' sx={{ color: '', marginTop: '0.5%', marginLeft: '1%', fontWeight: '900', fontSize: { xs: '35px', sm: '50px', md: '80px', color: '#1B1B1B' } }}>
+        <Typography variant='h2' sx={{ color: '#1B1B1B', marginTop: '0.5%', marginLeft: '1%', fontWeight: '900', fontSize: { xs: '35px', sm: '50px', md: '80px',  } }}>
           Lingam's Organic
         </Typography>
-
-        <Mybutton variant='outlined' sx={{ fontSize: '15px', marginTop: { xs: '40px', md: '15px' }, paddingY: { xs: '25px', md: '25px', marginLeft: '1%' } }}>
+        <Box sx={{marginTop:{xs:'30px', md:"50px"}}}>
+        <Mybutton variant='outlined' fontSize={{ sx: '15px', marginTop: { xs: '40px', md: '15px',lg:'70px' }, paddingY: { xs: '25px', md: '25px', marginLeft: '1%' } }}>
           Start Shopping
         </Mybutton>
-        <Button variant='contained' sx={{ fontSize: '15px', marginTop: { xs: '40px', md: '0.5%' }, paddingY: '12px', marginLeft: '35px', backgroundColor: '#1B1B1B' }}>
+        <Button variant='contained' sx={{ fontSize: '15px', marginTop: { xs: '0px', md: '0%',lg:'0px' }, paddingY: '12px', marginLeft: '35px', backgroundColor: '#1B1B1B' }}>
           Join Now
         </Button>
-
-        <Box sx={{ marginLeft: '1%', marginTop: { xs: '30px', md: '1%' }, display: 'flex', flexDirection: 'row', gap: 2 }}>
+</Box>
+        <Box sx={{ marginLeft: '1%', marginTop: { xs: '30px', md: '1%', xl:'3%' }, display: 'flex', flexDirection: 'row', gap: 2 }}>
           <Box sx={{ display: 'flex', flexDirection: 'column' }}>
             <Box sx={{ fontWeight: 700, fontSize: { xs: '25px', md: '48px' } }}>
               15K
@@ -64,15 +86,36 @@ const Menu = ({ Mybutton }) => {
           <Box sx={{ fontSize: { sx: '13px', md: '20px' } }}>Store <br /> Locations</Box>
           </Box>
         </Box>
-        {/* <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
-          <Box sx={{ backgroundColor: 'green', paddingY: '10%', paddingX: '5%' }}>
-            <LuRefreshCcw style={{ fontSize: '25px', color: 'white' }} />
+         </Box>
+         <Box>
+                  
+                  <Typography variant='h2'sx={{textAlign:'center', marginTop:'50px', color:'#2E7D32', fontWeight:600, fontSize: { xs: '35px', sm: '50px', md: '60px',  }}}>Categories</Typography>
+                 <Box sx={{display:'flex', flexDirection:{xs:'column', md:'row'}, gap:'10px', marginTop:{xs:'0px',xl:'50px'}}}>
+                     {prod.map((p)=>(
+                    
+                <Card key={p.id} sx={{ maxWidth: 345 , paddingY:'3%', paddingX:'3%', marginLeft:{xs:'50px', md:'0px'}}}>
+               <CardMedia
+                 sx={{ height: 140, width: 140, borderRadius:'50%' ,marginLeft:{xs:'80px', md:"0px"}}}
+                 image={p.img}
+                 title={p.head}
+               />
+               <CardContent>
+                 <Typography gutterBottom variant="h5" component="div" sx={{textAlign:'center'}}>
+                  {p.head}
+                 </Typography>
+                  
+               </CardContent>
+               <CardActions>
+                 <Mybutton variant='outlined' sx={{ml:{sm:'20%' ,xs:'25%', md:'18%'}}}>View</Mybutton>
+                 
+               </CardActions>
+             </Card>
+               ))}
+             </Box>
+         
+              
+             </Box>
 
-          </Box>
-          <Box>2</Box>
-          <Box>3</Box>
-        </Box> */}
-      </Box>
     </div>
   )
 }

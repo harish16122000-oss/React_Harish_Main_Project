@@ -9,6 +9,7 @@ import Login1 from './Components/Login1';
  
 import { styled } from '@mui/material/styles';
 import Menu from './Components/Menu';
+import Product from './Components/Product';
 
 const Mybutton = styled(Button)({
   backgroundColor: "#2E7D32",
@@ -38,6 +39,7 @@ const App = () => {
              
             <Route path='/log' element={<Login Mybutton={Mybutton}/>} />
             <Route path='/log/log1' element={<Login1 Mybutton={Mybutton}/>} />
+            <Route path='/pro' element={<Product Mybutton={Mybutton}/>} />
             
 
           </Routes>
