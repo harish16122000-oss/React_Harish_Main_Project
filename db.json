@@ -1,85 +1,54 @@
 {
   "details": [
-    {
-      "name": "harish",
-      "email": "harish16122000@gmail.com",
-      "mobile": "8523904929",
-      "password": "har123",
-      "cpass": "har123",
-      "id": "OQoUjl4ePJM"
-    },
-    {
-      "name": "harish",
-      "email": "harish16122000@gmail.com",
-      "mobile": "8523904929",
-      "password": "har123",
-      "cpass": "har123",
-      "id": "gg2xs6eVTxA"
-    },
-    {
-      "name": "harish",
-      "email": "harish16122000@gmail.com",
-      "mobile": "8523904929",
-      "password": "har123",
-      "cpass": "har123",
-      "id": "x1TyEWgnyDI"
-    },
-    {
-      "name": "lingam",
-      "email": "harish16122000@gmail.com",
-      "mobile": "7865345906",
-      "password": "12345",
-      "cpass": "12345",
-      "id": "xW8D168vuu4"
-    },
-    {
-      "name": "lingam",
-      "email": "harish@gmail.com",
-      "mobile": "8523904929",
-      "password": "123",
-      "cpass": "123",
-      "id": "gg-cGh5bRXo"
-    },
-    {
-      "name": "hasryd",
-      "email": "harish@gmail.com",
-      "mobile": "3523626",
-      "password": "45345",
-      "cpass": "434",
-      "id": "EExMkWnBplI"
-    },
-    {
-      "name": "lingam",
-      "email": "harish@gmail.com",
-      "mobile": "8523904929",
-      "password": "12345",
-      "cpass": "12345",
-      "id": "SpA-l3ADW50"
-    },
-    {
-      "name": "",
-      "email": "",
-      "mobile": "",
-      "password": "",
-      "cpass": "",
-      "id": "1Z_rv6bIRRY"
-    },
-    {
-      "name": "",
-      "email": "",
-      "mobile": "",
-      "password": "",
-      "cpass": "",
-      "id": "1R02oCTu9O4"
-    },
-    {
-      "name": "",
-      "email": "",
-      "mobile": "",
-      "password": "",
-      "cpass": "",
-      "id": "XvpXDB2qOrg"
-    }
+    
   ],
-  "$schema": "./node_modules/json-server/schema.json"
+  
+  "wheat": [
+    {
+      "id": 1,
+       "img": "./wheat flour.jpg ",
+      "Name": "Wheat Flour",
+      "discount":"₹299",
+      "price":"₹250",
+      "offer":"17% OFF"
+
+    },
+    {
+      "id": 2,
+       "img": "./wheat bran.jpg",
+      "Name": "Wheat Bran",
+      "discount":"₹199",
+      "price":"₹150",
+      "offer":"25% OFF"
+
+    },
+    {
+      "id": 3,
+       "img": "./wheat maida.jpeg",
+      "Name": "Wheat Maida",
+      "discount":"₹278",
+      "price":"₹233",
+      "offer":"16% OFF"
+
+    },
+    {
+      "id": 4,
+       "img": "./wheat rava.jpg",
+      "Name": "Wheat Rava",
+      "discount":"₹199",
+      "price":"₹140",
+      "offer":"30% OFF"
+
+    },
+    {
+      "id": 5,
+       "img": "./wheat broken.png",
+      "Name": "Broken Wheat",
+      "discount":"₹129",
+      "price":"₹90",
+      "offer":"47% OFF"
+
+    }
+  ]
 }
+

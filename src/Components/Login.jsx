@@ -16,8 +16,7 @@ const Login = ({Mybutton}) => {
     mobile:'',
     password:'',
     cpass:''
-
-  })
+})
    
 
   const handleChange=(event)=>{

@@ -32,7 +32,7 @@ import { Container, Typography } from '@mui/material';
     >
       <Typography variant='h4' sx={{mb:"12%"}}>Login</Typography>
       <img src= {img1} alt="" height="150px" width="250px"/>
-      <TextField    label="Email" variant="standard" />
+      <TextField  label="Email" variant="standard" />
       <TextField   label="Password" variant="standard" />
       <Mybutton variant='outlined' sx={{mt:"20px"}}>Submit</Mybutton>
     </Box>

@@ -1,0 +1,100 @@
+import React, {useEffect, useState } from 'react'
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+ 
+import Typography from '@mui/material/Typography';
+import { Box } from '@mui/material';
+
+import veg1 from '../assets/veg1.jpg';
+
+import Rating from '@mui/material/Rating';
+import StarIcon from '@mui/icons-material/Star';
+
+import { CiHeart } from "react-icons/ci";
+import axios from 'axios';
+ 
+
+const labels = {
+  0.5: '',
+  1: ' ',
+  1.5: ' ',
+  2: ' ',
+  2.5: ' ',
+  3: ' ',
+  3.5: ' ',
+  4: ' ',
+  4.5: ' ',
+  5: ' ',
+};
+
+function getLabelText(value) {
+  return `${value} Star${value !== 1 ? 's' : ''}, ${labels[value]}`;
+}
+const Wheat = ({Mybutton}) => {
+    const[wheat, setWheat]= useState([]);
+     
+
+     const wheats = async()=>{
+      await axios.get("http://localhost:5000/wheat")
+      .then((res)=> setWheat(res.data))
+      .catch((err)=> console.log(err)
+      )
+     };
+     useEffect(()=>{wheats()},[]);
+
+
+    const [value, setValue] = React.useState(2);
+  const [hover, setHover] = React.useState(-1);
+  return (
+    <div>
+    
+         <Typography variant='h2'sx={{textAlign:'center', marginTop:'50px', color:'#2E7D32', fontWeight:600}}>Wheat Products</Typography>
+        <Box sx={{display:'flex', flexDirection:{xs:'column', md:'row'}, gap:'10px', justifyContent:'space-evenly',  marginTop:{xs:'10px',xl:'50px'}}}>
+             
+           {wheat.map((w)=>(
+       <Card key={w.id}  sx={{marginTop:{xs:"40px", md:'0px'} ,maxWidth: 250 , marginLeft:{xs:'80px', md:'0px'},backgroundColor:'#FFF8E1'}}>
+       <CardMedia
+        sx={{ height:{xs: 250, md: 250 }, width:{xs: 250, md: 250}}}
+        image={w.img}
+        title={w.Name}
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div" sx={{textAlign:'center', color: "#2E7D32", fontWeight:700}}>
+        {w.Name}
+        </Typography>
+         <Box sx={{ width: 200, display:'flex', alignItems: 'center', }}>
+      <Rating
+      sx={{marginLeft:'50px'}}
+        name="hover-feedback"
+        value={value}
+        precision={0.5}
+        getLabelText={getLabelText}
+        onChange={(event, newValue) => {
+          setValue(newValue);
+        }}
+        onChangeActive={(event, newHover) => {
+          setHover(newHover);
+        }}
+        emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
+      />
+      {value !== null && (
+        <Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
+      )}
+    </Box>
+    <Typography sx={{marginTop:'20px', marginLeft:'1px'}}> <span style={{textDecoration:"line-through",color:'#584f4f'}}> {w.discount}.00</span> <span style={{marginLeft:'5px',fontSize:'19px', fontWeight: 800,}}>{w.price}.00</span><span style={{border:'1px solid ', padding:'2px',marginLeft:'10px', color:'#584f4f', fontSize:'13px'}}>{w.offer}</span></Typography>
+         
+      </CardContent>
+      <CardActions>
+        <Mybutton variant='outlined' sx={{marginLeft:'40px'}}>Add to cart</Mybutton>
+        <CiHeart  style={{fontSize:'32px', border:" 1px solid", padding:'3px'}}/>
+      </CardActions>
+    </Card>
+      ))}
+    </Box>
+    </div>
+  )
+}
+
+export default Wheat
