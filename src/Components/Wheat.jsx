@@ -7,13 +7,14 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Box } from '@mui/material';
 
-import veg1 from '../assets/veg1.jpg';
+
 
 import Rating from '@mui/material/Rating';
 import StarIcon from '@mui/icons-material/Star';
 
 import { CiHeart } from "react-icons/ci";
 import axios from 'axios';
+import Skeleton from '@mui/material/Skeleton';
  
 
 const labels = {
@@ -28,25 +29,70 @@ const labels = {
   4.5: ' ',
   5: ' ',
 };
-
 function getLabelText(value) {
   return `${value} Star${value !== 1 ? 's' : ''}, ${labels[value]}`;
 }
+
 const Wheat = ({Mybutton}) => {
     const[wheat, setWheat]= useState([]);
-     
+    const [loading, setLoading]= useState(true);
 
-     const wheats = async()=>{
-      await axios.get("http://localhost:5000/wheat")
-      .then((res)=> setWheat(res.data))
-      .catch((err)=> console.log(err)
-      )
-     };
+    const wheats = async()=>{ 
+try{
+     
+     const res = await axios.get("http://localhost:5000/wheat");
+      setWheat(res.data);
+   }
+     catch(error){
+      console.error( "Error fetching data:", error)
+     }
+     finally{
+      setLoading(false);
+     } };
      useEffect(()=>{wheats()},[]);
 
-
-    const [value, setValue] = React.useState(2);
+     const [value, setValue] = React.useState(2);
   const [hover, setHover] = React.useState(-1);
+
+    if(loading) return <Box sx={{ width: 300, display:{xs:"grid", md:'flex'},  justifyContent:"space-evenly", alignItems:'center', marginTop:{xs:"30px", md:"200px"} }}>
+       <Box sx={{marginLeft:"50px"}}>
+       <Skeleton variant="rectangular" width={210} height={118}  />
+       <Skeleton />
+       <Skeleton width="80%" />
+       <Skeleton width="50%" />
+       
+       </Box>
+       <Box sx={{marginLeft:"50px"}}>
+       <Skeleton variant="rectangular" width={210} height={118}  />
+       <Skeleton />
+       <Skeleton width="80%" />
+       <Skeleton width="50%" />
+       
+       </Box>
+       <Box sx={{marginLeft:"50px"}}>
+       <Skeleton variant="rectangular" width={210} height={118}  />
+       <Skeleton />
+       <Skeleton width="80%" />
+       <Skeleton width="50%" />
+       
+       </Box>
+       <Box sx={{marginLeft:"50px"}}>
+       <Skeleton variant="rectangular" width={210} height={118}  />
+       <Skeleton />
+       <Skeleton width="80%" />
+       <Skeleton width="50%" />
+       
+       </Box>
+       <Box sx={{marginLeft:"50px"}}>
+       <Skeleton variant="rectangular" width={210} height={118}  />
+       <Skeleton />
+       <Skeleton width="80%" />
+       <Skeleton width="50%" />
+       
+       </Box>
+    </Box>;
+
+    
   return (
     <div>
     
@@ -54,7 +100,7 @@ const Wheat = ({Mybutton}) => {
         <Box sx={{display:'flex', flexDirection:{xs:'column', md:'row'}, gap:'10px', justifyContent:'space-evenly',  marginTop:{xs:'10px',xl:'50px'}}}>
              
            {wheat.map((w)=>(
-       <Card key={w.id}  sx={{marginTop:{xs:"40px", md:'0px'} ,maxWidth: 250 , marginLeft:{xs:'80px', md:'0px'},backgroundColor:'#FFF8E1'}}>
+       <Card key={w.id}  sx={{marginTop:{xs:"40px", md:'30px'} ,maxWidth: 250 , marginLeft:{xs:'80px', md:'0px'},backgroundColor:'#F8F7F5'}}>
        <CardMedia
         sx={{ height:{xs: 250, md: 250 }, width:{xs: 250, md: 250}}}
         image={w.img}

@@ -93,7 +93,7 @@ const Menu = ({ Mybutton }) => {
                  <Box sx={{display:'flex', flexDirection:{xs:'column', md:'row'}, gap:'10px', marginTop:{xs:'0px',md:'50px'},paddingBottom:"6%"}}>
                      {prod.map((p)=>(
                     
-                <Card key={p.id} sx={{ maxWidth: 345 , paddingY:'3%', paddingX:{xs:'3%',md:"1.5%",xl:'3%'}, marginLeft:{xs:'50px', md:'0px'},backgroundColor:'#FFF8E1'}}>
+                <Card key={p.id} sx={{ maxWidth: 345 , paddingY:'3%', paddingX:{xs:'3%',md:"1.5%",xl:'3%'}, marginLeft:{xs:'50px', md:'0px'},backgroundColor:'#F8F7F5'}}>
                <CardMedia
                  sx={{ height: 140, width: 140, borderRadius:'50%' ,marginLeft:{xs:'80px', md:"0px"}}}
                  image={p.img}
@@ -106,7 +106,7 @@ const Menu = ({ Mybutton }) => {
                   
                </CardContent>
                <CardActions>
-                 <Mybutton variant='outlined' sx={{ml:{sm:'20%' ,xs:'25%', md:'10%',xl:'10%'}}}>View</Mybutton>
+                 <Mybutton variant='outlined' sx={{ml:{sm:'20%' ,xs:'25%', md:'1px',xl:'10%'}}}>View</Mybutton>
                  
                </CardActions>
              </Card>
