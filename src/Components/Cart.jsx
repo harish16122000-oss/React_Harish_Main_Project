@@ -6,15 +6,17 @@ import CardMedia from '@mui/material/CardMedia';
  import { addItem, removeItem, increaseQty, decreaseQty, clearCart } from '../Counterslice'
 import Typography from '@mui/material/Typography';
 import { CiHeart } from "react-icons/ci";
- 
+ import { Box } from '@mui/material';
 import { useSelector } from 'react-redux';
- 
-
+ import { IoIosAddCircle } from "react-icons/io";
+import { useDispatch } from 'react-redux';
 
 const Cart = ({Mybutton}) => {
+  const dispatch =useDispatch()
     const  product= useSelector((state)=>state.cart.items);
   return (
     <div>
+      <Box sx={{marginTop:{xs:"40px", md:"70px"}}}>
         {product.map((p)=>(
        <Card key={p.id}  sx={{marginTop:{xs:"40px", md:'20px', lg:"0px"} ,maxWidth: 250 , marginLeft:{xs:'80px', md:'0px'},backgroundColor:'#f5e8cd'}}>
        <CardMedia
@@ -27,15 +29,17 @@ const Cart = ({Mybutton}) => {
         {p.Name}
         </Typography>
          
-    <Typography sx={{marginTop:'20px', marginLeft:'1px'}}> <span style={{textDecoration:"line-through",color:'#584f4f'}}> {p.discount}.00</span> <span style={{marginLeft:'5px',fontSize:'19px', fontWeight: 800,}}>{p.price}.00</span><span style={{border:'1px solid ', padding:'2px',marginLeft:'10px', color:'#584f4f', fontSize:'13px'}}>{p.offer}</span></Typography>
+    <Typography sx={{marginTop:'20px', marginLeft:'1px'}}> <span style={{textDecoration:"line-through", color:'#584f4f'}}> {p.discount}.00</span> <span style={{marginLeft:'5px',fontSize:'19px', fontWeight: 800,}}>{p.price}.00</span><span style={{border:'1px solid ', padding:'2px', marginLeft:'10px', color:'#584f4f', fontSize:'13px'}}>{p.offer}</span></Typography>
          
       </CardContent>
       <CardActions>
+        <IoIosAddCircle onClick={()=> dispatch(increaseQty(p.id))} />
         <Mybutton variant='outlined' sx={{marginLeft:'40px'}}>Buy Now</Mybutton>
         <CiHeart  style={{fontSize:'32px', border:" 1px solid", padding:'3px'}}/>
       </CardActions>
     </Card>
     ))}
+    </Box>
     </div>
   )
 }

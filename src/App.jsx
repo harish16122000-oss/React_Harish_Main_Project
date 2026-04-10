@@ -3,9 +3,9 @@ import Naver from './Components/Naver'
 import { Button, CssBaseline, ThemeProvider } from '@mui/material'
 import theme from './Theme'
 
-import Login from './Components/Login';
+import Login from './Pages/Login';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Login1 from './Components/Login1';
+import Login1 from './Pages/Login1';
  
 import { styled } from '@mui/material/styles';
 import Menu from './Components/Menu';

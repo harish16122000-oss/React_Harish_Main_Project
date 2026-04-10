@@ -41,7 +41,7 @@ const Menu = ({ Mybutton }) => {
        paddingTop:{xs: "15%",md:'0'},
         paddingX: '1%',
         backgroundPosition: { xs: "10%" },
-        marginLeft: {xs:"10%", md:'3%'}
+        paddingLeft: {xs:"10%", md:'3%'}
 
       }}>
         <Typography variant='h1' sx={{ color: '#66BB6A', fontWeight: 800, fontSize: { xs: '35px', sm: '50px', md: '80px' }, display: 'inline', marginLeft: '1%' }} >

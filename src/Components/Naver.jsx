@@ -85,7 +85,11 @@ const Location = useLocation();
     setAnchorEl(null);
   };
 
-  const menuItems = ['Home', 'About', 'Products', 'Cart', 'Contact', 'Register'];
+  const menuItems = [
+    {name:"Categories", to:"/wheat"},
+    {name:"Cart", to:"/cart"},
+    {name:"Login", to:"/log/log1"}
+  ];
 
   return (
     <>
@@ -117,7 +121,8 @@ const Location = useLocation();
           {!isMobile && (
             <>
             {menuItems.map((menu, index)=>(
-               <Box key={index}  sx={linkStyle}>{menu}</Box>
+               <Box key={index}  sx={linkStyle}><Link sx={linkStyle} to={menu.to}>{menu.name} </Link> </Box>
+                
             ))}
               
               
@@ -140,12 +145,12 @@ const Location = useLocation();
 )}
       
       <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
-        {menuItems.map((item) => (
+        {menuItems.map((menu, item) => (
           <MenuItem key={item} onClick={handleClose} >
-            {item }
+           <Link sx={linkStyle} to={menu.to}>{menu.name} </Link>
           </MenuItem>
         ))}
-        <MenuItem onClick={handleClose}>Login</MenuItem>
+        <MenuItem onClick={handleClose}></MenuItem>
       </Menu>
     </>
   );
