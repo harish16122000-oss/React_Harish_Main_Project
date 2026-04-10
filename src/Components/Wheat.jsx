@@ -7,14 +7,16 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Box } from '@mui/material';
 
-
-
 import Rating from '@mui/material/Rating';
 import StarIcon from '@mui/icons-material/Star';
 
 import { CiHeart } from "react-icons/ci";
 import axios from 'axios';
 import Skeleton from '@mui/material/Skeleton';
+import { addItem } from '../Counterslice';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+
  
 
 const labels = {
@@ -34,6 +36,8 @@ function getLabelText(value) {
 }
 
 const Wheat = ({Mybutton}) => {
+  const navigate= useNavigate()
+  const dispatch =useDispatch()
     const[wheat, setWheat]= useState([]);
     const [loading, setLoading]= useState(true);
 
@@ -55,35 +59,37 @@ try{
   const [hover, setHover] = React.useState(-1);
 
     if(loading) return <Box sx={{ width: 300, display:{xs:"grid", md:'flex'},  justifyContent:"space-evenly", alignItems:'center', marginTop:{xs:"30px", md:"200px"} }}>
-       <Box sx={{marginLeft:"50px"}}>
+
+
+       <Box sx={{marginLeft:{md:"50px", lg:"80px"}}}>
        <Skeleton variant="rectangular" width={210} height={118}  />
        <Skeleton />
        <Skeleton width="80%" />
        <Skeleton width="50%" />
        
        </Box>
-       <Box sx={{marginLeft:"50px"}}>
+       <Box sx={{marginLeft:{md:"50px", lg:"80px"}}}>
        <Skeleton variant="rectangular" width={210} height={118}  />
        <Skeleton />
        <Skeleton width="80%" />
        <Skeleton width="50%" />
        
        </Box>
-       <Box sx={{marginLeft:"50px"}}>
+       <Box sx={{marginLeft:{md:"50px", lg:"80px"}}}>
        <Skeleton variant="rectangular" width={210} height={118}  />
        <Skeleton />
        <Skeleton width="80%" />
        <Skeleton width="50%" />
        
        </Box>
-       <Box sx={{marginLeft:"50px"}}>
+       <Box sx={{marginLeft:{md:"50px", lg:"80px"}}}>
        <Skeleton variant="rectangular" width={210} height={118}  />
        <Skeleton />
        <Skeleton width="80%" />
        <Skeleton width="50%" />
        
        </Box>
-       <Box sx={{marginLeft:"50px"}}>
+       <Box sx={{marginLeft:{md:"50px", lg:"80px"}}}>
        <Skeleton variant="rectangular" width={210} height={118}  />
        <Skeleton />
        <Skeleton width="80%" />
@@ -100,7 +106,7 @@ try{
         <Box sx={{display:'flex', flexDirection:{xs:'column', md:'row'}, gap:'10px', justifyContent:'space-evenly',  marginTop:{xs:'10px',xl:'50px'}}}>
              
            {wheat.map((w)=>(
-       <Card key={w.id}  sx={{marginTop:{xs:"40px", md:'30px'} ,maxWidth: 250 , marginLeft:{xs:'80px', md:'0px'},backgroundColor:'#F8F7F5'}}>
+       <Card key={w.id}  sx={{marginTop:{xs:"40px", md:'20px', lg:"0px"} ,maxWidth: 250 , marginLeft:{xs:'80px', md:'0px'},backgroundColor:'#f5e8cd'}}>
        <CardMedia
         sx={{ height:{xs: 250, md: 250 }, width:{xs: 250, md: 250}}}
         image={w.img}
@@ -133,7 +139,7 @@ try{
          
       </CardContent>
       <CardActions>
-        <Mybutton variant='outlined' sx={{marginLeft:'40px'}}>Add to cart</Mybutton>
+        <Mybutton variant='outlined' sx={{marginLeft:'40px'}} onClick={() =>(dispatch(addItem(w)),navigate("/cart"))}>Add to cart</Mybutton>
         <CiHeart  style={{fontSize:'32px', border:" 1px solid", padding:'3px'}}/>
       </CardActions>
     </Card>

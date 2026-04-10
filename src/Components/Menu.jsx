@@ -41,7 +41,7 @@ const Menu = ({ Mybutton }) => {
        paddingTop:{xs: "15%",md:'0'},
         paddingX: '1%',
         backgroundPosition: { xs: "10%" },
-        marginLeft: {xs:"15%", md:'3%'}
+        marginLeft: {xs:"10%", md:'3%'}
 
       }}>
         <Typography variant='h1' sx={{ color: '#66BB6A', fontWeight: 800, fontSize: { xs: '35px', sm: '50px', md: '80px' }, display: 'inline', marginLeft: '1%' }} >
@@ -59,14 +59,14 @@ const Menu = ({ Mybutton }) => {
           Lingam's Organic
         </Typography>
         <Box sx={{marginTop:{xs:'30px', md:"50px"}}}>
-        <Mybutton variant='outlined' fontSize={{ sx: '15px', marginTop: { xs: '40px', md: '15px',lg:'70px' }, paddingY: { xs: '25px', md: '25px', marginLeft: '1%' } }}>
+        <Mybutton variant='outlined' fontSize={{ sx: '15px', marginTop: { xs: '40px', md: '15px',lg:'70px' }, paddingY: { xs: '25px', md: '25px', marginLeft: '1%' }, }}>
           Start Shopping
         </Mybutton>
-        <Button variant='contained' sx={{ fontSize: '15px', marginTop: { xs: '0px', md: '0%',lg:'0px' }, paddingY: '12px', marginLeft: '35px', backgroundColor: '#1B1B1B' }}>
+        <Button variant='contained' sx={{ fontSize: '15px', marginTop: { xs: '0px', md: '0%',lg:'0px' }, paddingY: '12px', marginLeft: '35px', backgroundColor: '#1B1B1B' ,  }}>
           Join Now
         </Button>
 </Box>
-        <Box sx={{ marginLeft: '1%', marginTop: { xs: '30px', md: '1%', xl:'3%' }, display: 'flex', flexDirection: 'row', gap: 2 }}>
+        <Box sx={{marginLeft:'1%', marginTop: { xs: '30px', md: '1%', xl:'3%' }, display: 'flex', flexDirection: 'row', gap: 2 }}>
           <Box sx={{ display: 'flex', flexDirection: 'column' }}>
             <Box sx={{ fontWeight: 700, fontSize: { xs: '25px', md: '48px' } }}>
               15K
@@ -74,13 +74,13 @@ const Menu = ({ Mybutton }) => {
             <Box sx={{ fontSize: { sx: '13px', md: '20px' } }}>Product <br />  Varities</Box>
           </Box>
           <Box sx={{ display: 'flex', flexDirection: 'column' , marginLeft:'30px'}}>
-            <Box sx={{ fontWeight: 700, fontSize: { xs: '25px', md: '48px' }, marginLeft: { xs: '1px', md: '10px' }, }}>
+            <Box sx={{ fontWeight: 700, fontSize: { xs: '25px', md: '48px' }, marginLeft: { xs: '1px', md: '0px' }, }}>
               50K
             </Box>
             <Box sx={{ fontSize: { sx: '13px', md: '20px' }, }}>Happy <br /> Customers</Box>
           </Box>
          <Box sx={{ display: 'flex', flexDirection: 'column' , marginLeft:'30px'}}>
-          <Box sx={{ fontWeight: 700, fontSize: { xs: '25px', md: '48px' }, marginLeft: { xs: '1px', md: '10px' } }}>
+          <Box sx={{ fontWeight: 700, fontSize: { xs: '25px', md: '48px' }, marginLeft: { xs: '1px', md: '0px' } }}>
             10+
           </Box>
           <Box sx={{ fontSize: { sx: '13px', md: '20px' } }}>Store <br /> Locations</Box>
@@ -89,11 +89,11 @@ const Menu = ({ Mybutton }) => {
          </Box>
          <Box>
                   
-                  <Typography variant='h2'sx={{textAlign:'center', marginTop:'50px', color:'#2E7D32', fontWeight:600, fontSize: { xs: '35px', sm: '50px', md: '60px',  }}}>Categories</Typography>
+                  <Typography variant='h2'sx={{textAlign:'center', marginTop:'50px', color:'#2E7D32', fontWeight:600, fontSize: { xs: '35px', sm: '50px', md: '60px',  }, marginBottom:{xs:"40px", md:'0px'}}}>Categories</Typography>
                  <Box sx={{display:'flex', flexDirection:{xs:'column', md:'row'}, gap:'10px', marginTop:{xs:'0px',md:'50px'},paddingBottom:"6%"}}>
                      {prod.map((p)=>(
                     
-                <Card key={p.id} sx={{ maxWidth: 345 , paddingY:'3%', paddingX:{xs:'3%',md:"1.5%",xl:'3%'}, marginLeft:{xs:'50px', md:'0px'},backgroundColor:'#F8F7F5'}}>
+                <Card key={p.id} sx={{ maxWidth: 345 , paddingY:'3%', paddingX:{xs:'3%',md:"1.5%",xl:'3%'}, marginLeft:{xs:'50px', md:'0px'},backgroundColor:'#f5e8cd', marginBottom:{xs:"20px", md:"0px"}}}>
                <CardMedia
                  sx={{ height: 140, width: 140, borderRadius:'50%' ,marginLeft:{xs:'80px', md:"0px"}}}
                  image={p.img}

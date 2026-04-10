@@ -18,7 +18,8 @@ import {
   MenuItem,
   
   useMediaQuery,
-  useTheme
+  useTheme,
+  Divider
   
 } from '@mui/material';
  
@@ -104,6 +105,8 @@ const Location = useLocation();
             </IconButton>
              
       <Drawer open={opens} onClose={toggleDrawer(false)}>
+       <Typography variant='h6' sx={{color:"#2E7D32", marginLeft:'50px'}}>Categories</Typography>
+        <Divider/>
         {DrawerList}
       </Drawer>
           </Box>
