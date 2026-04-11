@@ -8,10 +8,11 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login1 from './Pages/Login1';
  
 import { styled } from '@mui/material/styles';
-import Menu from './Components/Menu';
+import Menu from './Pages/Menu';
  
-import Wheat from './Components/Wheat';
+
 import Cart from './Components/Cart';
+import Mainer from './Pages/Mainer';
 
 const Mybutton = styled(Button)({
   backgroundColor: "#2E7D32",
@@ -42,7 +43,7 @@ const App = () => {
             <Route path='/log' element={<Login Mybutton={Mybutton}/>} />
             <Route path='/log/log1' element={<Login1 Mybutton={Mybutton}/>} />
              
-            <Route path='/wheat' element={<Wheat Mybutton={Mybutton}/>} />
+            <Route path='/cat' element={<Mainer Mybutton={Mybutton}/>} />
             <Route path='/cart' element={<Cart Mybutton={Mybutton}/>} />
             
 

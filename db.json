@@ -49,6 +49,53 @@
       "offer":"47% OFF"
 
     }
+  ],
+  "rice": [
+    {
+      "id": 1,
+       "img": "./rice flour.png",
+      "Name": "Rice Flour",
+      "discount":"₹299",
+      "price":"₹250",
+      "offer":"17% OFF"
+
+    },
+    {
+      "id": 2,
+       "img": " ./flatted rice.jpeg",
+      "Name": "Faltted Rice",
+      "discount":"₹199",
+      "price":"₹150",
+      "offer":"25% OFF"
+
+    },
+    {
+      "id": 3,
+       "img": "./puffed rice.jpg",
+      "Name": "Puffed Rice ",
+      "discount":"₹278",
+      "price":"₹233",
+      "offer":"16% OFF"
+
+    },
+    {
+      "id": 4,
+       "img": "./rice noodles.jpg",
+      "Name": "Rice Noodles",
+      "discount":"₹199",
+      "price":"₹140",
+      "offer":"30% OFF"
+
+    },
+    {
+      "id": 5,
+       "img": "./rice batter.jpg",
+      "Name": "Rice Batter",
+      "discount":"₹129",
+      "price":"₹90",
+      "offer":"47% OFF"
+
+    }
   ]
 }
 

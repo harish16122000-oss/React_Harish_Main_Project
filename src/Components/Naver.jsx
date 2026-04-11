@@ -87,7 +87,7 @@ const Location = useLocation();
 
   const menuItems = [
     {name:"Menu", to:"/"},
-    {name:"Categories", to:"/wheat"},
+    {name:"Categories", to:"/cat"},
     {name:"Cart", to:"/cart"},
     {name:"Login", to:"/log/log1"}
   ];

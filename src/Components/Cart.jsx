@@ -18,7 +18,7 @@ const Cart = ({Mybutton}) => {
     const  product= useSelector((state)=>state.cart.items);
   return (
     <div>
-      <Box sx={{marginTop:{xs:"0px", md:"70px"}, display:{xs:"grid", md:"flex"}, gap:'20px'}}>
+      <Box sx={{marginTop:{xs:"0px", md:"30px"}, display:{xs:"grid", md:"flex"}, gap:'20px'}}>
         {product.map((p)=>(
        <Card key={p.id}  sx={{marginTop:{xs:"40px", md:'20px', lg:"0px"} ,maxWidth: 250 , marginLeft:{xs:'80px', md:'0px'},backgroundColor:'#f5e8cd'}}>
          
@@ -35,12 +35,14 @@ const Cart = ({Mybutton}) => {
         </Typography>
          
     <Typography sx={{marginTop:'20px', marginLeft:'1px'}}> <span style={{textDecoration:"line-through", color:'#584f4f'}}> {p.discount}.00</span> <span style={{marginLeft:'5px',fontSize:'19px', fontWeight: 800,}}>{p.price}.00</span><span style={{border:'1px solid ', padding:'2px', marginLeft:'10px', color:'#584f4f', fontSize:'13px'}}>{p.offer}</span></Typography>
-         
+    <Box sx={{display:"flex", justifyContent:"space-evenly", marginTop:"15px"}}>
+          <IoIosAddCircle style={{color:"#2a14ec", fontSize:'30px', backgroundColor:'white'}} onClick={()=> dispatch(increaseQty(p.id))} /> <span style={{fontSize:"30px", fontWeight:800}}>{p.quantity}</span>
+            <FaCircleMinus onClick={()=> dispatch(decreaseQty(p.id))}  style={{fontSize:'32px',  padding:'3px'}}/></Box>
       </CardContent>
       <CardActions>
-        <IoIosAddCircle style={{color:"#2a14ec", fontSize:'30px', backgroundColor:'white'}} onClick={()=> dispatch(increaseQty(p.id))} />
+       
         <Mybutton variant='outlined' sx={{marginLeft:'40px'}}>Buy Now</Mybutton>
-        <FaCircleMinus onClick={()=> dispatch(decreaseQty(p.id))}  style={{fontSize:'32px',  padding:'3px'}}/>
+        
           <MdDelete onClick={()=> dispatch(removeItem(p.id))} style={{
           
           color:"red", fontSize:'30px', backgroundColor:'#f5e8cd' }}/>
