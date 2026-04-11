@@ -58,6 +58,7 @@ try{
      const [value, setValue] = React.useState(2);
   const [hover, setHover] = React.useState(-1);
 
+                     /* Loading */
     if(loading) return <Box sx={{ width: 300, display:{xs:"grid", md:'flex'},  justifyContent:"space-evenly", alignItems:'center', marginTop:{xs:"30px", md:"200px"} }}>
 
 
@@ -100,11 +101,14 @@ try{
 
     
   return (
+
     <div>
-    
+                                     {/* Wheat */}
+
          <Typography variant='h2'sx={{textAlign:'center', marginTop:'50px', color:'#2E7D32', fontWeight:600}}>Wheat Products</Typography>
         <Box sx={{display:'flex', flexDirection:{xs:'column', md:'row'}, gap:'10px', justifyContent:'space-evenly',  marginTop:{xs:'10px',xl:'50px'}}}>
-             
+
+               {/* Mapmethod */}
            {wheat.map((w)=>(
        <Card key={w.id}  sx={{marginTop:{xs:"40px", md:'20px', lg:"0px"} ,maxWidth: 250 , marginLeft:{xs:'80px', md:'0px'},backgroundColor:'#f5e8cd'}}>
        <CardMedia
@@ -119,21 +123,9 @@ try{
          <Box sx={{ width: 200, display:'flex', alignItems: 'center', }}>
       <Rating
       sx={{marginLeft:'50px'}}
-        name="hover-feedback"
-        value={value}
-        precision={0.5}
-        getLabelText={getLabelText}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-        }}
-        onChangeActive={(event, newHover) => {
-          setHover(newHover);
-        }}
         emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
       />
-      {value !== null && (
-        <Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
-      )}
+      
     </Box>
     <Typography sx={{marginTop:'20px', marginLeft:'1px'}}> <span style={{textDecoration:"line-through",color:'#584f4f'}}> {w.discount}.00</span> <span style={{marginLeft:'5px',fontSize:'19px', fontWeight: 800,}}>{w.price}.00</span><span style={{border:'1px solid ', padding:'2px',marginLeft:'10px', color:'#584f4f', fontSize:'13px'}}>{w.offer}</span></Typography>
          

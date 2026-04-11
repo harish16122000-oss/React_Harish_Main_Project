@@ -86,6 +86,7 @@ const Location = useLocation();
   };
 
   const menuItems = [
+    {name:"Menu", to:"/"},
     {name:"Categories", to:"/wheat"},
     {name:"Cart", to:"/cart"},
     {name:"Login", to:"/log/log1"}
@@ -93,6 +94,7 @@ const Location = useLocation();
 
   return (
     <>
+                    {/* Location */}
     {Location.pathname !== '/log' && Location.pathname !=='/log/log1' &&(
       <AppBar position="static" color="primary">
         <Toolbar>
@@ -107,7 +109,9 @@ const Location = useLocation();
              <IconButton onClick={toggleDrawer(true)} color="inherit">
               <MenuIcon></MenuIcon>
             </IconButton>
-             
+
+            {/* LeftDrawer */}
+
       <Drawer open={opens} onClose={toggleDrawer(false)}>
        <Typography variant='h6' sx={{color:"#2E7D32", marginLeft:'50px'}}>Categories</Typography>
         <Divider/>
@@ -117,11 +121,12 @@ const Location = useLocation();
 
           <Box sx={{ flexGrow: 1 }} />
 
+        {/* Desktop */}
          
           {!isMobile && (
             <>
             {menuItems.map((menu, index)=>(
-               <Box key={index}  sx={linkStyle}><Link sx={linkStyle} to={menu.to}>{menu.name} </Link> </Box>
+               <Box key={index}  sx={linkStyle}><Link style={{textDecoration:"none", color:'white'}} to={menu.to}>{menu.name} </Link> </Box>
                 
             ))}
               
@@ -132,6 +137,8 @@ const Location = useLocation();
              </>
           )}
 
+
+      {/* Mobile */}
          
          {isMobile && (
   
@@ -147,7 +154,7 @@ const Location = useLocation();
       <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
         {menuItems.map((menu, item) => (
           <MenuItem key={item} onClick={handleClose} >
-           <Link sx={linkStyle} to={menu.to}>{menu.name} </Link>
+           <Link style={{textDecoration:'none', color:'black'}} to={menu.to}>{menu.name} </Link>
           </MenuItem>
         ))}
         <MenuItem onClick={handleClose}></MenuItem>
@@ -156,6 +163,7 @@ const Location = useLocation();
   );
 };
 
+      /* Style */
 const linkStyle = {
   textDecoration: 'none',
   mr: "60px",

@@ -5,10 +5,12 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
  import { addItem, removeItem, increaseQty, decreaseQty, clearCart } from '../Counterslice'
 import Typography from '@mui/material/Typography';
-import { CiHeart } from "react-icons/ci";
+
  import { Box } from '@mui/material';
 import { useSelector } from 'react-redux';
  import { IoIosAddCircle } from "react-icons/io";
+ import { FaCircleMinus } from "react-icons/fa6";
+ import { MdDelete } from "react-icons/md";
 import { useDispatch } from 'react-redux';
 
 const Cart = ({Mybutton}) => {
@@ -16,14 +18,17 @@ const Cart = ({Mybutton}) => {
     const  product= useSelector((state)=>state.cart.items);
   return (
     <div>
-      <Box sx={{marginTop:{xs:"40px", md:"70px"}}}>
+      <Box sx={{marginTop:{xs:"0px", md:"70px"}, display:{xs:"grid", md:"flex"}, gap:'20px'}}>
         {product.map((p)=>(
        <Card key={p.id}  sx={{marginTop:{xs:"40px", md:'20px', lg:"0px"} ,maxWidth: 250 , marginLeft:{xs:'80px', md:'0px'},backgroundColor:'#f5e8cd'}}>
+         
        <CardMedia
         sx={{ height:{xs: 250, md: 250 }, width:{xs: 250, md: 250}}}
         image={p.img}
         title={p.Name}
+
       />
+     
       <CardContent>
         <Typography gutterBottom variant="h5" component="div" sx={{textAlign:'center', color: "#2E7D32", fontWeight:700}}>
         {p.Name}
@@ -33,9 +38,12 @@ const Cart = ({Mybutton}) => {
          
       </CardContent>
       <CardActions>
-        <IoIosAddCircle onClick={()=> dispatch(increaseQty(p.id))} />
+        <IoIosAddCircle style={{color:"#2a14ec", fontSize:'30px', backgroundColor:'white'}} onClick={()=> dispatch(increaseQty(p.id))} />
         <Mybutton variant='outlined' sx={{marginLeft:'40px'}}>Buy Now</Mybutton>
-        <CiHeart  style={{fontSize:'32px', border:" 1px solid", padding:'3px'}}/>
+        <FaCircleMinus onClick={()=> dispatch(decreaseQty(p.id))}  style={{fontSize:'32px',  padding:'3px'}}/>
+          <MdDelete onClick={()=> dispatch(removeItem(p.id))} style={{
+          
+          color:"red", fontSize:'30px', backgroundColor:'#f5e8cd' }}/>
       </CardActions>
     </Card>
     ))}

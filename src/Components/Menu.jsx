@@ -27,8 +27,10 @@ const Menu = ({ Mybutton }) => {
           {id:7 , img:rice1, head:'Rice',  },
       ]
   return (
-    <div>
+    <div> 
+                       {/* Mainpage */}
 
+                     {/* Backgroundimage */}
 
       <Box sx={{
         backgroundImage: `url(${ban})`,
@@ -88,7 +90,9 @@ const Menu = ({ Mybutton }) => {
         </Box>
          </Box>
          <Box>
-                  
+
+                       {/* Categories */}
+                       
                   <Typography variant='h2'sx={{textAlign:'center', marginTop:'50px', color:'#2E7D32', fontWeight:600, fontSize: { xs: '35px', sm: '50px', md: '60px',  }, marginBottom:{xs:"40px", md:'0px'}}}>Categories</Typography>
                  <Box sx={{display:'flex', flexDirection:{xs:'column', md:'row'}, gap:'10px', marginTop:{xs:'0px',md:'50px'},paddingBottom:"6%"}}>
                      {prod.map((p)=>(
