@@ -55,17 +55,17 @@
       "id": 1,
        "img": "./rice flour.png",
       "Name": "Rice Flour",
-      "discount":"₹299",
-      "price":"₹250",
-      "offer":"17% OFF"
+      "discount":"₹109",
+      "price":"₹80",
+      "offer":"15% OFF"
 
     },
     {
       "id": 2,
        "img": " ./flatted rice.jpeg",
       "Name": "Faltted Rice",
-      "discount":"₹199",
-      "price":"₹150",
+      "discount":"₹59",
+      "price":"₹50",
       "offer":"25% OFF"
 
     },
@@ -73,8 +73,8 @@
       "id": 3,
        "img": "./puffed rice.jpg",
       "Name": "Puffed Rice ",
-      "discount":"₹278",
-      "price":"₹233",
+      "discount":"₹78",
+      "price":"₹63",
       "offer":"16% OFF"
 
     },
@@ -82,8 +82,8 @@
       "id": 4,
        "img": "./rice noodles.jpg",
       "Name": "Rice Noodles",
-      "discount":"₹199",
-      "price":"₹140",
+      "discount":"₹127",
+      "price":"₹110",
       "offer":"30% OFF"
 
     },
@@ -91,8 +91,55 @@
       "id": 5,
        "img": "./rice batter.jpg",
       "Name": "Rice Batter",
-      "discount":"₹129",
-      "price":"₹90",
+      "discount":"₹52",
+      "price":"₹45",
+      "offer":"47% OFF"
+
+    }
+  ],
+  "millet": [
+    {
+      "id": 1,
+       "img": "./millet atta.webp",
+      "Name": "Millet Atta",
+      "discount":"₹60",
+      "price":"₹50",
+      "offer":"17% OFF"
+
+    },
+    {
+      "id": 2,
+       "img": "./millet khichdi.webp",
+      "Name": "Millet Kichdi",
+      "discount":"₹77",
+      "price":"₹57",
+      "offer":"25% OFF"
+
+    },
+    {
+      "id": 3,
+       "img": "./millet ladoos.webp",
+      "Name": "Millet Laddos",
+      "discount":"₹138",
+      "price":"₹123",
+      "offer":"16% OFF"
+
+    },
+    {
+      "id": 4,
+       "img": "./millet noodle.webp",
+      "Name": "Millet Noodles",
+      "discount":"₹122",
+      "price":"₹110",
+      "offer":"30% OFF"
+
+    },
+    {
+      "id": 5,
+       "img": "./millet powder.webp",
+      "Name": "Millet Powder",
+      "discount":"₹121",
+      "price":"₹120",
       "offer":"47% OFF"
 
     }
