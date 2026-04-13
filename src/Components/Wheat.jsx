@@ -105,7 +105,7 @@ try{
     <div>
                                      {/* Wheat */}
 
-         <Typography variant='h2'sx={{textAlign:'center', marginTop:'50px', color:'#2E7D32', fontWeight:600}}>Wheat Products</Typography>
+         <Typography variant='h2'sx={{textAlign:'center', paddingTop:'50px', color:'#2E7D32', fontWeight:600}}>Wheat Products</Typography>
         <Box sx={{display:'flex', flexDirection:{xs:'column', md:'row'}, gap:'10px', justifyContent:'space-evenly',  marginTop:{xs:'10px',xl:'50px'}}}>
 
                {/* Mapmethod */}

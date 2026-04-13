@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {useLocation} from 'react-router-dom';
+import {useLocation, useNavigate} from 'react-router-dom';
 
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
@@ -36,6 +36,7 @@ import  milk from  '../assets/milk.png'
 import drink from '../assets/drink.PNG'
 
 const Naver = () => {
+  const navigate= useNavigate()
 
 const Location = useLocation();
   const [opens, setOpens] = React.useState(false);
@@ -59,7 +60,7 @@ const Location = useLocation();
        {draw.map((dra, index)=>(
         <ListItem key={index}>
           <img src= {dra.icon} alt="" />
-          <ListItemText sx={{ml:"30px", mt:"15px"}}>{dra.title}</ListItemText>
+          <ListItemText sx={{ml:"30px", mt:"15px"}} onClick={()=>navigate("/cat")}>{dra.title}</ListItemText>
 
         </ListItem>
        ))}
@@ -89,7 +90,8 @@ const Location = useLocation();
     {name:"Menu", to:"/"},
     {name:"Categories", to:"/cat"},
     {name:"Cart", to:"/cart"},
-    {name:"Login", to:"/log/log1"}
+    {name:"Register", to:"/log"},
+    
   ];
 
   return (
@@ -129,9 +131,9 @@ const Location = useLocation();
                <Box key={index}  sx={linkStyle}><Link style={{textDecoration:"none", color:'white'}} to={menu.to}>{menu.name} </Link> </Box>
                 
             ))}
+            
               
-              
-              <Link to="/log"><Button color="secondary" variant="contained">
+              <Link to="/log/log1"><Button color="secondary" variant="contained">
                 Login
               </Button></Link>
              </>

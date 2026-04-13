@@ -5,7 +5,7 @@ import Millet from '../Components/Millet'
 
 const Mainer = ({Mybutton}) => {
   return (
-    <div>
+    <div style={{backgroundColor:"#f5f5ec"}}>
      <Wheat Mybutton={Mybutton}/>
      <Millet Mybutton={Mybutton}/>
      <Rice Mybutton={Mybutton}/>   

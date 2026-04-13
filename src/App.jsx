@@ -13,6 +13,7 @@ import Menu from './Pages/Menu';
 
 import Cart from './Components/Cart';
 import Mainer from './Pages/Mainer';
+import Wheat from './Components/Wheat';
 
 const Mybutton = styled(Button)({
   backgroundColor: "#2E7D32",
@@ -45,6 +46,7 @@ const App = () => {
              
             <Route path='/cat' element={<Mainer Mybutton={Mybutton}/>} />
             <Route path='/cart' element={<Cart Mybutton={Mybutton}/>} />
+            <Route path='/wheat' element={<Wheat/>} />
             
 
           </Routes>

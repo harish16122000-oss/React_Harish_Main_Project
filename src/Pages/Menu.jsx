@@ -14,13 +14,16 @@ import dairy1 from '../assets/dairy1.jpg'
 
 import { Box, Button  } from '@mui/material';
 import ban from '../assets/ban.png';
+import { useNavigate } from 'react-router-dom';
 
 
 const Menu = ({ Mybutton }) => {
+  const navigate= useNavigate(); 
+ 
    const prod= [
-          {id:1 , img: wheat1, head:'Wheat',},
-          {id:2 , img: millet1, head:'Millet',  },
-          {id:3 , img: juice1 , head:'Juice',},
+          {id:1 , img: wheat1, head:'Wheat'},      
+              {id:2 , img: millet1, head:'Millet',  },
+          {id:3 , img: juice1 , head:'Juice', },
           {id:4 , img: dairy1, head:'Dairy ',  },
           {id:5 , img: fruit1, head:'Fruits', },
           {id:6 , img: veg1, head:'Vegetables',  },
@@ -110,7 +113,7 @@ const Menu = ({ Mybutton }) => {
                   
                </CardContent>
                <CardActions>
-                 <Mybutton variant='outlined' sx={{ml:{sm:'20%' ,xs:'25%', md:'1px',xl:'10%'}}}>View</Mybutton>
+                 <Mybutton variant='outlined' onClick={ (()=> navigate("/cat"))}  sx={{ml:{sm:'20%' ,xs:'25%', md:'1px',xl:'10%'}}}>View</Mybutton>
                  
                </CardActions>
              </Card>
