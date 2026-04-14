@@ -50,53 +50,6 @@
 
     }
   ],
-  "rice": [
-    {
-      "id": 1,
-       "img": "./rice flour.png",
-      "Name": "Rice Flour",
-      "discount":"₹109",
-      "price":"₹80",
-      "offer":"15% OFF"
-
-    },
-    {
-      "id": 2,
-       "img": " ./flatted rice.jpeg",
-      "Name": "Faltted Rice",
-      "discount":"₹59",
-      "price":"₹50",
-      "offer":"25% OFF"
-
-    },
-    {
-      "id": 3,
-       "img": "./puffed rice.jpg",
-      "Name": "Puffed Rice ",
-      "discount":"₹78",
-      "price":"₹63",
-      "offer":"16% OFF"
-
-    },
-    {
-      "id": 4,
-       "img": "./rice noodles.jpg",
-      "Name": "Rice Noodles",
-      "discount":"₹127",
-      "price":"₹110",
-      "offer":"30% OFF"
-
-    },
-    {
-      "id": 5,
-       "img": "./rice batter.jpg",
-      "Name": "Rice Batter",
-      "discount":"₹52",
-      "price":"₹45",
-      "offer":"47% OFF"
-
-    }
-  ],
   "millet": [
     {
       "id": 1,
@@ -140,6 +93,242 @@
       "Name": "Millet Powder",
       "discount":"₹121",
       "price":"₹120",
+      "offer":"47% OFF"
+
+    }
+  ],
+  "juice": [
+    {
+      "id": 1,
+       "img": "./grape juice.jpg",
+      "Name": "Grape Juice",
+      "discount":"₹50",
+      "price":"₹40",
+      "offer":"20% OFF"
+
+    },
+    {
+      "id": 2,
+       "img": "./lime juice.jpg",
+      "Name": "Lime Juice",
+      "discount":"₹77",
+      "price":"₹57",
+      "offer":"25% OFF"
+
+    },
+    {
+      "id": 3,
+       "img": "./mosambi juice.jpg",
+      "Name": "Mosambi Juice",
+      "discount":"₹108",
+      "price":"₹100",
+      "offer":"16% OFF"
+
+    },
+    {
+      "id": 4,
+       "img": "./muskmelon juice.jpg",
+      "Name": "Muskmelon Juice",
+      "discount":"₹122",
+      "price":"₹110",
+      "offer":"30% OFF"
+
+    },
+    {
+      "id": 5,
+       "img": "./pomegranate juice.jpg",
+      "Name": "Pomegranate Juice",
+      "discount":"₹121",
+      "price":"₹120",
+      "offer":"47% OFF"
+
+    }
+  ],
+  "Dairy": [
+    {
+      "id": 1,
+       "img": "./dairy butter.jpg",
+      "Name": "Butter",
+      "discount":"₹60",
+      "price":"₹50",
+      "offer":"17% OFF"
+
+    },
+    {
+      "id": 2,
+       "img": "./dairy ghee.webp",
+      "Name": "Ghee",
+      "discount":"₹77",
+      "price":"₹57",
+      "offer":"25% OFF"
+
+    },
+    {
+      "id": 3,
+       "img": "./dairy lassi.jfif",
+      "Name": "lassi",
+      "discount":"₹73",
+      "price":"₹45",
+      "offer":"16% OFF"
+
+    },
+    {
+      "id": 4,
+       "img": "./dairy yogurt.jfif",
+      "Name": "Yogurt",
+      "discount":"₹102",
+      "price":"₹80",
+      "offer":"25% OFF"
+
+    },
+    {
+      "id": 5,
+       "img": "./dairy milk.webp",
+      "Name": "Milk",
+      "discount":"₹101",
+      "price":"₹90",
+      "offer":"17% OFF"
+
+    }
+  ],
+  "Fruits": [
+    {
+      "id": 1,
+       "img": "./fruit apple.jfif",
+      "Name": "Apple",
+      "discount":"₹20",
+      "price":"₹15",
+      "offer":"25% OFF"
+
+    },
+    {
+      "id": 2,
+       "img": "./fruit guava.jpg",
+      "Name": "Guava",
+      "discount":"₹17",
+      "price":"₹10",
+      "offer":"25% OFF"
+
+    },
+    {
+      "id": 3,
+       "img": "./fruit mango.jpg",
+      "Name": "Mango",
+      "discount":"₹48",
+      "price":"₹40",
+      "offer":"16% OFF"
+
+    },
+    {
+      "id": 4,
+       "img": "./fruit orange.jpg",
+      "Name": "Orange",
+      "discount":"₹22",
+      "price":"₹20",
+      "offer":"10% OFF"
+
+    },
+    {
+      "id": 5,
+       "img": "./fruit pineapple.png",
+      "Name": "Pineapple",
+      "discount":"₹21",
+      "price":"₹20",
+      "offer":"47% OFF"
+
+    }
+  ],
+  "Vegetables": [
+    {
+      "id": 1,
+       "img": "./veg bitterguard.jpg",
+      "Name": "Bitterguard",
+      "discount":"₹30",
+      "price":"₹15",
+      "offer":"50% OFF"
+
+    },
+    {
+      "id": 2,
+       "img": "./veg brinjal.jpg",
+      "Name": "Brinjal",
+      "discount":"₹17",
+      "price":"₹10",
+      "offer":"25% OFF"
+
+    },
+    {
+      "id": 3,
+       "img": "./veg carrot.jfif",
+      "Name": "Carrot",
+      "discount":"₹18",
+      "price":"₹15",
+      "offer":"60% OFF"
+
+    },
+    {
+      "id": 4,
+       "img": "./veg cucumber.jpg",
+      "Name": "Cucumber",
+      "discount":"₹20",
+      "price":"₹10",
+      "offer":"50% OFF"
+
+    },
+    {
+      "id": 5,
+       "img": "./veg lady'sfinger.jpg",
+      "Name": "Lady's Finger",
+      "discount":"₹13",
+      "price":"₹11",
+      "offer":"47% OFF"
+
+    }
+  ],
+  
+  "rice": [
+    {
+      "id": 1,
+       "img": "./rice flour.png",
+      "Name": "Rice Flour",
+      "discount":"₹109",
+      "price":"₹80",
+      "offer":"15% OFF"
+
+    },
+    {
+      "id": 2,
+       "img": " ./flatted rice.jpeg",
+      "Name": "Faltted Rice",
+      "discount":"₹59",
+      "price":"₹50",
+      "offer":"25% OFF"
+
+    },
+    {
+      "id": 3,
+       "img": "./puffed rice.jpg",
+      "Name": "Puffed Rice ",
+      "discount":"₹78",
+      "price":"₹63",
+      "offer":"16% OFF"
+
+    },
+    {
+      "id": 4,
+       "img": "./rice noodles.jpg",
+      "Name": "Rice Noodles",
+      "discount":"₹127",
+      "price":"₹110",
+      "offer":"30% OFF"
+
+    },
+    {
+      "id": 5,
+       "img": "./rice batter.jpg",
+      "Name": "Rice Batter",
+      "discount":"₹52",
+      "price":"₹45",
       "offer":"47% OFF"
 
     }

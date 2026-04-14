@@ -35,7 +35,7 @@ function getLabelText(value) {
   return `${value} Star${value !== 1 ? 's' : ''}, ${labels[value]}`;
 }
 
-const Wheat = ({Mybutton}) => {
+const Fruits = ({Mybutton}) => {
   const navigate= useNavigate()
   const dispatch =useDispatch()
     const[wheat, setWheat]= useState([]);
@@ -44,7 +44,7 @@ const Wheat = ({Mybutton}) => {
     const wheats = async()=>{ 
 try{
      
-     const res = await axios.get("http://localhost:5000/wheat");
+     const res = await axios.get("http://localhost:5000/Fruits");
       setWheat(res.data);
    }
      catch(error){
@@ -103,9 +103,9 @@ try{
   return (
 
     <div>
-                                     {/* Wheat */}
+                                     {/* Fruits */}
 
-         <Typography variant='h2'sx={{textAlign:'center', paddingTop:'50px', color:'#2E7D32', fontWeight:600}}>Wheat Products</Typography>
+         <Typography variant='h2'sx={{textAlign:'center', paddingTop:'50px', color:'#2E7D32', fontWeight:600}}>Fruit Products</Typography>
         <Box sx={{display:'flex', flexDirection:{xs:'column', md:'row'}, gap:'10px', justifyContent:'space-evenly',  marginTop:{xs:'10px',xl:'50px'}}}>
 
                {/* Mapmethod */}
@@ -141,4 +141,4 @@ try{
   )
 }
 
-export default Wheat
+export default Fruits
