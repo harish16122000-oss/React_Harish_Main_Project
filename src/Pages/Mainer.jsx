@@ -11,7 +11,7 @@ const Mainer = ({Mybutton}) => {
   return (
     
     <div style={{backgroundColor:"#f5f5ec"}}>
-    <div style={{paddingTop:"30px"}}>
+    <div style={{paddingTop:"30px",}}>
      <Wheat Mybutton={Mybutton} />
      <Millet Mybutton={Mybutton}/>
      <Rice Mybutton={Mybutton}/> 

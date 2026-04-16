@@ -12,7 +12,7 @@ import millet1 from '../assets/millet1.png';
 import juice1 from '../assets/juice1.jpg';
 import dairy1 from '../assets/dairy1.jpg'
 
-import { Box, Button  } from '@mui/material';
+import { Box, Button, Container, Grid  } from '@mui/material';
 import ban from '../assets/ban.png';
 import { useNavigate } from 'react-router-dom';
 
@@ -122,6 +122,23 @@ const Menu = ({ Mybutton }) => {
          
               
              </Box>
+             {/* Best Selling products */}
+             <Container>
+             <Box>
+              <Typography variant='h4' sx={{textAlign:"center"}}> Best Selling Products</Typography>
+              <Grid container columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'50px'},mx:'auto'}}>
+                
+                <Grid  size={{xs:12, sm:6, md:3, lg:3, xl:2}}>
+                
+                <img src={veg1}  style={{ height: 140, width: 140, borderRadius:'50%' ,marginLeft:{xs:'80px', md:"0px"}}} alt="" /> <br />
+               <Typography variant='body' > </Typography>
+              
+                   </Grid>
+
+              </Grid>
+                
+             </Box>
+             </Container>
 
     </div>
   )

@@ -21,7 +21,7 @@ const Cart = ({Mybutton}) => {
       <Grid container columnSpacing={{md:6}} justifyContent="start" sx={{marginTop:{xs:"0px", md:"30px"},mx:"50px"  }}>
         {product.map((p)=>(
           <Grid key={p.id} size={{xs:12, sm:6, md:3, lg:3, xl:3}}>
-       <Card    sx={{marginTop:{xs:"40px", md:'20px', lg:"0px"} ,maxWidth: 250 , marginLeft:{xs:'80px', md:'0px'},backgroundColor:'#f5e8cd', marginBottom:{xs:"0px", md:'30px'}}}>
+       <Card    sx={{marginTop:{xs:"40px", md:'20px', lg:"0px"} ,maxWidth: 250 , marginLeft:{xs:'30px', md:'0px'},backgroundColor:'#f5e8cd', marginBottom:{xs:"0px", md:'30px'}}}>
          
        <CardMedia
         sx={{ height:{xs: 250, md: 250 }, width:{xs: 250, md: 250}}}
