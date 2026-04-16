@@ -6,7 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
  import { addItem, removeItem, increaseQty, decreaseQty, clearCart } from '../Counterslice'
 import Typography from '@mui/material/Typography';
 
- import { Box } from '@mui/material';
+ import { Box, Grid } from '@mui/material';
 import { useSelector } from 'react-redux';
  import { IoIosAddCircle } from "react-icons/io";
  import { FaCircleMinus } from "react-icons/fa6";
@@ -18,9 +18,10 @@ const Cart = ({Mybutton}) => {
     const  product= useSelector((state)=>state.cart.items);
   return (
     <div>
-      <Box sx={{marginTop:{xs:"0px", md:"30px"}, display:{xs:"grid", md:"flex"}, gap:'20px'}}>
+      <Grid container columnSpacing={{md:6}} justifyContent="start" sx={{marginTop:{xs:"0px", md:"30px"},mx:"50px"  }}>
         {product.map((p)=>(
-       <Card key={p.id}  sx={{marginTop:{xs:"40px", md:'20px', lg:"0px"} ,maxWidth: 250 , marginLeft:{xs:'80px', md:'0px'},backgroundColor:'#f5e8cd'}}>
+          <Grid key={p.id} size={{xs:12, sm:6, md:3, lg:3, xl:3}}>
+       <Card    sx={{marginTop:{xs:"40px", md:'20px', lg:"0px"} ,maxWidth: 250 , marginLeft:{xs:'80px', md:'0px'},backgroundColor:'#f5e8cd', marginBottom:{xs:"0px", md:'30px'}}}>
          
        <CardMedia
         sx={{ height:{xs: 250, md: 250 }, width:{xs: 250, md: 250}}}
@@ -48,8 +49,9 @@ const Cart = ({Mybutton}) => {
           color:"red", fontSize:'30px', backgroundColor:'#f5e8cd' }}/>
       </CardActions>
     </Card>
+    </Grid>
     ))}
-    </Box>
+    </Grid>
     </div>
   )
 }

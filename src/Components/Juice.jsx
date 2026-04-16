@@ -5,7 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
  
 import Typography from '@mui/material/Typography';
-import { Box } from '@mui/material';
+import { Box, Container, Grid } from '@mui/material';
 
 import Rating from '@mui/material/Rating';
 import StarIcon from '@mui/icons-material/Star';
@@ -31,9 +31,7 @@ const labels = {
   4.5: ' ',
   5: ' ',
 };
-function getLabelText(value) {
-  return `${value} Star${value !== 1 ? 's' : ''}, ${labels[value]}`;
-}
+
 
 const Juice = ({Mybutton}) => {
   const navigate= useNavigate()
@@ -105,14 +103,17 @@ try{
     <div>
                                      {/* Juice */}
 
-         <Typography variant='h2'sx={{textAlign:'center', paddingTop:'50px', color:'#2E7D32', fontWeight:600}}>Juice Products</Typography>
-        <Box sx={{display:'flex', flexDirection:{xs:'column', md:'row'}, gap:'10px', justifyContent:'space-evenly',  marginTop:{xs:'10px',xl:'50px'}}}>
-
+       <Typography variant='h2'sx={{textAlign:'center', marginTop:'50px', color:'#2E7D32', fontWeight:600, marginBottom:{xs:"0px",md:'40px'}}}>Juice Products</Typography>
+  
+        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'50px'},mx:'auto'}}>
+          
                {/* Mapmethod */}
            {wheat.map((w)=>(
-       <Card key={w.id}  sx={{marginTop:{xs:"40px", md:'40px', lg:"20px"} ,maxWidth: 250 , marginLeft:{xs:'80px', md:'0px'},backgroundColor:'#f5e8cd'}}>
+           
+             <Grid key={w.id} size={{xs:12, sm:6, md:3, lg:3, xl:2}}>
+       <Card   sx={{marginTop:{xs:"40px", md:'20px', lg:"0px"}  , marginLeft:{xs:'80px', md:'0px'},backgroundColor:'#f5e8cd', marginBottom:"30px"}}>
        <CardMedia
-        sx={{ height:{xs: 250, md: 250 }, width:{xs: 250, md: 250}}}
+        sx={{ height:{xs: 250, md: 250 }}}
         image={w.img}
         title={w.Name}
       />
@@ -135,8 +136,12 @@ try{
         <CiHeart  style={{fontSize:'32px', border:" 1px solid", padding:'3px'}}/>
       </CardActions>
     </Card>
+      </Grid>
+      
       ))}
-    </Box>
+   
+    </Grid>
+
     </div>
   )
 }

@@ -9,15 +9,17 @@ import Vegetable from '../Components/Vegetable'
 
 const Mainer = ({Mybutton}) => {
   return (
+    
     <div style={{backgroundColor:"#f5f5ec"}}>
-     <Wheat Mybutton={Mybutton}/>
+    <div style={{paddingTop:"30px"}}>
+     <Wheat Mybutton={Mybutton} />
      <Millet Mybutton={Mybutton}/>
      <Rice Mybutton={Mybutton}/> 
      <Juice Mybutton={Mybutton}/>
      <Dairy Mybutton={Mybutton}/>
      <Fruits Mybutton={Mybutton}/>
      <Vegetable Mybutton={Mybutton}/>
-
+</div>
     </div>
   )
 }
