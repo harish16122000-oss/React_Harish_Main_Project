@@ -10,8 +10,14 @@ import rice1 from '../assets/rice1.png';
 import wheat1 from '../assets/wheat1.jpg';
 import millet1 from '../assets/millet1.png';
 import juice1 from '../assets/juice1.jpg';
-import dairy1 from '../assets/dairy1.jpg'
-
+import dairy1 from '../assets/dairy1.jpg';
+import best1 from '../assets/dairy butter.jpg';
+import best2 from '../assets/fruit apple.jfif';
+import best3 from '../assets/millet ladoos.webp';
+import best4 from '../assets/pomegranate juice.jpg';
+import back1 from '../assets/background-1.jpg';
+import back2 from '../assets/blue_background_2.jpg';
+import back3 from '../assets/background3.jpg'
 import { Box, Button, Container, Grid  } from '@mui/material';
 import ban from '../assets/ban.png';
 import { useNavigate } from 'react-router-dom';
@@ -28,6 +34,13 @@ const Menu = ({ Mybutton }) => {
           {id:5 , img: fruit1, head:'Fruits', },
           {id:6 , img: veg1, head:'Vegetables',  },
           {id:7 , img:rice1, head:'Rice',  },
+      ]
+       
+      const best =[
+             {id:1, img:best1, name:"Butter"},
+             {id:2, img:best2, name:"Apple"},
+             {id:3, img:best3, name:" Ladoos"},
+             {id:4, img:best4, name:"Juice"},
       ]
   return (
     <div> 
@@ -122,23 +135,40 @@ const Menu = ({ Mybutton }) => {
          
               
              </Box>
-             {/* Best Selling products */}
+                                      {/* Best Selling products */}
              <Container>
              <Box>
               <Typography variant='h4' sx={{textAlign:"center"}}> Best Selling Products</Typography>
               <Grid container columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'50px'},mx:'auto'}}>
+                {best.map((e)=>(
+                <Grid key={e.id} size={{xs:12, sm:6, md:3, lg:3, xl:3}}>
                 
-                <Grid  size={{xs:12, sm:6, md:3, lg:3, xl:2}}>
-                
-                <img src={veg1}  style={{ height: 140, width: 140, borderRadius:'50%' ,marginLeft:{xs:'80px', md:"0px"}}} alt="" /> <br />
-               <Typography variant='body' > </Typography>
+                <img src={e.img}  style={{ height: 180, width: 180, borderRadius:'50%' ,marginLeft:{xs:'80px', md:"0px"}, marginTop:{sx:"20px", md:"0px"}}} alt="" /> <br />
+               <Typography   variant='body' sx={{ marginLeft:'65px'}} > {e.name} </Typography>
               
                    </Grid>
-
+               ))}
               </Grid>
                 
              </Box>
              </Container>
+             <Box sx={{display:{xs:"block", lg:'flex'}, marginX:"20px", marginY:{md:"100px"},gap:"20px",justifyContent:"center"}}>
+              <Box sx={{position:"relative", }}>
+                <Box component="img"src={back1}sx={{ height: "100%", width: { xs: "100%", xl: "100%" }}}/>
+                 <Box sx={{position:"absolute", bottom:"55%", left:'5%', color:"white"}}>
+                  <h1> items on Sale</h1>
+                  <p> Discount upto 30%</p>
+                 </Box>
+              </Box>
+              <Box sx={{position:"relative"}}>
+                <Box component="img"src={back3}sx={{ height: "100%", width: { xs: "100%", xl: "100%" }}}/>
+                 <Box sx={{position:"absolute", bottom:"25%", left:'30%', color:"white"}}>
+                  <h1> Combo Offers</h1>
+                  <p> Discount upto 30%</p>
+                 </Box>
+              </Box>
+              
+             </Box>
 
     </div>
   )
