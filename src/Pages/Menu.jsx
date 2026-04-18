@@ -20,6 +20,7 @@ import back2 from '../assets/blue_background_2.jpg';
 import back3 from '../assets/background3.jpg'
 import { Box, Button, Container, Grid  } from '@mui/material';
 import ban from '../assets/ban.png';
+
 import { useNavigate } from 'react-router-dom';
 
 

@@ -26,17 +26,30 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import ListIcon from '@mui/icons-material/List';
 import { Link } from 'react-router-dom';
+ 
 
- import veg from '../assets/veg.png'
-import  fruit from '../assets/frutis.PNG'
-import rice from  '../assets/rice.PNG'
-import wheat from  '../assets/wheat.PNG'
-import  millet from  '../assets/millet.PNG'
-import  milk from  '../assets/milk.png'
-import drink from '../assets/drink.PNG'
+import { FiLogIn } from "react-icons/fi";
+import { RiLogoutCircleLine } from "react-icons/ri";
+
+ import veg from '../assets/veg.png';
+import  fruit from '../assets/frutis.PNG';
+import rice from  '../assets/rice.PNG';
+import wheat from  '../assets/wheat.PNG';
+import  millet from  '../assets/millet.PNG';
+import  milk from  '../assets/milk.png';
+import drink from '../assets/drink.PNG';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
 
 const Naver = () => {
-  const navigate= useNavigate()
+  const navigate= useNavigate();
+  const [anchorE2, setAnchorE2] = React.useState(null);
+    const opened = Boolean(anchorE2);
+    const handleClicked = (event) => {
+      setAnchorE2(event.currentTarget);
+    };
+    const handleClosed = () => {
+      setAnchorE2(null);
+    };
 
 const Location = useLocation();
   const [opens, setOpens] = React.useState(false);
@@ -133,9 +146,30 @@ const Location = useLocation();
             ))}
             
               
-              <Link to="/log/log1"><Button color="secondary" variant="contained">
-                Login
-              </Button></Link>
+              <Button
+        id="basic-button"
+        aria-controls={opened ? 'basic-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={opened ? 'true' : undefined}
+        onClick={handleClicked}
+      >
+        <AccountBoxIcon/>
+      </Button>
+      <Menu
+        id="basic-menu"
+        anchorE1={anchorE2}
+        open={opened}
+        onClose={handleClosed}
+        slotProps={{
+          list: {
+            'aria-labelledby': 'basic-button',
+          },
+        }}
+      >
+        
+        <MenuItem onClick={handleClosed}><Link to='/log'> <FiLogIn />Login</Link></MenuItem>
+        <MenuItem onClick={handleClosed}> <RiLogoutCircleLine /> Logout</MenuItem>
+      </Menu>
              </>
           )}
 
@@ -143,11 +177,13 @@ const Location = useLocation();
       {/* Mobile */}
          
          {isMobile && (
-  
+  <>
     <IconButton color="inherit" onClick={handleClick}>
       <ListIcon/>
-    </IconButton>
-  
+      
+    </IconButton> 
+     <Link to=" "> <AccountBoxIcon  style={{color:"white",marginLeft:"10px", fontSize:"20px"}}></AccountBoxIcon> </Link>
+  </>
 )}
         </Toolbar>
       </AppBar>
@@ -157,10 +193,14 @@ const Location = useLocation();
         {menuItems.map((menu, item) => (
           <MenuItem key={item} onClick={handleClose} >
            <Link style={{textDecoration:'none', color:'black'}} to={menu.to}>{menu.name} </Link>
+           
           </MenuItem>
+          
         ))}
         <MenuItem onClick={handleClose}></MenuItem>
+         
       </Menu>
+     
     </>
   );
 };
