@@ -6,6 +6,7 @@ import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
+import { FaShoppingCart } from "react-icons/fa";
 
 import {
   AppBar,
@@ -102,8 +103,8 @@ const Location = useLocation();
   const menuItems = [
     {name:"Menu", to:"/"},
     {name:"Categories", to:"/cat"},
-    {name:"Cart", to:"/cart"},
-    {name:"Register", to:"/log"},
+    
+    
     
   ];
 
@@ -145,19 +146,19 @@ const Location = useLocation();
                 
             ))}
             
-              
-              <Button
+              <Link to='/cart'> <FaShoppingCart style={{color:'white', fontSize:"20px", marginRight:'20px'}}/> </Link> 
+              <IconButton
         id="basic-button"
         aria-controls={opened ? 'basic-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={opened ? 'true' : undefined}
         onClick={handleClicked}
       >
-        <AccountBoxIcon/>
-      </Button>
+        <AccountBoxIcon style={{color:"white"}}/>
+      </IconButton>
       <Menu
         id="basic-menu"
-        anchorE1={anchorE2}
+        anchorEl={anchorE2}
         open={opened}
         onClose={handleClosed}
         slotProps={{
@@ -182,7 +183,31 @@ const Location = useLocation();
       <ListIcon/>
       
     </IconButton> 
-     <Link to=" "> <AccountBoxIcon  style={{color:"white",marginLeft:"10px", fontSize:"20px"}}></AccountBoxIcon> </Link>
+    <Link to='/cart'> <FaShoppingCart style={{color:'white', fontSize:"20px", marginRight:'15px', marginleft:"15px"}}/> </Link>
+     <IconButton
+        id="basic-button"
+        aria-controls={opened ? 'basic-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={opened ? 'true' : undefined}
+        onClick={handleClicked}
+      >
+        <AccountBoxIcon style={{color:"white"}}/>
+      </IconButton>
+      <Menu
+        id="basic-menu"
+        anchorEl={anchorE2}
+        open={opened}
+        onClose={handleClosed}
+        slotProps={{
+          list: {
+            'aria-labelledby': 'basic-button',
+          },
+        }}
+      >
+        
+        <MenuItem onClick={handleClosed}><Link to='/log'> <FiLogIn />Login</Link></MenuItem>
+        <MenuItem onClick={handleClosed}> <RiLogoutCircleLine /> Logout</MenuItem>
+      </Menu>
   </>
 )}
         </Toolbar>
@@ -197,7 +222,7 @@ const Location = useLocation();
           </MenuItem>
           
         ))}
-        <MenuItem onClick={handleClose}></MenuItem>
+       
          
       </Menu>
      
