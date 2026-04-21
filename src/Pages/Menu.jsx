@@ -25,7 +25,8 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { MdPayment } from "react-icons/md";
 import { TiTickOutline } from "react-icons/ti";
 import { MdOutlineLocalOffer } from "react-icons/md";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import  backgreen from '../assets/green_back.jpg'
 
 
 const Menu = ({ Mybutton }) => {
@@ -249,6 +250,14 @@ const Menu = ({ Mybutton }) => {
         </Card>
       ))}
     </Box>
+    <Container sx={{backgroundImage:`url(${backgreen})`, marginTop:{xs:"50px", md:"100px"}}}>
+      <Typography variant='h2'sx={{color:"white", paddingTop:"100px", textAlign:"center"}}>Get 25% Discount on<br/> your first <br /> purchase
+     
+      </Typography>
+      <p style={{color:'white', textAlign:'center', }}>Just Sign Up & Register it now to become member.
+</p>
+<Button variant='outlined'sx={{marginLeft:"45%", backgroundColor:'White',paddingX:"40px", marginY:"20px"}}><Link to='/log' style={{textDecoration:"none", color:"#2E7D32"}}>login</Link></Button>
+    </Container>
 
     </div>
   )
