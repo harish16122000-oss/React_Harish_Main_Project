@@ -42,7 +42,7 @@ const App = () => {
             <Route path='/' element={<Menu Mybutton={Mybutton}/>} />
              
             <Route path='/log' element={<Login Mybutton={Mybutton}/>} />
-            <Route path='/log/log1' element={<Login1 Mybutton={Mybutton}/>} />
+            <Route path='/log1' element={<Login1 Mybutton={Mybutton}/>} />
              
             <Route path='/cat' element={<Mainer Mybutton={Mybutton}/>} />
             <Route path='/cart' element={<Cart Mybutton={Mybutton}/>} />

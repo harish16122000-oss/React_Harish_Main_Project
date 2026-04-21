@@ -20,16 +20,49 @@ import back2 from '../assets/blue_background_2.jpg';
 import back3 from '../assets/background3.jpg'
 import { Box, Button, Container, Grid  } from '@mui/material';
 import ban from '../assets/ban.png';
-
+import CardActionArea from '@mui/material/CardActionArea';
+import { TbTruckDelivery } from "react-icons/tb";
+import { MdPayment } from "react-icons/md";
+import { TiTickOutline } from "react-icons/ti";
+import { MdOutlineLocalOffer } from "react-icons/md";
 import { useNavigate } from 'react-router-dom';
 
 
 const Menu = ({ Mybutton }) => {
   const navigate= useNavigate(); 
+
+
+  
+  const cards = [
+  {
+    id: 1,
+    icon: <TbTruckDelivery />,
+    title: 'Free delivery',
+    description: 'Get your orders delivered to your doorstep at no extra cost.',
+  },
+  {
+    id: 2,
+     icon: <MdPayment />,
+    title: '100% secure payment',
+    description: 'Enjoy safe and secure transactions every time you shop.',
+  },
+  {
+    id: 3,
+     icon: <TiTickOutline />,
+    title: 'Quality gurantee',
+    description: 'We provide high-quality products you can trust.',
+  },
+  {
+    id: 4,
+     icon: <MdOutlineLocalOffer />,
+    title: 'Daily offers',
+    description: 'Grab exciting deals and discounts every day.',
+  }
+];
  
    const prod= [
           {id:1 , img: wheat1, head:'Wheat'},      
-              {id:2 , img: millet1, head:'Millet',  },
+          {id:2 , img: millet1, head:'Millet',},
           {id:3 , img: juice1 , head:'Juice', },
           {id:4 , img: dairy1, head:'Dairy ',  },
           {id:5 , img: fruit1, head:'Fruits', },
@@ -153,7 +186,9 @@ const Menu = ({ Mybutton }) => {
                 
              </Box>
              </Container>
-             <Box sx={{display:{xs:"block", lg:'flex'}, marginX:"20px", marginY:{md:"100px"},gap:"20px",justifyContent:"center"}}>
+              {/* Combo offers */}
+
+             <Box sx={{display:{xs:"block", lg:'flex'}, marginX:"20px", marginY:{md:"100px"},gap:"20px",justifyContent:"center", marginTop:{xs:"50px", md:"100px"}}}>
               <Box sx={{position:"relative", }}>
                 <Box component="img"src={back1}sx={{ height: "100%", width: { xs: "100%", xl: "100%" }}}/>
                  <Box sx={{position:"absolute", bottom:"55%", left:'5%', color:"white"}}>
@@ -170,6 +205,50 @@ const Menu = ({ Mybutton }) => {
               </Box>
               
              </Box>
+            {/* Delivery  */}
+
+             <Box
+      sx={{
+        width: '100%',
+        display: {xs:"block",md:'grid'},
+         paddingLeft:{xs:"20px", md:"150px"},
+        gridTemplateColumns: '20% 20% 20% 20% ',
+        gap: 3,
+        marginTop:{xs:"50px", md:"0px"}
+       
+      
+      }}
+    >
+      {cards.map((card, index) => (
+        <Card sx={{border:"1px solid",marginTop:{xs:"20px", md:"0px"} }} key={card.id}>
+          <CardActionArea
+           
+             
+            sx={{
+              height: '100%',
+              '&[data-active]': {
+                backgroundColor: 'action.selected',
+                '&:hover': {
+                  backgroundColor: 'action.selectedHover',
+                },
+              },
+            }}
+          >
+            <CardContent sx={{ height: '100%', }}>
+              <Typography variant="h5" component="div">
+                {card.icon}
+              </Typography> 
+              <Typography variant="h5" component="div">
+                {card.title}
+              </Typography>
+              <Typography variant="body2" sx={{color: 'text.secondary'}}>
+                {card.description}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+      ))}
+    </Box>
 
     </div>
   )

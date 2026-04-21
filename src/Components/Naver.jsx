@@ -168,7 +168,7 @@ const Location = useLocation();
         }}
       >
         
-        <MenuItem onClick={handleClosed}><Link to='/log'> <FiLogIn />Login</Link></MenuItem>
+        <MenuItem onClick={handleClosed}><Link to='/log1'> <FiLogIn />Login</Link></MenuItem>
         <MenuItem onClick={handleClosed}> <RiLogoutCircleLine /> Logout</MenuItem>
       </Menu>
              </>

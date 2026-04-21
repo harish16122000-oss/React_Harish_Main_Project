@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import {  Container, Typography } from '@mui/material';
 import axios from 'axios'
-import { Link } from 'react-router-dom';
+
   
  
 
@@ -100,7 +100,7 @@ const Login = ({Mybutton}) => {
           <TextField name='cpass' type='password'  value={detail.cpass} onChange={handleChange} label="Confirm Password" variant="outlined" />
  
 <Mybutton type='submit' variant='outlined'>Submit</Mybutton>
-<Typography>If you already have an account please <Link to='log1'>login</Link></Typography>
+
       </Box>        
       
       </Container>

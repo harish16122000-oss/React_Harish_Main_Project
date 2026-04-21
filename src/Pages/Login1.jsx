@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import img1 from  '../assets/logo1.png'
 import { Container, Typography } from '@mui/material';
-  
+  import { Link } from 'react-router-dom';
  
  const Login1 = ({Mybutton}) => {
 
@@ -36,6 +36,7 @@ import { Container, Typography } from '@mui/material';
       <TextField   label="Password" variant="standard" />
       <Mybutton variant='outlined' sx={{mt:"20px"}}>Submit</Mybutton>
     </Box>
+    <Typography>If you don't have an account please <Link to='/log'>login</Link></Typography>
         </Container>
      </Container>
      </div>
