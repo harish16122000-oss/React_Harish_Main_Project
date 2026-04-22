@@ -13,6 +13,7 @@ import Menu from './Pages/Menu';
 import Cart from './Components/Cart';
 import Mainer from './Pages/Mainer';
 import Wheat from './Components/Wheat';
+import Details from './Pages/Details';
 
  
 const Mybutton = styled(Button)({
@@ -46,6 +47,7 @@ const App = () => {
              
             <Route path='/cat' element={<Mainer Mybutton={Mybutton}/>} />
             <Route path='/cart' element={<Cart Mybutton={Mybutton}/>} />
+            <Route path='/det' element={<Details Mybutton={Mybutton}/>} />
              
             
             

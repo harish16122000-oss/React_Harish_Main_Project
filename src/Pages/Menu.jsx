@@ -207,6 +207,9 @@ const Menu = ({ Mybutton }) => {
               
              </Box>
             {/* Delivery  */}
+            <Typography variant='h4'sx={{textAlign:'center', marginTop:{xs:'50px', md:"100px"}}}>
+             Why Choose Us
+            </Typography>
 
              <Box
       sx={{
@@ -215,7 +218,7 @@ const Menu = ({ Mybutton }) => {
          paddingLeft:{xs:"20px", md:"150px"},
         gridTemplateColumns: '20% 20% 20% 20% ',
         gap: 3,
-        marginTop:{xs:"50px", md:"0px"}
+        marginTop:{xs:"50px", md:"50px"}
        
       
       }}
@@ -256,7 +259,7 @@ const Menu = ({ Mybutton }) => {
       </Typography>
       <p style={{color:'white', textAlign:'center', }}>Just Sign Up & Register it now to become member.
 </p>
-<Button variant='outlined'sx={{marginLeft:"45%", backgroundColor:'White',paddingX:"40px", marginY:"20px"}}><Link to='/log' style={{textDecoration:"none", color:"#2E7D32"}}>login</Link></Button>
+<Button variant='outlined'sx={{marginLeft:"45%", backgroundColor:'White',paddingX:"40px", marginY:"20px"}}><Link to='/log1' style={{textDecoration:"none", color:"#2E7D32"}}>login</Link></Button>
     </Container>
 
     </div>
