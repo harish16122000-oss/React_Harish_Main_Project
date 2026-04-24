@@ -12,10 +12,11 @@ import { useSelector } from 'react-redux';
  import { FaCircleMinus } from "react-icons/fa6";
  import { MdDelete } from "react-icons/md";
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Cart = ({Mybutton}) => {
-  const dispatch =useDispatch()
+  const navigate= useNavigate();
+  const dispatch =useDispatch();
     const  product= useSelector((state)=>state.cart.items);
   return (
     <div>
@@ -43,7 +44,7 @@ const Cart = ({Mybutton}) => {
       </CardContent>
       <CardActions>
        
-        <Mybutton variant='outlined' sx={{marginLeft:'40px'}}><Link to='/det'style={{textDecoration:'none', color:'white'}}>Buy Now</Link> </Mybutton>
+        <Mybutton variant='outlined' sx={{marginLeft:'40px'}}onClick={()=> navigate(`/det/${p.id}`)}> Buy Now </Mybutton>
         
           <MdDelete onClick={()=> dispatch(removeItem(p.id))} style={{
           

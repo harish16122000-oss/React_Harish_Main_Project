@@ -111,7 +111,7 @@ const Location = useLocation();
   return (
     <>
                     {/* Location */}
-    {Location.pathname !== '/log' && Location.pathname !=='/log/log1' && Location.pathname !=='/det' &&(
+    {Location.pathname !== '/log' && Location.pathname !=='/log1' && Location.pathname !=='/det' &&Location.pathname !=='/order' &&(
       <AppBar position="static" color="primary">
         <Toolbar>
 

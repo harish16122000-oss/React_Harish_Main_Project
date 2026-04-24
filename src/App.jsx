@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Naver from './Components/Naver'
 import { Button, CssBaseline, ThemeProvider } from '@mui/material'
 import theme from './Theme'
@@ -14,6 +14,8 @@ import Cart from './Components/Cart';
 import Mainer from './Pages/Mainer';
 import Wheat from './Components/Wheat';
 import Details from './Pages/Details';
+import Order from './Components/Order';
+
 
  
 const Mybutton = styled(Button)({
@@ -30,6 +32,7 @@ const Mybutton = styled(Button)({
 
   
 const App = () => {
+  
 
   return (
     <div>
@@ -47,7 +50,8 @@ const App = () => {
              
             <Route path='/cat' element={<Mainer Mybutton={Mybutton}/>} />
             <Route path='/cart' element={<Cart Mybutton={Mybutton}/>} />
-            <Route path='/det' element={<Details Mybutton={Mybutton}/>} />
+            <Route path='/det/:id' element={<Details Mybutton={Mybutton}/>} />
+            <Route path='/order' element={<Order Mybutton={Mybutton}/>} />
              
             
             

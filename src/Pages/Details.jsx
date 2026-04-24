@@ -1,108 +1,78 @@
 import React, { useState } from 'react'
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import {  Container, Typography } from '@mui/material';
-import axios from 'axios'
 
-  
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
  
 
 
 
-const Details = ({Mybutton}) => {
-  const [detail, setDetail]= useState({
-    name:'',
-    email:'',
-    mobile:'',
-    password:'',
-    cpass:''
-})
+import TextField from '@mui/material/TextField';
+import {  Container, Typography } from '@mui/material';
+import axios from 'axios'
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Box, Grid } from '@mui/material';
+import { useSelector } from 'react-redux';
+ import { IoIosAddCircle } from "react-icons/io";
+ import { FaCircleMinus } from "react-icons/fa6";
+ import { MdDelete } from "react-icons/md";
+
+ 
+
+
+
+/* const Details = ({Mybutton}) => {
+ const { id } = useParams();
+
+const product = useSelector((state) => state.cart.items  );
+
+console.log("Products:", product);
+console.log("URL id:", id);
+
+const deta = product.find((pro) => pro.id === Number(id));
+
+console.log("Matched product:", deta);
+
+if (!deta) {
+  return <Typography>Product not found</Typography>;
+}
    
-
-  const handleChange=(event)=>{
-    const{name, value}= event.target;
-    setDetail((prevstate)=>({
-      ...prevstate,[name]:value
-    })); }
-
-    const handleSubmit= (async(e)=>{
-      try{
-      e.preventDefault();
-     
-      await axios.post("http://localhost:5000/detail",detail);
-      }
-      catch(error){ 
-        console.log(error);
-        
-       }
-      setDetail({ name:'',
-    email:'',
-    mobile:'',
-    password:'',
-    cpass:''})
-    
-    })
+  
  
    
   return (
     <div>
+     <p>{deta.Name}</p>
       
 
-      <Container  sx={{
-        display: "flex", justifyContent: "center",
-        alignItems: "center",
-        justifyItems: "center",
-        flexDirection: "column",
-        gap: "15px",
-        backgroundColor:'#F1F8E9',
-         
-         
-      }}>
-        
-        
-        <Box
-          component="form"
-          onSubmit={handleSubmit}
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            justifyItems: "center",
-            gap: "16px",
-            flexDirection: "column",
-            px:"3%",
-            my:{
-              lg:"0.5%",
-              xl:"5%"
-
-            },
-            backgroundColor:"#FFFFFF",
-            borderRadius:"20px",
-           
-            '& > .MuiTextField-root': { m: 1, width: '25ch', minWidth: "400px",  },
-    
-    
-          }}
-          noValidate
-          autoComplete="off"
-        >
-          <Typography variant='h4' sx={{ textAlign: "center",mt:"5px" }}>
-          Address
-        </Typography>
-          
-          <TextField name='name' value={detail.name} type='text' onChange={handleChange}  label="Name" variant="outlined"  />
-          <TextField name='email' type='email' value={detail.email} onChange={handleChange}  label="Email" variant="outlined" />
-          <TextField name='mobile'  value={detail.mobile} onChange={handleChange} label="Mobile " variant="outlined" type='tel'  />
-          <TextField name='password' type='text' value={detail.password} onChange={handleChange}  label="Pincode" variant="outlined" />
-          <TextField name='cpass' type='text'  value={detail.cpass} onChange={handleChange} label="Place" variant="outlined" />
- 
-<Mybutton type='submit' variant='outlined'>Submit</Mybutton>
-
-      </Box>        
-      
-      </Container>
+     
     </div>
   )
-}
+} */
+const Details = () => {
+
+  const { id } = useParams();
+
+  const cartItems = useSelector((state) => state.cart.items || []);
+
+  const deta = cartItems.find((item) => item.id === Number(id));
+
+  if (cartItems.length === 0) {
+    return <Typography>Cart is empty</Typography>;
+  }
+
+  if (!deta) {
+    return <Typography>Product not found in cart</Typography>;
+  }
+
+  return (
+    <div>
+      <Typography variant="h5">{deta.Name}</Typography>
+      <Typography>Price: {deta.price}</Typography>
+      <Typography>Quantity: {deta.quantity}</Typography>
+    </div>
+  );
+};
 
 export default Details

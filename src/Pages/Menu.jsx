@@ -259,7 +259,7 @@ const Menu = ({ Mybutton }) => {
       </Typography>
       <p style={{color:'white', textAlign:'center', }}>Just Sign Up & Register it now to become member.
 </p>
-<Button variant='outlined'sx={{marginLeft:"45%", backgroundColor:'White',paddingX:"40px", marginY:"20px"}}><Link to='/log1' style={{textDecoration:"none", color:"#2E7D32"}}>login</Link></Button>
+<Mybutton variant='outlined'sx={{marginLeft:"45%",paddingX:"40px", marginY:"20px"}} onClick={ (()=> navigate("/log1"))}>Login</Mybutton>
     </Container>
 
     </div>

@@ -20,15 +20,15 @@ import { useNavigate } from 'react-router-dom';
  
 
 const labels = {
-  0.5: '',
+  
   1: ' ',
-  1.5: ' ',
+  
   2: ' ',
-  2.5: ' ',
+   
   3: ' ',
-  3.5: ' ',
+  
   4: ' ',
-  4.5: ' ',
+  
   5: ' ',
 };
 
@@ -38,7 +38,7 @@ const Millet = ({Mybutton}) => {
   const dispatch =useDispatch()
     const[wheat, setWheat]= useState([]);
     const [loading, setLoading]= useState(true);
-
+ 
     const wheats = async()=>{ 
 try{
      
@@ -124,8 +124,8 @@ try{
          <Box sx={{ width: 200, display:'flex', alignItems: 'center', }}>
       <Rating
       sx={{marginLeft:'50px'}}
-        emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
-      />
+        emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" defaultValue={2} precision={1} />}
+      readOnly />
       
     </Box>
     <Typography sx={{marginTop:'20px', marginLeft:'1px'}}> <span style={{textDecoration:"line-through",color:'#584f4f'}}> {w.discount}.00</span> <span style={{marginLeft:'5px',fontSize:'19px', fontWeight: 800,}}>{w.price}.00</span><span style={{border:'1px solid ', padding:'2px',marginLeft:'10px', color:'#584f4f', fontSize:'13px'}}>{w.offer}</span></Typography>
