@@ -33,13 +33,14 @@ const labels = {
 };
 
 
-const Vegetable = ({Mybutton}) => {
+const Vegetable = ({Mybutton, datam}) => {
+   const wheat = datam?.wheat || [];
   const navigate= useNavigate()
   const dispatch =useDispatch()
-    const[wheat, setWheat]= useState([]);
+    /* const[wheat, setWheat]= useState([]); */
     const [loading, setLoading]= useState(true);
 
-    const wheats = async()=>{ 
+   /*  const wheats = async()=>{ 
 try{
      
      const res = await axios.get("http://localhost:5000/Vegetables");
@@ -52,12 +53,12 @@ try{
       setLoading(false);
      } };
      useEffect(()=>{wheats()},[]);
-
+ */
      const [value, setValue] = React.useState(2);
   const [hover, setHover] = React.useState(-1);
 
                      /* Loading */
-    if(loading) return <Box sx={{ width: 300, display:{xs:"grid", md:'flex'},  justifyContent:"space-evenly", alignItems:'center', marginTop:{xs:"30px", md:"200px"} }}>
+    /* if(loading) return <Box sx={{ width: 300, display:{xs:"grid", md:'flex'},  justifyContent:"space-evenly", alignItems:'center', marginTop:{xs:"30px", md:"200px"} }}>
 
 
        <Box sx={{marginLeft:{md:"50px", lg:"80px"}}}>
@@ -95,7 +96,7 @@ try{
        <Skeleton width="50%" />
        
        </Box>
-    </Box>;
+    </Box>; */
 
     
   return (

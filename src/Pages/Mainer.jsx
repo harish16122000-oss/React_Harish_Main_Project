@@ -7,18 +7,18 @@ import Dairy from '../Components/Dairy'
 import Fruits from '../Components/Fruits'
 import Vegetable from '../Components/Vegetable'
 
-const Mainer = ({Mybutton}) => {
+const Mainer = ({Mybutton, datam}) => {
   return (
     
     <div style={{backgroundColor:"#f5f5ec"}}>
     <div style={{paddingTop:"30px",}}>
-     <Wheat Mybutton={Mybutton} />
-     <Millet Mybutton={Mybutton}/>
-     <Rice Mybutton={Mybutton}/> 
-     <Juice Mybutton={Mybutton}/>
-     <Dairy Mybutton={Mybutton}/>
-     <Fruits Mybutton={Mybutton}/>
-     <Vegetable Mybutton={Mybutton}/>
+     <Wheat Mybutton={Mybutton} datam={datam}/>
+     <Millet Mybutton={Mybutton} datam={datam}/>
+     <Rice Mybutton={Mybutton} datam={datam}/> 
+     <Juice Mybutton={Mybutton} datam={datam}/>
+     <Dairy Mybutton={Mybutton} datam={datam}/>
+     <Fruits Mybutton={Mybutton} datam={datam}/>
+     <Vegetable Mybutton={Mybutton} datam={datam}/>
 </div>
     </div>
   )

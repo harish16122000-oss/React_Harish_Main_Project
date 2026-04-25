@@ -50,13 +50,14 @@ if (!deta) {
     </div>
   )
 } */
-const Details = () => {
+const Details = ({datam}) => {
+
 
   const { id } = useParams();
 
   const cartItems = useSelector((state) => state.cart.items || []);
 
-  const deta = cartItems.find((item) => item.id === Number(id));
+  const deta = datam.find((item) => item.id === Number(id));
 
   if (cartItems.length === 0) {
     return <Typography>Cart is empty</Typography>;
