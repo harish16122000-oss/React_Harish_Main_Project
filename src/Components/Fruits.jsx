@@ -34,7 +34,7 @@ const labels = {
 
 
 const Fruits = ({Mybutton, datam}) => {
-   const wheat = datam?.wheat || [];
+   const wheat = datam?.Fruits || [];
   const navigate= useNavigate()
   const dispatch =useDispatch()
     /* const[wheat, setWheat]= useState([]); */
@@ -111,7 +111,7 @@ try{
                {/* Mapmethod */}
            {wheat.map((w)=>(
            
-             <Grid key={w.id} size={{xs:12, sm:6, md:3, lg:3, xl:2}}>
+        <Grid key={w.id} size={{xs:12, sm:6, md:3, lg:3, xl:2}}>
        <Card   sx={{marginTop:{xs:"40px", md:'20px', lg:"0px"}  , backgroundColor:'#f5e8cd', marginBottom:"30px"}}>
        <CardMedia
         sx={{ height:{xs: 250, md: 250 }}}

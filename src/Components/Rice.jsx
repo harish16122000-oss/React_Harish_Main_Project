@@ -34,7 +34,7 @@ const labels = {
 
 
 const Rice = ({Mybutton, datam}) => {
-   const wheat = datam?.wheat || [];
+   const wheat = datam?.rice || [];
   const navigate= useNavigate()
   const dispatch =useDispatch()
     /* const[wheat, setWheat]= useState([]); */

@@ -100,7 +100,7 @@ const Wheat = ({ Mybutton, datam }) => {
 
     </Box>
   </Box>; */
-
+console.log("WHEAT DATA:", datam);
 
   return (
 

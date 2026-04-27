@@ -1,79 +1,107 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
+import { Box, Typography, TextField, Button, Card, CardContent, CardMedia } from "@mui/material";
+import { useNavigate, useParams } from "react-router-dom";
 
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
- 
-
-
-
-import TextField from '@mui/material/TextField';
-import {  Container, Typography } from '@mui/material';
-import axios from 'axios'
-import { Link, useNavigate, useParams } from 'react-router-dom';
-import { Box, Grid } from '@mui/material';
-import { useSelector } from 'react-redux';
- import { IoIosAddCircle } from "react-icons/io";
- import { FaCircleMinus } from "react-icons/fa6";
- import { MdDelete } from "react-icons/md";
-
- 
-
-
-
-/* const Details = ({Mybutton}) => {
- const { id } = useParams();
-
-const product = useSelector((state) => state.cart.items  );
-
-console.log("Products:", product);
-console.log("URL id:", id);
-
-const deta = product.find((pro) => pro.id === Number(id));
-
-console.log("Matched product:", deta);
-
-if (!deta) {
-  return <Typography>Product not found</Typography>;
-}
-   
-  
- 
-   
-  return (
-    <div>
-     <p>{deta.Name}</p>
-      
-
-     
-    </div>
-  )
-} */
-const Details = ({datam}) => {
-
-
+const Details = ({ datam = {} }) => {
   const { id } = useParams();
 
-  const cartItems = useSelector((state) => state.cart.items || []);
+  const allItems = Object.values(datam).flat();
 
-  const deta = datam.find((item) => item.id === Number(id));
-
-  if (cartItems.length === 0) {
-    return <Typography>Cart is empty</Typography>;
-  }
+  const deta = allItems.find(
+    (item) => String(item.id) === String(id)
+  );
 
   if (!deta) {
-    return <Typography>Product not found in cart</Typography>;
+    return <Typography>Product not found</Typography>;
   }
+  const [address, setAddress] = useState({
+    name: "",
+    mobile: "",
+    street: "",
+    city: "",
+    state: "",
+    pincode: ""
+  });
+
+  const handleChange = (e) => {
+    setAddress({ ...address, [e.target.name]: e.target.value });
+  };
+
+  const handleOrder = () => {
+    console.log("Product: Rice Batter");
+    console.log("Address:", address);
+    alert("Order Placed Successfully!");
+  };
+  const navigate= useNavigate();
 
   return (
-    <div>
-      <Typography variant="h5">{deta.Name}</Typography>
-      <Typography>Price: {deta.price}</Typography>
-      <Typography>Quantity: {deta.quantity}</Typography>
-    </div>
+    <Box
+      sx={{
+        display: "flex",
+        gap: 5,
+        justifyContent: "center",
+        alignItems: "flex-start",
+        padding: "40px",
+        flexWrap: "wrap"
+      }}
+    >
+      
+      {/* ✅ Product Section */}
+      <Card    sx={{marginTop:{xs:"40px", md:'20px', lg:"0px"}, maxWidth: 250 ,backgroundColor:'#f5e8cd', marginBottom:{xs:"0px", md:'30px'}, marginTop:{xs:"1%", md:"1%"},  }}>
+         
+       <CardMedia
+        sx={{ height:{xs: 250, md: 250 }, width:{xs: 250, md: 250}}}
+        image={deta.img}
+        title={deta.Name}
+
+      />
+     
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div" sx={{textAlign:'center', color: "#2E7D32", fontWeight:700}}>
+        {deta.Name}
+        </Typography>
+         
+    <Typography sx={{marginTop:'20px', marginLeft:'1px'}}> <span style={{textDecoration:"line-through", color:'#584f4f'}}> {deta.discount}.00</span> <span style={{marginLeft:'5px',fontSize:'19px', fontWeight: 800,}}>{deta.price}.00</span><span style={{border:'1px solid ', padding:'2px', marginLeft:'10px', color:'#584f4f', fontSize:'13px'}}>{deta.offer}</span></Typography> 
+     
+     </CardContent> </Card>
+
+      {/* ✅ Address Section */}
+      <Box
+        sx={{
+          width: 350,
+          padding: "20px",
+          boxShadow: 3,
+          borderRadius: 3,
+          backgroundColor: "#fff"
+        }}
+      >
+        <Typography variant="h6" sx={{ mb: 2 }}>
+          Delivery Address
+        </Typography>
+
+        <TextField label="Full Name" name="name" fullWidth margin="normal" onChange={handleChange} />
+        <TextField label="Mobile Number" name="mobile" fullWidth margin="normal" onChange={handleChange} />
+        <TextField label="Street Address" name="street" fullWidth margin="normal" onChange={handleChange} />
+        <TextField label="City" name="city" fullWidth margin="normal" onChange={handleChange} />
+        <TextField label="State" name="state" fullWidth margin="normal" onChange={handleChange} />
+        <TextField label="Pincode" name="pincode" fullWidth margin="normal" onChange={handleChange} />
+
+        <Button
+          variant="contained"
+          fullWidth
+          sx={{ mt: 2, backgroundColor: "green" }}
+          onClick={()=> { handleOrder; navigate("/order");}} >
+      
+         Confirm order
+        
+        </Button>
+      </Box>
+
+    </Box>
   );
 };
 
+ 
+
+ 
 export default Details

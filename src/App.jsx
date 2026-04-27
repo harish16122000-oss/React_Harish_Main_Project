@@ -58,13 +58,13 @@ const App = () => {
       console.log("RESPONSES:", responses);
 
       setDatam({
-        wheat: responses[0]?.data || [],
-        millet: responses[1]?.data || [],
-        juice: responses[2]?.data || [],
-        Dairy: responses[3]?.data || [],
-        Fruits: responses[4]?.data || [],
-        Vegetables: responses[5]?.data || [],
-        rice: responses[6]?.data || []
+        wheat: responses[0]?.data ,
+        millet: responses[1]?.data,
+        juice: responses[2]?.data,
+        Dairy: responses[3]?.data,
+        Fruits: responses[4]?.data,
+        Vegetables: responses[5]?.data,
+        rice: responses[6]?.data
       });
     })
     .catch((err) => console.log("ERROR:", err));

@@ -34,7 +34,7 @@ const labels = {
 
 
 const Juice = ({Mybutton, datam}) => {
-   const wheat = datam?.wheat || [];
+   const wheat = datam?.juice || [];
    console.log(wheat)
   const navigate= useNavigate()
   const dispatch =useDispatch()

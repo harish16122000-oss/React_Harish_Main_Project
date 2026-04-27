@@ -103,6 +103,7 @@ const Location = useLocation();
   const menuItems = [
     {name:"Menu", to:"/"},
     {name:"Categories", to:"/cat"},
+    {name:"My Details"}
     
     
     

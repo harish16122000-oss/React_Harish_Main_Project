@@ -15,7 +15,7 @@
   "wheat": [
     {
       "id": 1,
-      "img": "./wheat flour.jpg ",
+      "img": "/wheat-flour.jpg",
       "Name": "Wheat Flour",
       "discount": "₹99",
       "price": "₹79",
@@ -23,7 +23,7 @@
     },
     {
       "id": 2,
-      "img": "./wheat bran.jpg",
+      "img": "/wheat-bran.jpg",
       "Name": "Wheat Bran",
       "discount": "₹99",
       "price": "₹87",
@@ -31,7 +31,7 @@
     },
     {
       "id": 3,
-      "img": "./wheat maida.jpeg",
+      "img": "/wheat-maida.jpeg",
       "Name": "Wheat Maida",
       "discount": "₹88",
       "price": "₹80",
@@ -39,7 +39,7 @@
     },
     {
       "id": 4,
-      "img": "./wheat rava.jpg",
+      "img": "/wheat-rava.jpg",
       "Name": "Wheat Rava",
       "discount": "₹119",
       "price": "₹80",
@@ -47,7 +47,7 @@
     },
     {
       "id": 5,
-      "img": "./wheat broken.png",
+      "img": "/wheat-broken.png",
       "Name": "Broken Wheat",
       "discount": "₹129",
       "price": "₹90",
@@ -57,7 +57,7 @@
   "millet": [
     {
       "id": 6,
-      "img": "./millet atta.webp",
+      "img": "/millet-atta.webp",
       "Name": "Millet Atta",
       "discount": "₹60",
       "price": "₹50",
@@ -65,7 +65,7 @@
     },
     {
       "id": 7,
-      "img": "./millet khichdi.webp",
+      "img": "/millet-khichdi.webp",
       "Name": "Millet Kichdi",
       "discount": "₹77",
       "price": "₹57",
@@ -73,7 +73,7 @@
     },
     {
       "id": 8,
-      "img": "./millet ladoos.webp",
+      "img": "/millet-ladoos.webp",
       "Name": "Millet Laddos",
       "discount": "₹118",
       "price": "₹93",
@@ -81,7 +81,7 @@
     },
     {
       "id": 9,
-      "img": "./millet noodle.webp",
+      "img": "/millet-noodle.webp",
       "Name": "Millet Noodles",
       "discount": "₹122",
       "price": "₹97",
@@ -89,7 +89,7 @@
     },
     {
       "id": 10,
-      "img": "./millet powder.webp",
+      "img": "/millet-powder.webp",
       "Name": "Millet Powder",
       "discount": "₹121",
       "price": "₹80",
@@ -99,7 +99,7 @@
   "juice": [
     {
       "id": 11,
-      "img": "./grape juice.jpg",
+      "img": "/grape-juice.jpg",
       "Name": "Grape Juice",
       "discount": "₹50",
       "price": "₹40",
@@ -107,7 +107,7 @@
     },
     {
       "id": 12,
-      "img": "./lime juice.jpg",
+      "img": "/lime-juice.jpg",
       "Name": "Lime Juice",
       "discount": "₹77",
       "price": "₹57",
@@ -115,7 +115,7 @@
     },
     {
       "id": 13,
-      "img": "./mosambi juice.jpg",
+      "img": "/mosambi-juice.jpg",
       "Name": "Mosambi Juice",
       "discount": "₹108",
       "price": "₹99",
@@ -123,7 +123,7 @@
     },
     {
       "id": 14,
-      "img": "./muskmelon juice.jpg",
+      "img": "/muskmelon-juice.jpg",
       "Name": "Muskmelon Juice",
       "discount": "₹112",
       "price": "₹90",
@@ -131,7 +131,7 @@
     },
     {
       "id": 15,
-      "img": "./pomegranate juice.jpg",
+      "img": "/pomegranate-juice.jpg",
       "Name": "Pomegranate Juice",
       "discount": "₹121",
       "price": "₹99",
@@ -141,7 +141,7 @@
   "Dairy": [
     {
       "id": 16,
-      "img": "./dairy butter.jpg",
+      "img": "/dairy-butter.jpg",
       "Name": "Butter",
       "discount": "₹60",
       "price": "₹50",
@@ -149,7 +149,7 @@
     },
     {
       "id": 17,
-      "img": "./dairy ghee.webp",
+      "img": "/dairy-ghee.webp",
       "Name": "Ghee",
       "discount": "₹77",
       "price": "₹57",
@@ -157,7 +157,7 @@
     },
     {
       "id": 18,
-      "img": "./dairy lassi.jfif",
+      "img": "/dairy-lassi.jfif",
       "Name": "lassi",
       "discount": "₹73",
       "price": "₹45",
@@ -165,7 +165,7 @@
     },
     {
       "id": 19,
-      "img": "./dairy yogurt.jfif",
+      "img": "/dairy-yogurt.jfif",
       "Name": "Yogurt",
       "discount": "₹102",
       "price": "₹80",
@@ -173,7 +173,7 @@
     },
     {
       "id": 20,
-      "img": "./dairy milk.webp",
+      "img": "/dairy-milk.webp",
       "Name": "Milk",
       "discount": "₹101",
       "price": "₹90",
@@ -183,7 +183,7 @@
   "Fruits": [
     {
       "id": 21,
-      "img": "./fruit apple.jfif",
+      "img": "/fruit-apple.jfif",
       "Name": "Apple",
       "discount": "₹20",
       "price": "₹15",
@@ -191,7 +191,7 @@
     },
     {
       "id": 22,
-      "img": "./fruit guava.jpg",
+      "img": "/fruit-guava.jpg",
       "Name": "Guava",
       "discount": "₹17",
       "price": "₹10",
@@ -199,7 +199,7 @@
     },
     {
       "id": 23,
-      "img": "./fruit mango.jpg",
+      "img": "/fruit-mango.jpg",
       "Name": "Mango",
       "discount": "₹48",
       "price": "₹40",
@@ -207,7 +207,7 @@
     },
     {
       "id": 24,
-      "img": "./fruit orange.jpg",
+      "img": "/fruit-orange.jpg",
       "Name": "Orange",
       "discount": "₹22",
       "price": "₹20",
@@ -215,7 +215,7 @@
     },
     {
       "id": 25,
-      "img": "./fruit pineapple.png",
+      "img": "/fruit-pineapple.png",
       "Name": "Pineapple",
       "discount": "₹21",
       "price": "₹20",
@@ -225,7 +225,7 @@
   "Vegetables": [
     {
       "id": 26,
-      "img": "./veg bitterguard.jpg",
+      "img": "/veg-bitterguard.jpg",
       "Name": "Bitterguard",
       "discount": "₹30",
       "price": "₹15",
@@ -233,7 +233,7 @@
     },
     {
       "id": 27,
-      "img": "./veg brinjal.jpg",
+      "img": "/veg-brinjal.jpg",
       "Name": "Brinjal",
       "discount": "₹17",
       "price": "₹10",
@@ -241,7 +241,7 @@
     },
     {
       "id": 28,
-      "img": "./veg carrot.jfif",
+      "img": "/veg-carrot.jfif",
       "Name": "Carrot",
       "discount": "₹18",
       "price": "₹15",
@@ -249,7 +249,7 @@
     },
     {
       "id": 29,
-      "img": "./veg cucumber.jpg",
+      "img": "/veg-cucumber.jpg",
       "Name": "Cucumber",
       "discount": "₹20",
       "price": "₹10",
@@ -257,7 +257,7 @@
     },
     {
       "id": 30,
-      "img": "./veg lady'sfinger.jpg",
+      "img": "/veg-lady'sfinger.jpg",
       "Name": "Lady's Finger",
       "discount": "₹13",
       "price": "₹11",
@@ -267,7 +267,7 @@
   "rice": [
     {
       "id": 31,
-      "img": "./rice flour.png",
+      "img": "/rice-flour.png",
       "Name": "Rice Flour",
       "discount": "₹109",
       "price": "₹80",
@@ -275,7 +275,7 @@
     },
     {
       "id": 32,
-      "img": " ./flatted rice.jpeg",
+      "img": "/flatted-rice.jpeg",
       "Name": "Faltted Rice",
       "discount": "₹59",
       "price": "₹50",
@@ -283,7 +283,7 @@
     },
     {
       "id": 33,
-      "img": "./puffed rice.jpg",
+      "img": "/puffed-rice.jpg",
       "Name": "Puffed Rice ",
       "discount": "₹78",
       "price": "₹63",
@@ -291,7 +291,7 @@
     },
     {
       "id": 34,
-      "img": "./rice noodles.jpg",
+      "img": "/rice-noodles.jpg",
       "Name": "Rice Noodles",
       "discount": "₹97",
       "price": "₹90",
@@ -299,7 +299,7 @@
     },
     {
       "id": 35,
-      "img": "./rice batter.jpg",
+      "img": "/rice-batter.jpg",
       "Name": "Rice Batter",
       "discount": "₹52",
       "price": "₹45",
