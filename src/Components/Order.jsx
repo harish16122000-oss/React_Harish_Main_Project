@@ -52,7 +52,7 @@ const Order = () => {
 
           <Button
             variant="outlined"
-            onClick={() => navigate("/cart")}
+            onClick={() => navigate("/myorders")}
           >
             View Orders
           </Button>

@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { Box, Typography, TextField, Button, Card, CardContent, CardMedia } from "@mui/material";
 import { useNavigate, useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { placeOrder } from "../Counterslice";
 
 const Details = ({ datam = {} }) => {
   const { id } = useParams();
+  const orders= useDispatch();
 
   const allItems = Object.values(datam).flat();
 
@@ -22,15 +25,16 @@ const Details = ({ datam = {} }) => {
     state: "",
     pincode: ""
   });
-
+  
   const handleChange = (e) => {
-    setAddress({ ...address, [e.target.name]: e.target.value });
+    setAddress({ ...address, [e.target.name]: e.target.value});
   };
 
   const handleOrder = () => {
     console.log("Product: Rice Batter");
     console.log("Address:", address);
-    alert("Order Placed Successfully!");
+    
+
   };
   const navigate= useNavigate();
 
@@ -90,7 +94,7 @@ const Details = ({ datam = {} }) => {
           variant="contained"
           fullWidth
           sx={{ mt: 2, backgroundColor: "green" }}
-          onClick={()=> { handleOrder; navigate("/order");}} >
+          onClick={()=> {  navigate("/order"); orders(placeOrder(deta))}} >
       
          Confirm order
         

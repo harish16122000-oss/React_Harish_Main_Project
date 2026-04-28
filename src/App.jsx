@@ -16,6 +16,13 @@ import Wheat from './Components/Wheat';
 import Details from './Pages/Details';
 import Order from './Components/Order';
 import axios from 'axios';
+import MyOrders from './Pages/MyOrders';
+import Millet from './Components/Millet';
+import Rice from './Components/Rice';
+import Dairy from './Components/Dairy';
+import Fruits from './Components/Fruits';
+import Vegetable from './Components/Vegetable';
+import Juice from './Components/Juice';
 
 
  
@@ -82,6 +89,13 @@ const App = () => {
           <Routes>
             
             <Route path='/' element={<Menu Mybutton={Mybutton}/>} />
+            <Route path='/wheat' element={<Wheat/> }/>
+            <Route path='/rice' element={<Rice/>}/>
+            <Route path='/millet' element={<Millet/>}/>
+            <Route path='/fruit' element={<Fruits/>}/>
+            <Route path='/vegetable' element={<Vegetable/>}/>
+            <Route path='/juice' element={<Juice/>}/>
+            <Route path='/dairy' element={<Dairy/>}/>
              
             <Route path='/log' element={<Login Mybutton={Mybutton}/>} />
             <Route path='/log1' element={<Login1 Mybutton={Mybutton}/>} />
@@ -90,6 +104,7 @@ const App = () => {
             <Route path='/cart' element={<Cart Mybutton={Mybutton}/>} />
             <Route path='/det/:id' element={<Details Mybutton={Mybutton} datam={datam}/>} />
             <Route path='/order' element={<Order Mybutton={Mybutton}/>} />
+            <Route path='/myorders' element={<MyOrders Mybutton={Mybutton} datam={datam}/>} />
              
             
             

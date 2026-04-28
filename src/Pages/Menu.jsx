@@ -26,14 +26,13 @@ import { MdPayment } from "react-icons/md";
 import { TiTickOutline } from "react-icons/ti";
 import { MdOutlineLocalOffer } from "react-icons/md";
 import { Link, useNavigate } from 'react-router-dom';
-import  backgreen from '../assets/green_back.jpg'
+import  backgreen from '../assets/green_back.jpg';
 
 
-const Menu = ({ Mybutton }) => {
+const Menu = ({ Mybutton, datam }) => {
+
   const navigate= useNavigate(); 
 
-
-  
   const cards = [
   {
     id: 1,
@@ -62,13 +61,13 @@ const Menu = ({ Mybutton }) => {
 ];
  
    const prod= [
-          {id:1 , img: wheat1, head:'Wheat'},      
-          {id:2 , img: millet1, head:'Millet',},
-          {id:3 , img: juice1 , head:'Juice', },
-          {id:4 , img: dairy1, head:'Dairy ',  },
-          {id:5 , img: fruit1, head:'Fruits', },
-          {id:6 , img: veg1, head:'Vegetables',  },
-          {id:7 , img:rice1, head:'Rice',  },
+          {id:1 , img: wheat1, head:'Wheat', to:"/wheat"},      
+          {id:2 , img: millet1, head:'Millet',to:"/millet"},
+          {id:3 , img: juice1 , head:'Juice',to:"/juice" },
+          {id:4 , img: dairy1, head:'Dairy ', to:"/dairy" },
+          {id:5 , img: fruit1, head:'Fruits', to:"/fruit"},
+          {id:6 , img: veg1, head:'Vegetables', to:"/vegetable" },
+          {id:7 , img:rice1, head:'Rice', to:"/rice" },
       ]
        
       const best =[
@@ -120,7 +119,7 @@ const Menu = ({ Mybutton }) => {
         </Button>
 </Box>
         <Box sx={{marginLeft:'1%', marginTop: { xs: '30px', md: '1%', xl:'3%' }, display: 'flex', flexDirection: 'row', gap: 2 }}>
-          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+          <Box sx={{ display: 'flex', flexDirection: 'column'}}>
             <Box sx={{ fontWeight: 700, fontSize: { xs: '25px', md: '48px' } }}>
               15K
             </Box>
@@ -161,7 +160,7 @@ const Menu = ({ Mybutton }) => {
                   
                </CardContent>
                <CardActions>
-                 <Mybutton variant='outlined' onClick={ (()=> navigate("/cat"))}  sx={{ml:{sm:'20%' ,xs:'25%', md:'1px',xl:'10%'}}}>View</Mybutton>
+                 <Mybutton variant='outlined' onClick={ ()=> navigate("/cat")}  sx={{ml:{sm:'20%' ,xs:'25%', md:'1px',xl:'10%'}}}>View</Mybutton>
                  
                </CardActions>
              </Card>

@@ -103,7 +103,7 @@ const Location = useLocation();
   const menuItems = [
     {name:"Menu", to:"/"},
     {name:"Categories", to:"/cat"},
-    {name:"My Details"}
+    {name:"My orders", to:"/myorders"}
     
     
     
@@ -169,7 +169,7 @@ const Location = useLocation();
         }}
       >
         
-        <MenuItem onClick={handleClosed}><Link to='/log1'> <FiLogIn />Login</Link></MenuItem>
+        <MenuItem onclick={handleClosed}><Link to='/log1'> <FiLogIn />Login</Link></MenuItem>
         <MenuItem onClick={handleClosed}> <RiLogoutCircleLine /> Logout</MenuItem>
       </Menu>
              </>

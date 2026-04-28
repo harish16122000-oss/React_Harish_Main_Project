@@ -19,88 +19,12 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-const labels = {
-  0.5: '',
-  1: ' ',
-  1.5: ' ',
-  2: ' ',
-  2.5: ' ',
-  3: ' ',
-  3.5: ' ',
-  4: ' ',
-  4.5: ' ',
-  5: ' ',
-};
-
-
 const Wheat = ({ Mybutton, datam }) => {
    const wheat = datam?.wheat || [];
 
   const navigate = useNavigate()
   const dispatch = useDispatch()
-  /* const [wheat, setWheat] = useState([]); */
-  const [loading, setLoading] = useState(true);
-
-
- /*  const wheats = async () => {
-    try {
-
-      const res = await axios.get("http://localhost:5000/wheat");
-      setWheat(res.data);
-    }
-    catch (error) {
-      console.error("Error fetching data:", error)
-    }
-    finally {
-      setLoading(false);
-    }
-  };
-  useEffect(() => { wheats() }, []); */
-
-  const [value, setValue] = React.useState(2);
-  const [hover, setHover] = React.useState(-1);
-
-  /* Loading */
- /*  if (loading) return <Box sx={{ width: 300, display: { xs: "grid", md: 'flex' }, justifyContent: "space-evenly", alignItems: 'center', marginTop: { xs: "30px", md: "200px" } }}>
-
-
-    <Box sx={{ marginLeft: { md: "50px", lg: "80px" } }}>
-      <Skeleton variant="rectangular" width={210} height={118} />
-      <Skeleton />
-      <Skeleton width="80%" />
-      <Skeleton width="50%" />
-
-    </Box>
-    <Box sx={{ marginLeft: { md: "50px", lg: "80px" } }}>
-      <Skeleton variant="rectangular" width={210} height={118} />
-      <Skeleton />
-      <Skeleton width="80%" />
-      <Skeleton width="50%" />
-
-    </Box>
-    <Box sx={{ marginLeft: { md: "50px", lg: "80px" } }}>
-      <Skeleton variant="rectangular" width={210} height={118} />
-      <Skeleton />
-      <Skeleton width="80%" />
-      <Skeleton width="50%" />
-
-    </Box>
-    <Box sx={{ marginLeft: { md: "50px", lg: "80px" } }}>
-      <Skeleton variant="rectangular" width={210} height={118} />
-      <Skeleton />
-      <Skeleton width="80%" />
-      <Skeleton width="50%" />
-
-    </Box>
-    <Box sx={{ marginLeft: { md: "50px", lg: "80px" } }}>
-      <Skeleton variant="rectangular" width={210} height={118} />
-      <Skeleton />
-      <Skeleton width="80%" />
-      <Skeleton width="50%" />
-
-    </Box>
-  </Box>; */
-console.log("WHEAT DATA:", datam);
+  
 
   return (
 
@@ -126,11 +50,13 @@ console.log("WHEAT DATA:", datam);
                   {w.Name}
                 </Typography>
                 <Box sx={{ width: 200, display: 'flex', alignItems: 'center', }}>
-                  <Rating
-                    sx={{ marginLeft: '50px' }}
-                    emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" defaultValue={2} precision={1} />}
-                    readOnly />
-
+                   {<Rating
+      sx={{marginLeft:'30px'}}
+      value={w.value}
+      precision={1}
+        emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit"  />}
+      readOnly />
+       }
                 </Box>
                 <Typography sx={{ marginTop: '20px', marginLeft: '1px' }}> <span style={{ textDecoration: "line-through", color: '#584f4f' }}> {w.discount}.00</span> <span style={{ marginLeft: '5px', fontSize: '19px', fontWeight: 800, }}>{w.price}.00</span><span style={{ border: '1px solid ', padding: '2px', marginLeft: '10px', color: '#584f4f', fontSize: '13px' }}>{w.offer}</span></Typography>
 

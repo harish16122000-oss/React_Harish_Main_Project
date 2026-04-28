@@ -18,6 +18,7 @@
       "img": "/wheat-flour.jpg",
       "Name": "Wheat Flour",
       "discount": "₹99",
+      "value": 3,
       "price": "₹79",
       "offer": "17% OFF"
     },
@@ -26,6 +27,7 @@
       "img": "/wheat-bran.jpg",
       "Name": "Wheat Bran",
       "discount": "₹99",
+      "value": 4,
       "price": "₹87",
       "offer": "25% OFF"
     },
@@ -34,6 +36,7 @@
       "img": "/wheat-maida.jpeg",
       "Name": "Wheat Maida",
       "discount": "₹88",
+      "value": 3,
       "price": "₹80",
       "offer": "16% OFF"
     },
@@ -42,6 +45,7 @@
       "img": "/wheat-rava.jpg",
       "Name": "Wheat Rava",
       "discount": "₹119",
+      "value": 4,
       "price": "₹80",
       "offer": "30% OFF"
     },
@@ -50,6 +54,7 @@
       "img": "/wheat-broken.png",
       "Name": "Broken Wheat",
       "discount": "₹129",
+      "value": 5,
       "price": "₹90",
       "offer": "47% OFF"
     }
@@ -60,6 +65,7 @@
       "img": "/millet-atta.webp",
       "Name": "Millet Atta",
       "discount": "₹60",
+      "value": 2,
       "price": "₹50",
       "offer": "17% OFF"
     },
@@ -68,6 +74,7 @@
       "img": "/millet-khichdi.webp",
       "Name": "Millet Kichdi",
       "discount": "₹77",
+      "value": 5,
       "price": "₹57",
       "offer": "25% OFF"
     },
@@ -76,6 +83,7 @@
       "img": "/millet-ladoos.webp",
       "Name": "Millet Laddos",
       "discount": "₹118",
+      "value": 3,
       "price": "₹93",
       "offer": "16% OFF"
     },
@@ -84,6 +92,7 @@
       "img": "/millet-noodle.webp",
       "Name": "Millet Noodles",
       "discount": "₹122",
+      "value": 2,
       "price": "₹97",
       "offer": "30% OFF"
     },
@@ -92,6 +101,7 @@
       "img": "/millet-powder.webp",
       "Name": "Millet Powder",
       "discount": "₹121",
+      "value": 5,
       "price": "₹80",
       "offer": "47% OFF"
     }
@@ -102,6 +112,7 @@
       "img": "/grape-juice.jpg",
       "Name": "Grape Juice",
       "discount": "₹50",
+      "value": 3,
       "price": "₹40",
       "offer": "20% OFF"
     },
@@ -110,6 +121,7 @@
       "img": "/lime-juice.jpg",
       "Name": "Lime Juice",
       "discount": "₹77",
+      "value": 2,
       "price": "₹57",
       "offer": "25% OFF"
     },
@@ -118,6 +130,7 @@
       "img": "/mosambi-juice.jpg",
       "Name": "Mosambi Juice",
       "discount": "₹108",
+      "value": 4,
       "price": "₹99",
       "offer": "16% OFF"
     },
@@ -126,6 +139,7 @@
       "img": "/muskmelon-juice.jpg",
       "Name": "Muskmelon Juice",
       "discount": "₹112",
+      "value": 4,
       "price": "₹90",
       "offer": "30% OFF"
     },
@@ -134,6 +148,7 @@
       "img": "/pomegranate-juice.jpg",
       "Name": "Pomegranate Juice",
       "discount": "₹121",
+      "value": 3,
       "price": "₹99",
       "offer": "47% OFF"
     }
@@ -144,6 +159,7 @@
       "img": "/dairy-butter.jpg",
       "Name": "Butter",
       "discount": "₹60",
+      "value": 4,
       "price": "₹50",
       "offer": "17% OFF"
     },
@@ -152,6 +168,7 @@
       "img": "/dairy-ghee.webp",
       "Name": "Ghee",
       "discount": "₹77",
+      "value": 5,
       "price": "₹57",
       "offer": "25% OFF"
     },
@@ -160,6 +177,7 @@
       "img": "/dairy-lassi.jfif",
       "Name": "lassi",
       "discount": "₹73",
+      "value": 3,
       "price": "₹45",
       "offer": "16% OFF"
     },
@@ -168,6 +186,7 @@
       "img": "/dairy-yogurt.jfif",
       "Name": "Yogurt",
       "discount": "₹102",
+      "value": 4,
       "price": "₹80",
       "offer": "25% OFF"
     },
@@ -176,6 +195,7 @@
       "img": "/dairy-milk.webp",
       "Name": "Milk",
       "discount": "₹101",
+      "value": 4,
       "price": "₹90",
       "offer": "17% OFF"
     }
@@ -186,6 +206,7 @@
       "img": "/fruit-apple.jfif",
       "Name": "Apple",
       "discount": "₹20",
+      "value": 5,
       "price": "₹15",
       "offer": "25% OFF"
     },
@@ -194,6 +215,7 @@
       "img": "/fruit-guava.jpg",
       "Name": "Guava",
       "discount": "₹17",
+      "value": 2,
       "price": "₹10",
       "offer": "25% OFF"
     },
@@ -202,6 +224,7 @@
       "img": "/fruit-mango.jpg",
       "Name": "Mango",
       "discount": "₹48",
+      "value": 4,
       "price": "₹40",
       "offer": "16% OFF"
     },
@@ -210,6 +233,7 @@
       "img": "/fruit-orange.jpg",
       "Name": "Orange",
       "discount": "₹22",
+      "value": 5,
       "price": "₹20",
       "offer": "10% OFF"
     },
@@ -218,6 +242,7 @@
       "img": "/fruit-pineapple.png",
       "Name": "Pineapple",
       "discount": "₹21",
+      "value": 4,
       "price": "₹20",
       "offer": "47% OFF"
     }
@@ -228,6 +253,7 @@
       "img": "/veg-bitterguard.jpg",
       "Name": "Bitterguard",
       "discount": "₹30",
+      "value": 5,
       "price": "₹15",
       "offer": "50% OFF"
     },
@@ -236,6 +262,7 @@
       "img": "/veg-brinjal.jpg",
       "Name": "Brinjal",
       "discount": "₹17",
+      "value": 4,
       "price": "₹10",
       "offer": "25% OFF"
     },
@@ -244,6 +271,7 @@
       "img": "/veg-carrot.jfif",
       "Name": "Carrot",
       "discount": "₹18",
+      "value": 5,
       "price": "₹15",
       "offer": "60% OFF"
     },
@@ -252,6 +280,7 @@
       "img": "/veg-cucumber.jpg",
       "Name": "Cucumber",
       "discount": "₹20",
+      "value": 2,
       "price": "₹10",
       "offer": "50% OFF"
     },
@@ -260,6 +289,7 @@
       "img": "/veg-lady'sfinger.jpg",
       "Name": "Lady's Finger",
       "discount": "₹13",
+      "value": 5,
       "price": "₹11",
       "offer": "47% OFF"
     }
@@ -270,6 +300,7 @@
       "img": "/rice-flour.png",
       "Name": "Rice Flour",
       "discount": "₹109",
+      "value": 3,
       "price": "₹80",
       "offer": "15% OFF"
     },
@@ -278,6 +309,7 @@
       "img": "/flatted-rice.jpeg",
       "Name": "Faltted Rice",
       "discount": "₹59",
+      "value": 5,
       "price": "₹50",
       "offer": "25% OFF"
     },
@@ -286,6 +318,7 @@
       "img": "/puffed-rice.jpg",
       "Name": "Puffed Rice ",
       "discount": "₹78",
+      "value": 2,
       "price": "₹63",
       "offer": "16% OFF"
     },
@@ -294,6 +327,7 @@
       "img": "/rice-noodles.jpg",
       "Name": "Rice Noodles",
       "discount": "₹97",
+      "value": 4,
       "price": "₹90",
       "offer": "30% OFF"
     },
@@ -302,6 +336,7 @@
       "img": "/rice-batter.jpg",
       "Name": "Rice Batter",
       "discount": "₹52",
+      "value": 5,
       "price": "₹45",
       "offer": "47% OFF"
     }
