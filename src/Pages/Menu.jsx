@@ -17,8 +17,9 @@ import best3 from '../assets/millet ladoos.webp';
 import best4 from '../assets/pomegranate juice.jpg';
 import back1 from '../assets/background-1.jpg';
 import back2 from '../assets/blue_background_2.jpg';
-import back3 from '../assets/background3.jpg'
-import { Box, Button, Container, Grid  } from '@mui/material';
+import back3 from '../assets/background3.jpg';
+import StarIcon from '@mui/icons-material/Star';
+import { Box, Button, Container, Grid, Rating  } from '@mui/material';
 import ban from '../assets/ban.png';
 import CardActionArea from '@mui/material/CardActionArea';
 import { TbTruckDelivery } from "react-icons/tb";
@@ -32,6 +33,16 @@ import  backgreen from '../assets/green_back.jpg';
 const Menu = ({ Mybutton, datam }) => {
 
   const navigate= useNavigate(); 
+
+  const feedback=[
+    {id:1,
+      name:"Kumar",
+      order:"ORD-1001",
+      rating: 4,
+      date: "28 Apr 2026",
+      review: "Very satisfied with the product quality. Everything was fresh and well packed. Delivery was quick too. Will definitely order again."
+    }
+  ]
 
   const cards = [
   {
@@ -173,7 +184,7 @@ const Menu = ({ Mybutton, datam }) => {
              <Container>
              <Box>
               <Typography variant='h4' sx={{textAlign:"center"}}> Best Selling Products</Typography>
-              <Grid container columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'50px'},mx:'auto'}}>
+              <Grid container columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',md:'50px'}}}>
                 {best.map((e)=>(
                 <Grid key={e.id} size={{xs:12, sm:6, md:3, lg:3, xl:3}}>
                 
@@ -260,7 +271,58 @@ const Menu = ({ Mybutton, datam }) => {
 </p>
 <Mybutton variant='outlined'sx={{marginLeft:"45%",paddingX:"40px", marginY:"20px"}} onClick={ (()=> navigate("/log1"))}>Login</Mybutton>
     </Container>
-
+    <Box sx={{marginTop:{xs:"20px", md:"50px"}}}>
+      <Typography variant='h4' sx={{textAlign:'center'}}>Customer Reviews</Typography>
+    </Box>
+<Box
+      sx={{
+        width: '100%',
+        display: {xs:"block",md:'grid'},
+         paddingLeft:{xs:"20px", md:"150px"},
+        gridTemplateColumns: '20% 20% 20% 20% ',
+        gap: 3,
+        marginTop:{xs:"50px", md:"50px"}
+       
+      
+      }}
+    >
+      {feedback.map((cards, index) => (
+        <Card sx={{border:"1px solid",marginTop:{xs:"20px", md:"0px"} }} key={cards.id}>
+          <CardActionArea
+           
+             
+            sx={{
+              height: '100%',
+              '&[data-active]': {
+                backgroundColor: 'action.selected',
+                '&:hover': {
+                  backgroundColor: 'action.selectedHover',
+                },
+              },
+            }}
+          >
+            <CardContent sx={{ height: '100%', }}>
+              <Typography variant="h5" component="div">
+                {cards.order}
+              </Typography> 
+               <Rating
+         
+         value={cards.rating}
+         precision={1}
+           emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit"  />}
+         readOnly /><br />
+         <Typography variant='body'gutterBottom >{cards.date}</Typography>
+              <Typography variant="h5" component="div">
+                {cards.name}
+              </Typography>
+              <Typography variant="body2" sx={{color: 'text.secondary'}}>
+                {cards.review}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+      ))}
+    </Box>
     </div>
   )
 }
