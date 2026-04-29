@@ -23,6 +23,7 @@ import Dairy from './Components/Dairy';
 import Fruits from './Components/Fruits';
 import Vegetable from './Components/Vegetable';
 import Juice from './Components/Juice';
+import Navigate from './Pages/Navigate';
 
 
  
@@ -96,6 +97,7 @@ const App = () => {
             <Route path='/vegetable' element={<Vegetable/>}/>
             <Route path='/juice' element={<Juice/>}/>
             <Route path='/dairy' element={<Dairy/>}/>
+            <Route path='/navigate/:to' element={<Navigate datam={datam} Mybutton={Mybutton}/>}/>
              
             <Route path='/log' element={<Login Mybutton={Mybutton}/>} />
             <Route path='/log1' element={<Login1 Mybutton={Mybutton}/>} />
