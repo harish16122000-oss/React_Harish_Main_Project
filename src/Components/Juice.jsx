@@ -54,7 +54,7 @@ const Juice = ({Mybutton, datam}) => {
         </Typography>
          <Box sx={{ width: 200, display:'flex', alignItems: 'center', }}>
       <Rating
-           sx={{marginLeft:'70px'}}
+           sx={{marginLeft:'30px'}}
            value={w.value}
            precision={1}
              emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit"  />}

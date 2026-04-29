@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -17,9 +17,8 @@ import best3 from '../assets/millet ladoos.webp';
 import best4 from '../assets/pomegranate juice.jpg';
 import back1 from '../assets/background-1.jpg';
 import back2 from '../assets/blue_background_2.jpg';
-import back3 from '../assets/background3.jpg';
-import StarIcon from '@mui/icons-material/Star';
-import { Box, Button, Container, Grid, Rating  } from '@mui/material';
+import back3 from '../assets/background3.jpg'
+import { Avatar, Box, Button, Container, Grid, Rating, TextField  } from '@mui/material';
 import ban from '../assets/ban.png';
 import CardActionArea from '@mui/material/CardActionArea';
 import { TbTruckDelivery } from "react-icons/tb";
@@ -32,17 +31,46 @@ import  backgreen from '../assets/green_back.jpg';
 
 const Menu = ({ Mybutton, datam }) => {
 
+  const [select, setSelect]= useState("");
   const navigate= useNavigate(); 
+   const [value, setValue] = React.useState(2);
+   const upload = () => {
 
-  const feedback=[
-    {id:1,
-      name:"Kumar",
-      order:"ORD-1001",
-      rating: 4,
-      date: "28 Apr 2026",
-      review: "Very satisfied with the product quality. Everything was fresh and well packed. Delivery was quick too. Will definitely order again."
-    }
-  ]
+   }
+  const reviews = [
+  {
+    id: 1,
+    name: "Harish Kumar",
+    orderId: "ORD-1001",
+    rating: 4,
+    date: "28 Apr 2026",
+    comment: "Very satisfied with the product quality.  Delivery was quick too. Will definitely order again."
+  },
+  {
+    id: 2,
+    name: "Priya Sharma",
+    orderId: "ORD-1002",
+    rating: 5,
+    date: "27 Apr 2026",
+    comment: "Excellent organic products! The vegetables were fresh and tasted natural. Loved the service and packaging."
+  },
+  {
+    id: 3,
+    name: "Arun Kumar",
+    orderId: "ORD-1003",
+    rating: 4,
+    date: "26 Apr 2026",
+    comment: "Good quality items, but delivery was slightly delayed. Overall happy with the purchase."
+  },
+  {
+    id: 4,
+    name: "Sneha Reddy",
+    orderId: "ORD-1004",
+    rating: 5,
+     date: "25 Apr 2026",
+    comment: "Amazing experience! Everything was fresh and organic as promised. Highly recommend this store."
+  }
+];
 
   const cards = [
   {
@@ -72,13 +100,13 @@ const Menu = ({ Mybutton, datam }) => {
 ];
  
    const prod= [
-          {id:1 , img: wheat1, head:'Wheat', to:"/wheat"},      
-          {id:2 , img: millet1, head:'Millet',to:"/millet"},
-          {id:3 , img: juice1 , head:'Juice',to:"/juice" },
-          {id:4 , img: dairy1, head:'Dairy ', to:"/dairy" },
-          {id:5 , img: fruit1, head:'Fruits', to:"/fruit"},
-          {id:6 , img: veg1, head:'Vegetables', to:"/vegetable" },
-          {id:7 , img:rice1, head:'Rice', to:"/rice" },
+          {id:1 , img: wheat1, head:'Wheat', to:"wheat"},      
+          {id:2 , img: millet1, head:'Millet',to:"millet"},
+          {id:3 , img: juice1 , head:'Juice',to:"juice" },
+          {id:4 , img: dairy1, head:'Dairy ', to:"Dairy" },
+          {id:5 , img: fruit1, head:'Fruits', to:"Fruits"},
+          {id:6 , img: veg1, head:'Vegetables', to:"Vegetables" },
+          {id:7 , img:rice1, head:'Rice', to:"rice" },
       ]
        
       const best =[
@@ -155,7 +183,7 @@ const Menu = ({ Mybutton, datam }) => {
                        {/* Categories */}
                        
                   <Typography variant='h2'sx={{textAlign:'center', marginTop:'50px', color:'#2E7D32', fontWeight:600, fontSize: { xs: '35px', sm: '50px', md: '60px',  }, marginBottom:{xs:"40px", md:'0px'}}}>Categories</Typography>
-                 <Box sx={{display:'flex', flexDirection:{xs:'column', md:'row'}, gap:'10px', marginTop:{xs:'0px',md:'50px'},paddingBottom:"6%"}}>
+                 <Box sx={{display:'flex', flexDirection:{xs:'column', md:'row'}, gap:'10px', justifyContent:"center", marginTop:{xs:'0px',md:'50px'},paddingBottom:"6%"}}>
                      {prod.map((p)=>(
                     
                 <Card key={p.id} sx={{ maxWidth: 345 , paddingY:'3%', paddingX:{xs:'3%',md:"1.5%",xl:'3%'}, marginLeft:{xs:'50px', md:'0px'},backgroundColor:'#f5e8cd', marginBottom:{xs:"20px", md:"0px"}}}>
@@ -171,7 +199,7 @@ const Menu = ({ Mybutton, datam }) => {
                   
                </CardContent>
                <CardActions>
-                 <Mybutton variant='outlined' onClick={ ()=> navigate("/cat")}  sx={{ml:{sm:'20%' ,xs:'25%', md:'1px',xl:'10%'}}}>View</Mybutton>
+                 <Mybutton variant='outlined' onClick={ ()=> navigate(`/navigate/${p.to}`)}  sx={{ml:{sm:'20%' ,xs:'25%', md:'1px',xl:'10%'}}}>View</Mybutton>
                  
                </CardActions>
              </Card>
@@ -184,7 +212,7 @@ const Menu = ({ Mybutton, datam }) => {
              <Container>
              <Box>
               <Typography variant='h4' sx={{textAlign:"center"}}> Best Selling Products</Typography>
-              <Grid container columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',md:'50px'}}}>
+              <Grid container columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'50px'},mx:'auto'}}>
                 {best.map((e)=>(
                 <Grid key={e.id} size={{xs:12, sm:6, md:3, lg:3, xl:3}}>
                 
@@ -271,57 +299,82 @@ const Menu = ({ Mybutton, datam }) => {
 </p>
 <Mybutton variant='outlined'sx={{marginLeft:"45%",paddingX:"40px", marginY:"20px"}} onClick={ (()=> navigate("/log1"))}>Login</Mybutton>
     </Container>
-    <Box sx={{marginTop:{xs:"20px", md:"50px"}}}>
-      <Typography variant='h4' sx={{textAlign:'center'}}>Customer Reviews</Typography>
-    </Box>
-<Box
-      sx={{
-        width: '100%',
-        display: {xs:"block",md:'grid'},
-         paddingLeft:{xs:"20px", md:"150px"},
-        gridTemplateColumns: '20% 20% 20% 20% ',
-        gap: 3,
-        marginTop:{xs:"50px", md:"50px"}
-       
+
+{/* Customer Reviews */}
+
+     <Box sx={{ p: 4, backgroundColor: "#f5f5f5", marginTop:{xs:"20px", md:"50px"} }}>
       
-      }}
-    >
-      {feedback.map((cards, index) => (
-        <Card sx={{border:"1px solid",marginTop:{xs:"20px", md:"0px"} }} key={cards.id}>
-          <CardActionArea
-           
-             
-            sx={{
-              height: '100%',
-              '&[data-active]': {
-                backgroundColor: 'action.selected',
-                '&:hover': {
-                  backgroundColor: 'action.selectedHover',
-                },
-              },
-            }}
-          >
-            <CardContent sx={{ height: '100%', }}>
-              <Typography variant="h5" component="div">
-                {cards.order}
-              </Typography> 
-               <Rating
-         
-         value={cards.rating}
-         precision={1}
-           emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit"  />}
-         readOnly /><br />
-         <Typography variant='body'gutterBottom >{cards.date}</Typography>
-              <Typography variant="h5" component="div">
-                {cards.name}
-              </Typography>
-              <Typography variant="body2" sx={{color: 'text.secondary'}}>
-                {cards.review}
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-      ))}
+      <Typography variant="h4" textAlign="center" mb={3} sx={{marginY:{xs:"20px", md:"50px"}}}>
+        Customer Reviews
+      </Typography>
+
+      <Grid container spacing={3} justifyContent='center'>
+        {reviews.map((rev) => (
+          <Grid item xs={12} sm={6} md={3} key={rev.id}>
+            
+            <Card sx={{ borderRadius: 3, boxShadow: 3 }}>
+              <CardContent>
+
+              
+                <Box display="flex" alignItems="center" gap={2}>
+                  <Avatar>{rev.name[0]}</Avatar>
+                  <Box>
+                    <Typography fontWeight="bold">
+                      {rev.name}
+                    </Typography>
+                    <Typography variant="caption" color="gray">
+                      {rev.date}
+                    </Typography>
+                  </Box>
+                </Box>
+
+                
+                <Typography variant="body2" sx={{ mt: 1 }}>
+                  Order: {rev.orderId}
+                </Typography>
+
+                
+                <Rating value={rev.rating} readOnly sx={{ mt: 1 }} />
+
+                
+                <Typography sx={{ mt: 1, width:'200px' }}>
+                  {rev.comment}
+                </Typography>
+
+              </CardContent>
+            </Card>
+
+          </Grid>
+        ))}
+      </Grid>
+      {/* Users Review */}
+<Box
+  sx={{
+    display: "flex",
+    justifyContent: "center",   // horizontal center
+    alignItems: "center",       // vertical (optional)
+    mt: 5
+  }}
+>
+   
+  <Box component="form" sx={{ display: "flex", flexDirection: "column", width: 300, mx: "auto", gap: 2, mt: 2 }}>
+       <Rating
+      name="simple-controlled"
+      sx={{ fontSize: "60px" }}
+      value={value}
+      onChange={(event, newValue) => {
+        setValue(newValue);
+      }}/>
+        <TextField label="Name" name='name' value='name'  />
+        <TextField label="Email" name='email' value='email'  />
+        <TextField label="Review Title" name='title' value='title'  />
+        <TextField label="What's your review?" name='review' value='review' />
+
+        <Button variant="contained" >
+          Submit
+        </Button>
+      </Box>
+</Box>
     </Box>
     </div>
   )

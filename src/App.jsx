@@ -93,10 +93,10 @@ const App = () => {
             <Route path='/wheat' element={<Wheat/> }/>
             <Route path='/rice' element={<Rice/>}/>
             <Route path='/millet' element={<Millet/>}/>
-            <Route path='/fruit' element={<Fruits/>}/>
-            <Route path='/vegetable' element={<Vegetable/>}/>
+            <Route path='/Fruits' element={<Fruits/>}/>
+            <Route path='/Vegetables' element={<Vegetable/>}/>
             <Route path='/juice' element={<Juice/>}/>
-            <Route path='/dairy' element={<Dairy/>}/>
+            <Route path='/Dairy' element={<Dairy/>}/>
             <Route path='/navigate/:to' element={<Navigate datam={datam} Mybutton={Mybutton}/>}/>
              
             <Route path='/log' element={<Login Mybutton={Mybutton}/>} />
