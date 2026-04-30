@@ -34,9 +34,9 @@ const Juice = ({Mybutton, datam}) => {
     <div>
                                      {/* Juice */}
 
-       <Typography variant='h2'sx={{textAlign:'center', marginTop:'50px', color:'#2E7D32', fontWeight:600, marginBottom:{xs:"0px",md:'40px'}}}>Juice Products</Typography>
+       <Typography variant='h2'sx={{textAlign:'center', marginTop:'50px', color:'#2E7D32', fontWeight:600, marginBottom:{xs:"0px",md:'40px'},fontSize:{xs:'40px', md:'60px'}}}>Juice Products</Typography>
   
-        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'50px'},mx:'auto'}}>
+        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'50px'},fontSize:{xs:'40px', md:'60px'}}}>
           
                {/* Mapmethod */}
            {wheat.map((w)=>(

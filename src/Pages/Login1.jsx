@@ -36,7 +36,7 @@ import { Container, Typography } from '@mui/material';
       <TextField   label="Password" variant="standard" />
       <Mybutton variant='outlined' sx={{mt:"20px"}}>Submit</Mybutton>
     </Box>
-    <Typography>If you don't have an account please <Link to='/log'>login</Link></Typography>
+    <Typography>If you don't have an account please <Link to='/log'>register</Link></Typography>
         </Container>
      </Container>
      </div>

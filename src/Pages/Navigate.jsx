@@ -28,14 +28,14 @@ const navigate = useNavigate();
     
   return (
     <div>
-        <Typography variant='h2' sx={{ textAlign: 'center', PaddingTop: '50px', color: '#2E7D32', fontWeight: 600, marginBottom: { xs: "0px", md: '40px' } }}>Products</Typography>
+        <Typography variant='h2' sx={{ textAlign: 'center', PaddingTop: '50px', color: '#2E7D32', fontWeight: 600, marginTop:{xs:'20px', md:'50px'} }}>Products</Typography>
         {/* wheat */}
-        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'50px'},mx:'auto'}}>
+        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{mx:'auto'}}>
 
     {to === 'wheat' && datam.wheat?.map((w)=>(
          <Grid key={w.id} size={{ xs: 12, sm: 6, md: 3, lg: 3, xl: 2 }}>
             
-            <Card sx={{ marginTop: { xs: "40px", md: '20px', lg: "50px" }, backgroundColor: '#f5e8cd', marginBottom: "30px" }}>
+            <Card sx={{ marginTop: { xs: "40px", md: '20px', lg: "50px" }, backgroundColor: '#f5e8cd', }}>
               <CardMedia
                 sx={{ height: { xs: 250, md: 250 } }}
                 image={w.img}
@@ -66,12 +66,12 @@ const navigate = useNavigate();
     ))}  
     </Grid>
     {/* millet */}
-        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'20px'},mx:'auto'}}>
+        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'0px'}}}>
 
     {to === 'millet' && datam.millet.map((w)=>(
          <Grid key={w.id} size={{ xs: 12, sm: 6, md: 3, lg: 3, xl: 2 }}>
             
-            <Card sx={{ marginTop: { xs: "40px", md: '20px', lg: "50px" }, backgroundColor: '#f5e8cd', }}>
+            <Card sx={{ marginTop: { xs: "40px", md: '20px', lg: "30px" }, backgroundColor: '#f5e8cd', }}>
               <CardMedia
                 sx={{ height: { xs: 250, md: 250 } }}
                 image={w.img}
@@ -107,7 +107,7 @@ const navigate = useNavigate();
     {to === 'juice' && datam.juice.map((w)=>(
          <Grid key={w.id} size={{ xs: 12, sm: 6, md: 3, lg: 3, xl: 2 }}>
             
-            <Card sx={{ marginTop: { xs: "40px", md: '20px', lg: "50px" }, backgroundColor: '#f5e8cd', marginBottom: "30px" }}>
+            <Card sx={{ marginTop: { xs: "40px", md: '20px', lg: "50px" }, backgroundColor: '#f5e8cd', }}>
               <CardMedia
                 sx={{ height: { xs: 250, md: 250 } }}
                 image={w.img}
@@ -138,12 +138,12 @@ const navigate = useNavigate();
     ))}  
     </Grid>
     {/* diary */}
-        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'50px'},mx:'auto'}}>
+        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'20px'}}}>
 
     {to === 'Dairy' && datam.Dairy.map((w)=>(
          <Grid key={w.id} size={{ xs: 12, sm: 6, md: 3, lg: 3, xl: 2 }}>
             
-            <Card sx={{ marginTop: { xs: "40px", md: '20px', lg: "50px" }, backgroundColor: '#f5e8cd', marginBottom: "30px" }}>
+            <Card sx={{ marginTop: { xs: "40px", md: '20px', lg: "0px" }, backgroundColor: '#f5e8cd',  }}>
               <CardMedia
                 sx={{ height: { xs: 250, md: 250 } }}
                 image={w.img}
@@ -174,12 +174,13 @@ const navigate = useNavigate();
     ))}  
     </Grid>
     {/* fruit */}
-        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'50px'},mx:'auto'}}>
+        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'0px'}}}>
 
     {to === 'Fruits' && datam.Fruits.map((w)=>(
          <Grid key={w.id} size={{ xs: 12, sm: 6, md: 3, lg: 3, xl: 2 }}>
             
-            <Card sx={{ marginTop: { xs: "40px", md: '20px', lg: "50px" }, backgroundColor: '#f5e8cd', marginBottom: "30px" }}>
+            <Card sx={{ marginTop: { xs: "40px", md: '20px', lg: "0px" }, backgroundColor: '#f5e8cd', 
+         }}>
               <CardMedia
                 sx={{ height: { xs: 250, md: 250 } }}
                 image={w.img}
@@ -210,12 +211,12 @@ const navigate = useNavigate();
     ))}  
     </Grid>
     {/* vegetable */}
-        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'50px'},mx:'auto'}}>
+        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'0px'},mx:'auto'}}>
 
     {to === 'Vegetables' && datam.Vegetables.map((w)=>(
          <Grid key={w.id} size={{ xs: 12, sm: 6, md: 3, lg: 3, xl: 2 }}>
             
-            <Card sx={{ marginTop: { xs: "40px", md: '20px', lg: "50px" }, backgroundColor: '#f5e8cd', marginBottom: "30px" }}>
+            <Card sx={{ marginTop: { xs: "40px", md: '20px', lg: "0px" }, backgroundColor: '#f5e8cd',}}>
               <CardMedia
                 sx={{ height: { xs: 250, md: 250 } }}
                 image={w.img}
@@ -249,12 +250,12 @@ const navigate = useNavigate();
     
 
     {/* rice */}
-        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'50px'},mx:'auto'}}>
+        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'0px'}}}>
 
     {to === 'rice' && datam.rice.map((w)=>(
          <Grid key={w.id} size={{ xs: 12, sm: 6, md: 3, lg: 3, xl: 2 }}>
             
-            <Card sx={{ marginTop: { xs: "40px", md: '20px', lg: "0px" }, backgroundColor: '#f5e8cd', marginBottom: "30px" }}>
+            <Card sx={{ backgroundColor: '#f5e8cd',}}>
               <CardMedia
                 sx={{ height: { xs: 250, md: 250 } }}
                 image={w.img}
@@ -266,7 +267,7 @@ const navigate = useNavigate();
                 </Typography>
                 <Box sx={{ width: 200, display: 'flex', alignItems: 'center', }}>
                    <Rating
-      sx={{marginLeft:'70px'}}
+      sx={{marginLeft:'30px'}}
       value={w.value}
       precision={1}
         emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit"  />}

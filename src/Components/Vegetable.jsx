@@ -33,9 +33,9 @@ const Vegetable = ({Mybutton, datam}) => {
     <div>
                                      {/* Vegetable */}
 
-       <Typography variant='h2'sx={{textAlign:'center', marginTop:'50px', color:'#2E7D32', fontWeight:600, marginBottom:{xs:"0px",md:'40px'}}}>Vegetable Products</Typography>
+       <Typography variant='h2'sx={{textAlign:'center', marginTop:'50px', color:'#2E7D32', fontWeight:600, marginBottom:{xs:"0px",md:'40px'},fontSize:{xs:'40px', md:'60px'}}}>Vegetable Products</Typography>
   
-        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'50px'},mx:'auto'}}>
+        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'50px'}}}>
           
                {/* Mapmethod */}
            {wheat.map((w)=>(
@@ -53,7 +53,7 @@ const Vegetable = ({Mybutton, datam}) => {
         </Typography>
          <Box sx={{ width: 200, display:'flex', alignItems: 'center', }}>
        <Rating
-      sx={{marginLeft:'70px'}}
+      sx={{marginLeft:'30px'}}
       value={w.value}
       precision={1}
         emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit"  />}

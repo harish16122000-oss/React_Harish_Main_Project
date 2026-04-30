@@ -33,7 +33,7 @@ import { FiLogIn } from "react-icons/fi";
 import { RiLogoutCircleLine } from "react-icons/ri";
 
  import veg from '../assets/veg.png';
-import  fruit from '../assets/frutis.PNG';
+import  fruit from '../assets/fruits.PNG';
 import rice from  '../assets/rice.PNG';
 import wheat from  '../assets/wheat.PNG';
 import  millet from  '../assets/millet.PNG';
@@ -56,13 +56,13 @@ const Location = useLocation();
   const [opens, setOpens] = React.useState(false);
   const draw =[
    
-   { icon: wheat, title: "Wheat"},
-    { icon: millet, title: "Millet"},
-    { icon: milk, title: "Natural Drinks"},
-    { icon: drink, title: "Dairy Products"},
-     { icon: fruit, title: "Fruits"},
-      { icon: veg, title: "Vegetables"},
-    { icon: rice, title: "Rice"},
+   { icon: wheat, title: "Wheat", to:"wheat"},
+    { icon: millet, title: "Millet", to:"millet"},
+    { icon: milk, title: "Natural Drinks", to:'juice'},
+    { icon: drink, title: "Dairy Products", to:"Dairy"},
+     { icon: fruit, title: "Fruits", to:"Fruits"},
+      { icon: veg, title: "Vegetables", to:"Vegetables"},
+    { icon: rice, title: "Rice", to:"rice"},
   ]
 
   const toggleDrawer = (newOpen) => () => {
@@ -73,8 +73,8 @@ const Location = useLocation();
       <List>
        {draw.map((dra, index)=>(
         <ListItem key={index}>
-          <img src= {dra.icon} alt="" />
-          <ListItemText sx={{ml:"30px", mt:"15px"}} onClick={()=>navigate("/cat")}>{dra.title}</ListItemText>
+          <img src= {dra.icon} alt="" width='30px' height='30px' />
+          <ListItemText sx={{ml:"30px", mt:"15px"}} onClick={()=>navigate(`/navigate/${dra.to}`)}>{dra.title}</ListItemText>
 
         </ListItem>
        ))}
@@ -124,7 +124,7 @@ const Location = useLocation();
               🌿 Lingam's Organic
             </Typography>
              <IconButton onClick={toggleDrawer(true)} color="inherit">
-              <MenuIcon></MenuIcon>
+              <MenuIcon style={{marginRight:'70px'}}></MenuIcon>
             </IconButton>
 
             {/* LeftDrawer */}
@@ -206,7 +206,7 @@ const Location = useLocation();
         }}
       >
         
-        <MenuItem onClick={handleClosed}><Link to='/log'> <FiLogIn />Login</Link></MenuItem>
+        <MenuItem onClick={handleClosed}><Link to='/log1'> <FiLogIn />Login</Link></MenuItem>
         <MenuItem onClick={handleClosed}> <RiLogoutCircleLine /> Logout</MenuItem>
       </Menu>
   </>

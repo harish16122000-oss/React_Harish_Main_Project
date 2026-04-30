@@ -18,7 +18,7 @@ import best4 from '../assets/pomegranate juice.jpg';
 import back1 from '../assets/background-1.jpg';
 import back2 from '../assets/blue_background_2.jpg';
 import back3 from '../assets/background3.jpg'
-import { Avatar, Box, Button, Container, Grid, Rating, TextField  } from '@mui/material';
+import { Avatar, Box, Button, Container, Grid, IconButton, Rating, TextField  } from '@mui/material';
 import ban from '../assets/ban.png';
 import CardActionArea from '@mui/material/CardActionArea';
 import { TbTruckDelivery } from "react-icons/tb";
@@ -27,9 +27,39 @@ import { TiTickOutline } from "react-icons/ti";
 import { MdOutlineLocalOffer } from "react-icons/md";
 import { Link, useNavigate } from 'react-router-dom';
 import  backgreen from '../assets/green_back.jpg';
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
 
 
 const Menu = ({ Mybutton, datam }) => {
+
+  const [feed, setFeed]= useState(
+    {
+      name:'',
+      email:'',
+      title:'',
+      review:''
+
+    }
+ )
+ const handleChange= (e)=>{
+  const[name, value]=e.target;
+  setFeed((prev)=>({...prev, [name]:value}))
+ }
+
+ const handleSubmit= (e)=>{
+  e.preventDefault;
+  setFeed(
+  {
+      name:'',
+      email:'',
+      title:'',
+      review:''
+
+    })
+  alert("Reviews Updated")
+ }
 
   const [select, setSelect]= useState("");
   const navigate= useNavigate(); 
@@ -186,7 +216,7 @@ const Menu = ({ Mybutton, datam }) => {
                  <Box sx={{display:'flex', flexDirection:{xs:'column', md:'row'}, gap:'10px', justifyContent:"center", marginTop:{xs:'0px',md:'50px'},paddingBottom:"6%"}}>
                      {prod.map((p)=>(
                     
-                <Card key={p.id} sx={{ maxWidth: 345 , paddingY:'3%', paddingX:{xs:'3%',md:"1.5%",xl:'3%'}, marginLeft:{xs:'50px', md:'0px'},backgroundColor:'#f5e8cd', marginBottom:{xs:"20px", md:"0px"}}}>
+                <Card key={p.id} sx={{ maxWidth: 345 , paddingY:'3%', paddingX:{xs:'3%',md:"1.5%",xl:'3%'}, marginLeft:{xs:'20px', md:'0px'},backgroundColor:'#f5e8cd', marginBottom:{xs:"20px", md:"0px"}}}>
                <CardMedia
                  sx={{ height: 140, width: 140, borderRadius:'50%' ,marginLeft:{xs:'80px', md:"0px"}}}
                  image={p.img}
@@ -212,12 +242,12 @@ const Menu = ({ Mybutton, datam }) => {
              <Container>
              <Box>
               <Typography variant='h4' sx={{textAlign:"center"}}> Best Selling Products</Typography>
-              <Grid container columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'50px'},mx:'auto'}}>
+              <Grid container columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'20px',xl:'50px'},mx:'auto'}}>
                 {best.map((e)=>(
                 <Grid key={e.id} size={{xs:12, sm:6, md:3, lg:3, xl:3}}>
                 
                 <img src={e.img}  style={{ height: 180, width: 180, borderRadius:'50%' ,marginLeft:{xs:'80px', md:"0px"}, marginTop:{sx:"20px", md:"0px"}}} alt="" /> <br />
-               <Typography   variant='body' sx={{ marginLeft:'65px'}} > {e.name} </Typography>
+               <Typography   variant='body' sx={{ marginLeft:'65px', marginBottom:{xs:'50px', md:'auto'}}} > {e.name} </Typography>
               
                    </Grid>
                ))}
@@ -251,9 +281,10 @@ const Menu = ({ Mybutton, datam }) => {
 
              <Box
       sx={{
-        width: '100%',
+        width:{xs:'100%', md:"100%"},
         display: {xs:"block",md:'grid'},
-         paddingLeft:{xs:"20px", md:"150px"},
+        justifyContent:'center',
+         paddingX:{xs:"15%", md:"auto"} ,
         gridTemplateColumns: '20% 20% 20% 20% ',
         gap: 3,
         marginTop:{xs:"50px", md:"50px"}
@@ -292,12 +323,12 @@ const Menu = ({ Mybutton, datam }) => {
       ))}
     </Box>
     <Container sx={{backgroundImage:`url(${backgreen})`, marginTop:{xs:"50px", md:"100px"}}}>
-      <Typography variant='h2'sx={{color:"white", paddingTop:"100px", textAlign:"center"}}>Get 25% Discount on<br/> your first <br /> purchase
+      <Typography variant='h2'sx={{color:"white", paddingTop:"100px", textAlign:"center", fontSize:{xs:"40px", md:'60px'}}}>Get 25% Discount on<br/> your first <br /> purchase
      
       </Typography>
       <p style={{color:'white', textAlign:'center', }}>Just Sign Up & Register it now to become member.
 </p>
-<Mybutton variant='outlined'sx={{marginLeft:"45%",paddingX:"40px", marginY:"20px"}} onClick={ (()=> navigate("/log1"))}>Login</Mybutton>
+<Mybutton variant='outlined'sx={{marginLeft:{xs:"30%",md:"45%"},paddingX:"40px", marginY:"20px"}} onClick={ (()=> navigate("/log1"))}>Login</Mybutton>
     </Container>
 
 {/* Customer Reviews */}
@@ -365,16 +396,77 @@ const Menu = ({ Mybutton, datam }) => {
       onChange={(event, newValue) => {
         setValue(newValue);
       }}/>
-        <TextField label="Name" name='name' value='name'  />
-        <TextField label="Email" name='email' value='email'  />
-        <TextField label="Review Title" name='title' value='title'  />
-        <TextField label="What's your review?" name='review' value='review' />
+        <TextField label="Name" />
+        <TextField label="Email"/>
+        <TextField label="Review Title"/>
+        <TextField label="What's your review?"/>
 
-        <Button variant="contained" >
+        <Button variant="contained" type='submit' >
           Submit
         </Button>
       </Box>
 </Box>
+    </Box>
+
+     <Box sx={{ backgroundColor: "#115e15", color: "#fff", mt: 5, pt: 5, pb: 3 }}>
+      
+      <Grid container spacing={4} justifyContent="center" sx={{ px: 5 }}>
+        
+        {/* Brand Section */}
+        <Grid item xs={12} md={4}>
+          <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2 }}>
+            Lingam's Organic
+          </Typography>
+          <Typography variant="body2">
+            Fresh, natural and organic products directly from farms to your home.
+          </Typography>
+        </Grid>
+
+        {/* Quick Links */}
+        <Grid item xs={12} md={2}>
+          <Typography variant="h6" sx={{ mb: 2 }}>
+            Quick Links
+          </Typography>
+          <Typography sx={{ cursor: "pointer" }}>Home</Typography>
+          <Typography sx={{ cursor: "pointer" }}>Products</Typography>
+          <Typography sx={{ cursor: "pointer" }}>About</Typography>
+          <Typography sx={{ cursor: "pointer" }}>Contact</Typography>
+        </Grid>
+
+        {/* Contact */}
+        <Grid item xs={12} md={3}>
+          <Typography variant="h6" sx={{ mb: 2 }}>
+            Contact Us
+          </Typography>
+          <Typography>Email: harish16122000@gmail.com</Typography>
+          <Typography>Phone: +91 8523904929</Typography>
+          <Typography>Location: Tamil Nadu, India</Typography>
+        </Grid>
+
+        {/* Newsletter */}
+        <Grid item xs={12} md={3}>
+          <Typography variant="h6" sx={{ mb: 2 }}>
+            Newsletter
+          </Typography>
+          <TextField
+            variant="filled"
+            label="Your Email"
+            fullWidth
+            sx={{ backgroundColor: "#fff", borderRadius: 1, mb: 2 }}
+          />
+          <Button variant="contained" color="warning" fullWidth>
+            Subscribe
+          </Button>
+        </Grid>
+
+      </Grid>
+
+      {/* Bottom Line */}
+      <Box sx={{ textAlign: "center", mt: 4, borderTop: "1px solid #ccc", pt: 2 }}>
+        <Typography variant="body2">
+          © 2026 Lingam's Organic | All Rights Reserved
+        </Typography>
+      </Box>
     </Box>
     </div>
   )
