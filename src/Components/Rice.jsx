@@ -52,7 +52,7 @@ const Rice = ({Mybutton, datam}) => {
         </Typography>
          <Box sx={{ width: 200, display:'flex', alignItems: 'center', }}>
     <Rating
-         sx={{marginLeft:'30px'}}
+         sx={{marginLeft:'70px'}}
          value={w.value}
          precision={1}
            emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit"  />}
@@ -60,7 +60,7 @@ const Rice = ({Mybutton, datam}) => {
           
       
     </Box>
-    <Typography sx={{marginTop:'20px', marginLeft:'1px'}}> <span style={{textDecoration:"line-through",color:'#584f4f'}}> {w.discount}.00</span> <span style={{marginLeft:'5px',fontSize:'19px', fontWeight: 800,}}>{w.price}.00</span><span style={{border:'1px solid ', padding:'2px',marginLeft:'10px', color:'#584f4f', fontSize:'13px'}}>{w.offer}</span></Typography>
+    <Typography sx={{marginTop:'20px', marginLeft:'40px'}}> <span style={{textDecoration:"line-through",color:'#584f4f'}}> {w.discount}.00</span> <span style={{marginLeft:'5px',fontSize:'19px', fontWeight: 800,}}>{w.price}.00</span><span style={{border:'1px solid ', padding:'2px',marginLeft:'10px', color:'#584f4f', fontSize:'13px'}}>{w.offer}</span></Typography>
          
       </CardContent>
       <CardActions>
