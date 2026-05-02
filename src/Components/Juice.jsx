@@ -36,7 +36,7 @@ const Juice = ({Mybutton, datam}) => {
 
        <Typography variant='h2'sx={{textAlign:'center', marginTop:'50px', color:'#2E7D32', fontWeight:600, marginBottom:{xs:"0px",md:'40px'},fontSize:{xs:'40px', md:'60px'}}}>Juice Products</Typography>
   
-        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'50px'},fontSize:{xs:'40px', md:'60px'}}}>
+        <Grid container   columnSpacing={{md:6}} justifyContent="space-around"   sx={{marginTop:{xs:'10px',xl:'50px'},marginX:{xs:'0px',md:'40px'}}}>
           
                {/* Mapmethod */}
            {wheat.map((w)=>(
@@ -54,7 +54,7 @@ const Juice = ({Mybutton, datam}) => {
         </Typography>
          <Box sx={{ width: 200, display:'flex', alignItems: 'center', }}>
       <Rating
-            sx={{marginLeft:{md:'70px', lg:"30px"}}}
+            sx={{marginLeft:{xs:'50px',md:'70px', xl:"30px"}}}
            value={w.value}
            precision={1}
              emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit"  />}
@@ -62,11 +62,11 @@ const Juice = ({Mybutton, datam}) => {
             
       
     </Box>
-    <Typography sx={{marginTop:'20px', marginLeft:{md:'40px', lg:'1px'}}}> <span style={{textDecoration:"line-through",color:'#584f4f'}}> {w.discount}.00</span> <span style={{marginLeft:'5px',fontSize:'19px', fontWeight: 800,}}>{w.price}.00</span><span style={{border:'1px solid ', padding:'2px',marginLeft:'10px', color:'#584f4f', fontSize:'13px'}}>{w.offer}</span></Typography>
+    <Typography sx={{marginTop:'20px',marginLeft:{xs:'20px', lg:'40px',xl:'1px'}}}> <span style={{textDecoration:"line-through",color:'#584f4f'}}> {w.discount}.00</span> <span style={{marginLeft:'5px',fontSize:'19px', fontWeight: 800,}}>{w.price}.00</span><span style={{border:'1px solid ', padding:'2px',marginLeft:'10px', color:'#584f4f', fontSize:'13px'}}>{w.offer}</span></Typography>
          
       </CardContent>
       <CardActions>
-        <Mybutton variant='outlined' sx={{marginLeft:'40px'}} onClick={() =>(dispatch(addItem(w)),navigate("/cart"))}>Add to cart</Mybutton>
+        <Mybutton variant='outlined' sx={{ marginLeft: {xs:'30px', md:'50px'} }} onClick={() =>(dispatch(addItem(w)),navigate("/cart"))}>Add to cart</Mybutton>
         <CiHeart  style={{fontSize:'32px', border:" 1px solid", padding:'3px'}}/>
       </CardActions>
     </Card>

@@ -30,7 +30,7 @@ const navigate = useNavigate();
     <div>
         <Typography variant='h2' sx={{ textAlign: 'center', PaddingTop: '50px', color: '#2E7D32', fontWeight: 600, marginTop:{xs:'20px', md:'50px'} }}>Products</Typography>
         {/* wheat */}
-        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{mx:'auto'}}>
+        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginX:{xs:'0px',md:'40px'}}}>
 
     {to === 'wheat' && datam.wheat.map((w)=>(
          <Grid key={w.id} size={{ xs: 12, sm: 6, md: 3, lg: 3, xl: 2 }}>
@@ -47,14 +47,14 @@ const navigate = useNavigate();
                 </Typography>
                 <Box sx={{ width: 200, display: 'flex', alignItems: 'center', }}>
                    <Rating
-      sx={{marginLeft:{md:'70px', lg:"30px"}}}
+     sx={{marginLeft:{xs:'50px',md:'70px', xl:"30px"}}}
       value={w.value}
       precision={1}
         emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit"  />}
       readOnly />
        
                 </Box>
-                <Typography sx={{ marginTop: '20px', marginLeft:{md:'40px', lg:'1px'} }}> <span style={{ textDecoration: "line-through", color: '#584f4f' }}> {w.discount}.00</span> <span style={{ marginLeft: '5px', fontSize: '19px', fontWeight: 800, }}>{w.price}.00</span><span style={{ border: '1px solid ', padding: '2px', marginLeft: '10px', color: '#584f4f', fontSize: '13px' }}>{w.offer}</span></Typography>
+                <Typography sx={{ marginTop: '20px', marginLeft:{xs:'20px', lg:'40px',xl:'1px'} }}> <span style={{ textDecoration: "line-through", color: '#584f4f' }}> {w.discount}.00</span> <span style={{ marginLeft: '5px', fontSize: '19px', fontWeight: 800, }}>{w.price}.00</span><span style={{ border: '1px solid ', padding: '2px', marginLeft: '10px', color: '#584f4f', fontSize: '13px' }}>{w.offer}</span></Typography>
 
               </CardContent>
               <CardActions>
@@ -66,7 +66,7 @@ const navigate = useNavigate();
     ))}  
     </Grid>
     {/* millet */}
-        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'0px'}}}>
+        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'0px'},marginX:{xs:'0px',md:'40px'}}}>
 
     {to === 'millet' && datam.millet.map((w)=>(
          <Grid key={w.id} size={{ xs: 12, sm: 6, md: 3, lg: 3, xl: 2 }}>
@@ -83,14 +83,14 @@ const navigate = useNavigate();
                 </Typography>
                 <Box sx={{ width: 200, display: 'flex', alignItems: 'center', }}>
                    <Rating
-       sx={{marginLeft:{md:'70px', lg:"30px"}}}
+       sx={{marginLeft:{xs:'50px',md:'70px', xl:"30px"}}}
       value={w.value}
       precision={1}
         emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit"  />}
       readOnly />
        
                 </Box>
-                <Typography sx={{ marginTop: '20px', marginLeft:{md:'40px', lg:'1px'}}}> <span style={{ textDecoration: "line-through", color: '#584f4f' }}> {w.discount}.00</span> <span style={{ marginLeft: '5px', fontSize: '19px', fontWeight: 800, }}>{w.price}.00</span><span style={{ border: '1px solid ', padding: '2px', marginLeft: '10px', color: '#584f4f', fontSize: '13px' }}>{w.offer}</span></Typography>
+                <Typography sx={{ marginTop: '20px',marginLeft:{xs:'20px', lg:'40px',xl:'1px'}}}> <span style={{ textDecoration: "line-through", color: '#584f4f' }}> {w.discount}.00</span> <span style={{ marginLeft: '5px', fontSize: '19px', fontWeight: 800, }}>{w.price}.00</span><span style={{ border: '1px solid ', padding: '2px', marginLeft: '10px', color: '#584f4f', fontSize: '13px' }}>{w.offer}</span></Typography>
 
               </CardContent>
               <CardActions>
@@ -102,7 +102,7 @@ const navigate = useNavigate();
     ))}  
     </Grid>
     {/* juice */}
-        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'50px'}}}>
+        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'50px'},marginX:{xs:'0px',md:'40px'}}}>
 
     {to === 'juice' && datam.juice.map((w)=>(
          <Grid key={w.id} size={{ xs: 12, sm: 6, md: 3, lg: 3, xl: 2 }}>
@@ -119,14 +119,14 @@ const navigate = useNavigate();
                 </Typography>
                 <Box sx={{ width: 200, display: 'flex', alignItems: 'center', }}>
                    <Rating
-       sx={{marginLeft:{md:'70px', lg:"30px"}}}
+       sx={{marginLeft:{xs:'50px',md:'70px', xl:"30px"}}}
       value={w.value}
       precision={1}
         emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit"  />}
       readOnly />
        
                 </Box>
-                <Typography sx={{ marginTop: '20px',marginLeft:{md:'40px', lg:'1px'} }}> <span style={{ textDecoration: "line-through", color: '#584f4f' }}> {w.discount}.00</span> <span style={{ marginLeft: '5px', fontSize: '19px', fontWeight: 800, }}>{w.price}.00</span><span style={{ border: '1px solid ', padding: '2px', marginLeft: '10px', color: '#584f4f', fontSize: '13px' }}>{w.offer}</span></Typography>
+                <Typography sx={{ marginTop: '20px',marginLeft:{xs:'20px', lg:'40px',xl:'1px'}}}> <span style={{ textDecoration: "line-through", color: '#584f4f' }}> {w.discount}.00</span> <span style={{ marginLeft: '5px', fontSize: '19px', fontWeight: 800, }}>{w.price}.00</span><span style={{ border: '1px solid ', padding: '2px', marginLeft: '10px', color: '#584f4f', fontSize: '13px' }}>{w.offer}</span></Typography>
 
               </CardContent>
               <CardActions>
@@ -138,7 +138,7 @@ const navigate = useNavigate();
     ))}  
     </Grid>
     {/* diary */}
-        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'20px'}}}>
+        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'20px'},marginX:{xs:'0px',md:'40px'}}}>
 
     {to === 'Dairy' && datam.Dairy.map((w)=>(
          <Grid key={w.id} size={{ xs: 12, sm: 6, md: 3, lg: 3, xl: 2 }}>
@@ -155,14 +155,14 @@ const navigate = useNavigate();
                 </Typography>
                 <Box sx={{ width: 200, display: 'flex', alignItems: 'center', }}>
                    <Rating
-      sx={{marginLeft:{md:'70px', lg:"30px"}}}
+      sx={{marginLeft:{xs:'50px',md:'70px', xl:"30px"}}}
       value={w.value}
       precision={1}
         emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit"  />}
       readOnly />
        
                 </Box>
-                <Typography sx={{ marginTop: '20px', marginLeft:{md:'40px', lg:'1px'} }}> <span style={{ textDecoration: "line-through", color: '#584f4f' }}> {w.discount}.00</span> <span style={{ marginLeft: '5px', fontSize: '19px', fontWeight: 800, }}>{w.price}.00</span><span style={{ border: '1px solid ', padding: '2px', marginLeft: '10px', color: '#584f4f', fontSize: '13px' }}>{w.offer}</span></Typography>
+                <Typography sx={{ marginTop: '20px', marginLeft:{xs:'20px', lg:'40px',xl:'1px'}}}> <span style={{ textDecoration: "line-through", color: '#584f4f' }}> {w.discount}.00</span> <span style={{ marginLeft: '5px', fontSize: '19px', fontWeight: 800, }}>{w.price}.00</span><span style={{ border: '1px solid ', padding: '2px', marginLeft: '10px', color: '#584f4f', fontSize: '13px' }}>{w.offer}</span></Typography>
 
               </CardContent>
               <CardActions>
@@ -174,7 +174,7 @@ const navigate = useNavigate();
     ))}  
     </Grid>
     {/* fruit */}
-        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'0px'}}}>
+        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'0px'},marginX:{xs:'0px',md:'40px'}}}>
 
     {to === 'Fruits' && datam.Fruits.map((w)=>(
          <Grid key={w.id} size={{ xs: 12, sm: 6, md: 3, lg: 3, xl: 2 }}>
@@ -191,14 +191,14 @@ const navigate = useNavigate();
                 </Typography>
                 <Box sx={{ width: 200, display: 'flex', alignItems: 'center', }}>
                    <Rating
-       sx={{marginLeft:{md:'70px', lg:"30px"}}}
+       sx={{marginLeft:{xs:'50px',md:'70px', xl:"30px"}}}
       value={w.value}
       precision={1}
         emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit"  />}
       readOnly />
        
                 </Box>
-                <Typography sx={{ marginTop: '20px', marginLeft:{md:'40px', lg:'1px'} }}> <span style={{ textDecoration: "line-through", color: '#584f4f' }}> {w.discount}.00</span> <span style={{ marginLeft: '5px', fontSize: '19px', fontWeight: 800, }}>{w.price}.00</span><span style={{ border: '1px solid ', padding: '2px', marginLeft: '10px', color: '#584f4f', fontSize: '13px' }}>{w.offer}</span></Typography>
+                <Typography sx={{ marginTop: '20px', marginLeft:{xs:'20px', lg:'40px',xl:'1px'} }}> <span style={{ textDecoration: "line-through", color: '#584f4f' }}> {w.discount}.00</span> <span style={{ marginLeft: '5px', fontSize: '19px', fontWeight: 800, }}>{w.price}.00</span><span style={{ border: '1px solid ', padding: '2px', marginLeft: '10px', color: '#584f4f', fontSize: '13px' }}>{w.offer}</span></Typography>
 
               </CardContent>
               <CardActions>
@@ -210,7 +210,7 @@ const navigate = useNavigate();
     ))}  
     </Grid>
     {/* vegetable */}
-        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'0px'}}}>
+        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"    sx={{marginTop:{xs:'10px',xl:'0px'},marginX:{xs:'0px',md:'40px'}}}>
 
     {to === 'Vegetables' && datam.Vegetables.map((w)=>(
          <Grid key={w.id} size={{ xs: 12, sm: 6, md: 3, lg: 3, xl: 2 }}>
@@ -227,14 +227,14 @@ const navigate = useNavigate();
                 </Typography>
                 <Box sx={{ width: 200, display: 'flex', alignItems: 'center', }}>
                    <Rating
-       sx={{marginLeft:{md:'70px', lg:"30px"}}}
+      sx={{marginLeft:{xs:'50px',md:'70px', xl:"30px"}}}
       value={w.value}
       precision={1}
         emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit"  />}
       readOnly />
        
                 </Box>
-                <Typography sx={{ marginTop: '20px', marginLeft:{md:'40px', lg:'1px'}}}> <span style={{ textDecoration: "line-through", color: '#584f4f' }}> {w.discount}.00</span> <span style={{ marginLeft: '5px', fontSize: '19px', fontWeight: 800, }}>{w.price}.00</span><span style={{ border: '1px solid ', padding: '2px', marginLeft: '10px', color: '#584f4f', fontSize: '13px' }}>{w.offer}</span></Typography>
+                <Typography sx={{ marginTop: '20px', marginLeft:{xs:'20px', lg:'40px',xl:'1px'}}}> <span style={{ textDecoration: "line-through", color: '#584f4f' }}> {w.discount}.00</span> <span style={{ marginLeft: '5px', fontSize: '19px', fontWeight: 800, }}>{w.price}.00</span><span style={{ border: '1px solid ', padding: '2px', marginLeft: '10px', color: '#584f4f', fontSize: '13px' }}>{w.offer}</span></Typography>
 
               </CardContent>
               <CardActions>
@@ -249,7 +249,7 @@ const navigate = useNavigate();
     
 
     {/* rice */}
-        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"     sx={{marginTop:{xs:'10px',md:'20px'}}}>
+        <Grid container   columnSpacing={{md:6}} justifyContent="space-evenly"     sx={{marginTop:{xs:'10px',md:'20px'},marginX:{xs:'0px',md:'40px'}}}>
 
     {to === 'rice' && datam.rice.map((w)=>(
          <Grid key={w.id} size={{ xs: 12, sm: 6, md: 3, lg: 3, xl: 2 }}>
@@ -266,14 +266,14 @@ const navigate = useNavigate();
                 </Typography>
                 <Box sx={{ width: 200, display: 'flex', alignItems: 'center', }}>
                    <Rating
-       sx={{marginLeft:{md:'70px', lg:"30px"}}}
+       sx={{marginLeft:{xs:'50px',md:'70px', xl:"30px"}}}
       value={w.value}
       precision={1}
         emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit"  />}
       readOnly />
        
                 </Box>
-                <Typography sx={{ marginTop: '20px',marginLeft:{md:'40px', lg:'1px'} }}> <span style={{ textDecoration: "line-through", color: '#584f4f' }}> {w.discount}.00</span> <span style={{ marginLeft: '5px', fontSize: '19px', fontWeight: 800, }}>{w.price}.00</span><span style={{ border: '1px solid ', padding: '2px', marginLeft: '10px', color: '#584f4f', fontSize: '13px' }}>{w.offer}</span></Typography>
+                <Typography sx={{ marginTop: '20px',marginLeft:{xs:'20px', lg:'40px',xl:'1px'} }}> <span style={{ textDecoration: "line-through", color: '#584f4f' }}> {w.discount}.00</span> <span style={{ marginLeft: '5px', fontSize: '19px', fontWeight: 800, }}>{w.price}.00</span><span style={{ border: '1px solid ', padding: '2px', marginLeft: '10px', color: '#584f4f', fontSize: '13px' }}>{w.offer}</span></Typography>
 
               </CardContent>
               <CardActions>

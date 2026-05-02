@@ -120,11 +120,11 @@ const Location = useLocation();
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
            
 
-            <Typography variant="h6" sx={{ ml: 1, fontWeight: 700 }}>
+            <Typography variant="h6" sx={{ ml: 1, fontWeight: 700,fontSize:{xs:"15px",md:'20px'} }}>
               🌿 Lingam's Organic
             </Typography>
-             <IconButton onClick={toggleDrawer(true)} color="inherit">
-              <MenuIcon style={{marginRight:'70px'}}></MenuIcon>
+             <IconButton  style={{marginRight:'70px'}} onClick={toggleDrawer(true)} color="inherit">
+              <MenuIcon></MenuIcon>
             </IconButton>
 
             {/* LeftDrawer */}

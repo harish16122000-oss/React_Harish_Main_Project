@@ -39,7 +39,7 @@ const Cart = ({Mybutton}) => {
          
     <Typography sx={{marginTop:'20px', marginLeft:'1px'}}> <span style={{textDecoration:"line-through", color:'#584f4f'}}> {p.discount}.00</span> <span style={{marginLeft:'5px',fontSize:'19px', fontWeight: 800,}}>{p.price}.00</span><span style={{border:'1px solid ', padding:'2px', marginLeft:'10px', color:'#584f4f', fontSize:'13px'}}>{p.offer}</span></Typography>
     <Box sx={{display:"flex", justifyContent:"space-evenly", marginTop:"15px"}}>
-          <IoIosAddCircle style={{color:"#2a14ec", fontSize:'30px', backgroundColor:'white'}} onClick={()=> dispatch(increaseQty(p.id))} /> <span style={{fontSize:"30px", fontWeight:800}}>{p.quantity}</span>
+          <IoIosAddCircle style={{color:"#2e7d32", fontSize:'30px',}} onClick={()=> dispatch(increaseQty(p.id))} /> <span style={{fontSize:"30px", fontWeight:800}}>{p.quantity}</span>
             <FaCircleMinus onClick={()=> dispatch(decreaseQty(p.id))}  style={{fontSize:'32px',  padding:'3px'}}/></Box>
       </CardContent>
       <CardActions>
