@@ -32,13 +32,13 @@ import { Link } from 'react-router-dom';
 import { FiLogIn } from "react-icons/fi";
 import { RiLogoutCircleLine } from "react-icons/ri";
 
- import veg from '../assets/veg.png';
-import  fruit from '../assets/fruits.PNG';
-import rice from  '../assets/rice.PNG';
-import wheat from  '../assets/wheat.PNG';
-import  millet from  '../assets/millet.PNG';
-import  milk from  '../assets/milk.png';
-import drink from '../assets/drink.PNG';
+ import veg from '/veg.PNG';
+import  fruit from '/fruits.PNG';
+import rice from  '/rice.PNG';
+import wheat from  '/wheat.PNG';
+import  millet from  '/millet.PNG';
+import  milk from  '/milk.png';
+import drink from '/drink.PNG';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 
 const Naver = () => {

@@ -13,8 +13,7 @@ import Rating from '@mui/material/Rating';
 import StarIcon from '@mui/icons-material/Star';
 
 import { CiHeart } from "react-icons/ci";
-import axios from 'axios';
-import Skeleton from '@mui/material/Skeleton';
+
 import { addItem } from '../Counterslice';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
