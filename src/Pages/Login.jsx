@@ -32,7 +32,7 @@ const Login = ({Mybutton}) => {
         alert("Password donot match")
         return;
       }
-      await axios.post("http://localhost:5000/details",detail);
+      await axios.post("https://react-harish-main-project-1.onrender.com/details",detail);
       alert("Registered Successfully!");}
       catch(error){ 
         console.log(error);

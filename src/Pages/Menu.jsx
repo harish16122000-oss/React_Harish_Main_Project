@@ -438,8 +438,8 @@ const Menu = ({ Mybutton, datam }) => {
           <Typography variant="h6" sx={{ mb: 2 }}>
             Contact Us
           </Typography>
-          <Typography>Email: harish16122000@gmail.com</Typography>
-          <Typography>Phone: +91 8523904929</Typography>
+          <Typography><Link style={{color:'white', textDecoration:"none"}} href="mailto:harish16122000@gmail.com" >Email: harish16122000@gmail.com</Link></Typography>
+          <Typography><Link style={{color:"white", textDecoration:"none"}} href="tel:+91 8523904929" >Phone: +91 8523904929</Link></Typography>
           <Typography>Location: Tamil Nadu, India</Typography>
         </Grid>
 

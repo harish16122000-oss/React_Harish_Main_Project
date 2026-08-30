@@ -54,13 +54,13 @@ const App = () => {
   })
    useEffect(() => {
   Promise.all([
-    axios.get("http://localhost:5000/wheat"),
-    axios.get("http://localhost:5000/millet"),
-    axios.get("http://localhost:5000/juice"),
-    axios.get("http://localhost:5000/Dairy"),
-    axios.get("http://localhost:5000/Fruits"),
-    axios.get("http://localhost:5000/Vegetables"),
-    axios.get("http://localhost:5000/rice")
+    axios.get("https://react-harish-main-project-1.onrender.com/wheat"),
+    axios.get("https://react-harish-main-project-1.onrender.com/millet"),
+    axios.get("https://react-harish-main-project-1.onrender.com/juice"),
+    axios.get("https://react-harish-main-project-1.onrender.com/Dairy"),
+    axios.get("https://react-harish-main-project-1.onrender.com/Fruits"),
+    axios.get("https://react-harish-main-project-1.onrender.com/Vegetables"),
+    axios.get("https://react-harish-main-project-1.onrender.com/rice")
   ])
     .then((responses) => {
       console.log("RESPONSES:", responses);
