@@ -338,20 +338,7 @@
       "price": "₹45",
       "offer": "47% OFF"
     }
-  ],
-  "Order": [
-    {
-      "id": "Ind4rZBytVY"
-    },
-    {
-      "name": "harish Lingam",
-      "mobile": "8523904929",
-      "street": "177, Ibrahim Sahib St",
-      "city": "Bengaluru",
-      "state": "Karnataka",
-      "pincode": "560001",
-      "id": "QwX--cdAu3g"
-    }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
+ 
+  
 }
